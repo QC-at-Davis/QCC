@@ -48,7 +48,7 @@ Combining multiple NOR gates makes it possible to achieve any other desired set 
 
 We want the same property in Quantum Computing, having a set of gates that can be used to create any other set of gates. This is particularly useful because it allows us to take existing Quantum Algorithms and "translate" them into a form more suitable for physical implementation or at the very least, into the operations we can currently perform. 
 
-However, this proves to be a bit problematic considering that the superposition mentioned before is an infinite spectrum beween \\(1\\) and \\(0\\), making exact gate set by gate set simulation impossible.
+However, this proves to be a bit problematic considering that the superposition mentioned before is an infinite spectrum between \\(1\\) and \\(0\\), making exact gate set by gate set simulation impossible.
 
 It is possible however, to have a set of gates simulate another set with an extremely good approximation. This is a result of the __Solovay-Kitaev Theorem__ which shows that you can take any desired qubit operation and decompose it into a sequence of gates to approximate it.
 
@@ -56,10 +56,10 @@ It is possible however, to have a set of gates simulate another set with an extr
 
 After performing a computation, you want to obtain the state of the qubit which should be your result. The Quantum Computer in question should be able to obtain this information accurately. 
 
-## Ability to Introconvert Stationary and Flying Qubits
+## Ability to Interconvert Stationary and Flying Qubits
 
 A __stationary qubit__ is one that remains in the Quantum Computer that generated while a __flying qubit__ is one that can be transmitted back and forth between Quantum Computers. 
 
-Converting between them should allow information to be reliably sent and recieved without fear of decoherence, which falls into the last criteria of *The ability to faithfully transmit flying qubits between specified locations*.
+Converting between them should allow information to be reliably sent and received without fear of decoherence, which falls into the last criteria of *The ability to faithfully transmit flying qubits between specified locations*.
 
 Progress in these areas has been an ongoing challenge, especially considering that decoherence inevitably happens in any environment outside of the Quantum Computer's control. 

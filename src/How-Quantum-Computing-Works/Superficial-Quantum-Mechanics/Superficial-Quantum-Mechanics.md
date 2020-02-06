@@ -1,14 +1,14 @@
 # Superficial Quantum Mechanics
 
-Before we can start to understand how Qubits operate, there are some ideas in Quantum Mechanics you need to have a strong understanding of. A mastery of this material will prove invaluable in undrestanding the Bloch Sphere and Diract Notation, two mathematical tools crucial to any quantum programmer.
+Before we can start to understand how Qubits operate, there are some ideas in Quantum Mechanics you need to have a strong understanding of. A mastery of this material will prove invaluable in understanding the Bloch Sphere and Dirac Notation, two mathematical tools crucial to any quantum programmer.
 
-The "superificial" in the title is intentional, as the concepts presented in this section are important but are introduced in a way that is as removed as possible from the actual underlying Quantum Mechanical phenomena, which will be investigated when you get introduced to the math that pairs with the field.
+The "superficial" in the title is intentional, as the concepts presented in this section are important but are introduced in a way that is as removed as possible from the actual underlying Quantum Mechanical phenomena, which will be investigated when you get introduced to the math that pairs with the field.
 
 ## What are Quantum Mechanics?
 
 Quantum Mechanics is the mathematical framework used to describe the behavior of motion and interaction in subatomic particles.
 
-At such small scales, Classical Physics and the Newtonian Mechanics we are inuitively familiar with in our daily lives completely falls apart and unusual properties such as __Superposition__ and __Entanglement__ begin to appear. 
+At such small scales, Classical Physics and the Newtonian Mechanics we are intuitively familiar with in our daily lives completely falls apart and unusual properties such as __Superposition__ and __Entanglement__ begin to appear. 
 
 Before we explain some phenomena, it's useful to know how they were identified in the first place.
 
@@ -58,7 +58,7 @@ IT DOES however, match the pattern generated if we were to pass some kind of wav
   <img  src="/How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/water-double-slit.jpg" style="height: 50%; width: 50%; background-color: white;">
 </p>
 
-Intuitively, we'd have to think that electrons must somehow be waves instead of particles. But how can something with charge and treateable as a point-like mass just turn into a wave? 
+Intuitively, we'd have to think that electrons must somehow be waves instead of particles. But how can something with charge and treatable as a point-like mass just turn into a wave? 
 
 Perhaps there is a problem with our experimental setup itself. Maybe, because we're shooting a stream of electrons through the double-slits the electrons are interacting with themselves in such a way that when they hit the barrier they produce a wave interference pattern. 
 
@@ -76,7 +76,7 @@ This led physicist Erwin Schrodinger to formulate the idea that the electron was
 
 The __Schrodinger Equation__ is a *partial different equation*, which means that solving it doesn't give you a number but another function. This function is known as the __Wave Function__ which *describes the probability a quantum mechanical system will be in a certain configuration*.
 
-Let's go back to our defintion of what a superposition is:
+Let's go back to our definition of what a superposition is:
 
 > Superposition is the ability of a quantum system to be in multiple states at the same time until a measurement is performed.
 
@@ -84,7 +84,7 @@ The *states* mentioned are anything that can be measured about the particle such
 
 The wave function is what allows quantum systems to assume multiple states. The key here is the "probability" part, the particle or system of interest doesn't really represent ALL possible states so much as the chance it'll be in one or a "probability distribution". That's where the "measurement" part comes in.
 
-When the electrons in our experiment interacted with the barrier, the wave function of the electron "collapses", thus forcing the electron to exist in one single location. What used to be an inifinite distribution of probabilties must "pick" one value and stick with it. That means that while the particle still acts as a wave, we can't really extract any information because we can only do so through measurement which causes the whole thing to fall apart. To be more precise, we can only measure one thing at a time which means all other desirable data is permanently lost.  
+When the electrons in our experiment interacted with the barrier, the wave function of the electron "collapses", thus forcing the electron to exist in one single location. What used to be an infinite distribution of probabilities must "pick" one value and stick with it. That means that while the particle still acts as a wave, we can't really extract any information because we can only do so through measurement which causes the whole thing to fall apart. To be more precise, we can only measure one thing at a time which means all other desirable data is permanently lost.  
 
 We also know that due to this wave function, electrons actually look more like this:
 
@@ -116,7 +116,7 @@ When one coin falls, the other will fall the same way and your probability turns
 |Heads| 50% | 0% |
 |Tails| 0% | 50% |
 
-Now imagine the same thing happening over and over again, but the behavior remains when the cardboard is removed and the coins are inifinitely far apart! 
+Now imagine the same thing happening over and over again, but the behavior remains when the cardboard is removed and the coins are infinitely far apart! 
 
 This analogy is essentially what Entanglement is, the perfect correlation between two particles or groups of particles. 
 

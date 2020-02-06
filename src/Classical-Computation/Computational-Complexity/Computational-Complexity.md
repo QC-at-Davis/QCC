@@ -2,7 +2,7 @@
 
 Computational Complexity is a concept used in Computer Science to characterize the resources required for an algorithm to solve a certain problem.
 
-The two resources Computer Scientists are most concerend about are:
+The two resources Computer Scientists are most concerned about are:
 
 * Time (how long does it take?)
 * Space (how much storage does it need?)
@@ -19,9 +19,9 @@ This proves to be rather problematic in comparing algorithm performance as there
 
 Luckily, there is one property of algorithms that remains the same regardless of what machine it runs on: *The growth of resource consumption relative to its input.*
 
-The growth itself has properties that computer scientists like to focus on, such as the best case, worst case, and average case scenarios.
+The growth itself has quantifiable properties that computer scientists like to focus on, such as the best-case, worst-case, and average-case scenarios.
 
-The case that the majority are concerend with however, is the worst-case scenario. That is, given some input, what is the largest growth we can expect in terms of resource consumption?
+The case that the majority are concerned with however, is the worst-case scenario. That is, given some input, what is the largest growth we can expect in terms of resource consumption?
 
 Such a property is mathematically formalized as Big-O notation.
 
@@ -50,7 +50,7 @@ To find a suitable \\(g(n)\\) we just need to find some function that can, with 
 
 We could choose something like \\(n!\\) but the goal of Big-O is to find the *best fitting bound* , one that still fits the definition but bounds \\(f(n)\\) as close as possible from above. 
 
-With that in mind, \\(10n^2\\) can easily grow faster than the given \\(f(n)\\). To truly satisfy the definition, we need to find an exact \\(n_0\\). The constant \\(10\\) in front of the \\(10n^2\\) already satisifies the first requirement of having a positive constant multiplier \\(c\\). 
+With that in mind, \\(10n^2\\) can easily grow faster than the given \\(f(n)\\). To truly satisfy the definition, we need to find an exact \\(n_0\\). The constant \\(10\\) in front of the \\(10n^2\\) already satisfies the first requirement of having a positive constant multiplier \\(c\\). 
 
 We graph the two functions together and find our \\(n_0\\):
 
@@ -81,6 +81,6 @@ In the opposite sense, if an algorithm is *tractable* it means its Big-O time co
 
 If we go back to the chart, that would mean algorithms that have \\(O(log(n))\\), \\(O(1)\\), and \\(O(n)\\) time complexities can be considered to be tractable. 
 
-## Complexity Classess
+## Complexity Classes
 
-Complexity classes are a way of categorizing problems that take the same amount of resources to solve. You won't need to know what exactly the classes are for understanding the motivations behind Quantum Computing in the next section but it does help in understanding the degree of difficulty certain problems are considered to be as well as a more formal definition of the motivations you'll soon see. 
+Complexity classes are a way of categorizing problems that take the same amount of resources to solve. You won't need to know what exactly the classes are for understanding the motivations behind Quantum Computing in the next section but it does help in understanding the degree of difficulty certain problems are considered to have as well as a more formal definition of the motivations you'll see soon.

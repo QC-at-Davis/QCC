@@ -1,7 +1,7 @@
 # The Qubit
 In the previous section, we went over several key principles of Quantum Mechanics that govern the most fundamental operations of QC.
 
-In this section, we look at the Qubit, analagous to the "bit" encountered in classical computers as being the fundamental unit of computation. By using multiple bits and manipulating them in certain ways, we can represent, store, and manipulate data to our desired form.
+In this section, we look at the Qubit, analogous to the "bit" encountered in classical computers as being the fundamental unit of computation. By using multiple bits and manipulating them in certain ways, we can represent, store, and manipulate data to our desired form.
 
 Unlike the bit however, Qubits can leverage the properties of __superposition__ and __entanglement__ we mentioned prior.
 
@@ -29,9 +29,9 @@ A final, important property of qubits is that although measurement will cause th
   <img  src="/How-Quantum-Computing-Works/The-Qubit/qubit.png" style="height: 50%; width: 50%; background-color: white;">
 </p>
 
-This result should remind you of the probabalistic nature of Quantum Computation already hinted by the __BQP__ and __QMA__ complexity classes where we a problem needs to be solved correctly AT LEAST some fraction of the time to fall into the quantum complexity classes. 
+This result should remind you of the probabilistic nature of Quantum Computation already hinted by the __BQP__ and __QMA__ complexity classes where we a problem needs to be solved correctly AT LEAST some fraction of the time to fall into the quantum complexity classes. 
 
-All of this seems more like a nuisance than somthing to accelerate computation but superposition allows for a property known as __Inherent Parallelism__.
+All of this seems more like a nuisance than something to accelerate computation but superposition allows for a property known as __Inherent Parallelism__.
 
 ### Inherent Parallelism 
 
@@ -67,7 +67,7 @@ Owing to the rapid development and infancy of the field, the hardware implementa
 
 Owing to this diversity, the authors of this guide have opted not to present the hardware details too early, instead focusing on each platform individually after developing the knowledge that still remains universally applicable in QC. 
 
-The following image gives just a sneak-peek at some of the different kinds of architectures already in existence (with the exception of Toplogical Qubits, which are theorized but have yet to be implemented):
+The following image gives just a sneak-peek at some of the different kinds of architectures already in existence (with the exception of Topological Qubits, which are theorized but have yet to be implemented):
 
 <p align="center">
   <img  src="/How-Quantum-Computing-Works/The-Qubit/qubit-types.png" style="height: 95%; width: 95%; background-color: white;">
@@ -114,6 +114,6 @@ Decoherence and the No-Cloning Theorem aren't necessary but are just consequence
 
 Beyond this, there is an even larger set of criteria that need to be satisfied for a device to be considered a true Quantum Computer.
 
-At this point in time, most platforms satisify the criteria to varying degrees but none has managed to satisfy all of them. Properties of certain qubit architectures even prohibit the realization of some of the criteria. 
+At this point in time, most platforms satisfy the criteria to varying degrees but none has managed to satisfy all of them. Properties of certain qubit architectures even prohibit the realization of some of the criteria. 
 
 These criteria are known as the __DiVincenzo Criteria__ and will be explained in the next section. The utility of knowing these criteria is it gives you an idea of the current state of QC, what things a Quantum Computer AS A WHOLE should be able to do, and the future of the field. 

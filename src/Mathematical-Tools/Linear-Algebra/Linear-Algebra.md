@@ -363,7 +363,7 @@ We'll use our newfound definition for the dot product this time:
 \\[\left\lVert \vec a \right\rVert = \sqrt{\vec a \cdot \vec a} = \sqrt{\boldsymbol{a} \cdot \boldsymbol{a}^\intercal} 
 = \sqrt{\begin{bmatrix} i & 0 \end{bmatrix} \cdot \begin{bmatrix} i \\\\ 0 \end{bmatrix}} = \sqrt{i^{2}} = i\\]
 
-Mathemeticians do not like the idea of having a quantity with real physical implication (length of the vector) be defined in imaginary terms. Thus, we have to tweak our definition of the dot product even further.
+Mathematicians do not like the idea of having a quantity with real physical implication (length of the vector) be defined in imaginary terms. Thus, we have to tweak our definition of the dot product even further.
 
 To guarantee a real result, we take the *conjugate* AND *transpose* of one of the vectors (the order of operations doesn't matter here) which gives us the following definition for the dot product: 
 
@@ -533,7 +533,7 @@ This brings us to the **Hilbert Space**, which is a __type__ of vector space tha
 
 ## Hilbert Space
 
-**Hilbert Space** is a type of vector space which satisifies the 10 axioms above but introduces a handful of others.
+**Hilbert Space** is a type of vector space which satisfies the 10 axioms above but introduces a handful of others.
 
 ### Inner Product Operation
 One of the main definitions is that of an **inner product**. You'll remember that we introduced it as the **dot product** although that term is more specific to real numbered vectors which have a clear geometric interpretation 
@@ -578,11 +578,11 @@ If we take the inner product of an element with itself, we are GUARANTEED a valu
 
 \\[\langle a, a\rangle = \mid a \mid^2 \geq 0 \\]
 
-### Seperability 
+### Separability 
 
-The idea of **seperability** means that the Hilbert Space has a **countable**, **dense**, **subset**.
+The idea of **separability** means that the Hilbert Space has a **countable**, **dense**, **subset**.
 
-Let's break that down with a comparison to the real numbers \\(\mathbb{R}\\) which also posess this property of seperability. 
+Let's break that down with a comparison to the real numbers \\(\mathbb{R}\\) which also possess this property of separability. 
 
 We know that the set of rational numbers \\(\mathbb{Q}\\) is a **subset** of \\(\mathbb{R}\\) as \\(\mathbb{R}\\) contains both rational AND irrational numbers. 
 
@@ -611,7 +611,7 @@ In the Finite variation, the basis vectors that you can make other vectors with 
 
 All the examples you saw with the dot product and matrices use a pair of finite, vectors. 
 
-### Inifnite Dimensional Hilbert Space
+### Infinite Dimensional Hilbert Space
 
 In the infinite variation (and the one we'll be doing the great majority of our work in) we have a infinite number of basis elements to create other elements from. 
 

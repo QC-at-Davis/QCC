@@ -4,13 +4,13 @@ Before we can delve into the nitty-gritty of how Quantum Computers work, there a
 Not understanding these ideas won't stop you from jumping into coding but it helps to really understand the big picture that Quantum Computing is in. 
 
 ## What is "Classical Computation?"
-Classical Computation is just a fancier way of addressing the way we've been performing computing for the past 40 or so years: with 1s and 0s or binary. 
+Classical Computation is just a fancier way of addressing the way we've been performing computing for the past 40 or so years: with 1s and 0s or more formally stated as **binary**. 
 
 <p align="center">
   <img  src="/Classical-Computation/binary-code.jpg">
 </p>
 
-Computers represent and manipulate data all in binary, usually through millions of special switches made of Silicon.
+Computers represent and manipulate data all in binary, usually through millions of special switches (transistors) made of Silicon.
 
 The server delivering the contents of this book, the smartphone in your pocket, and the device you're reading this on are all examples of "Classical Computers" which operate using binary to store and manipulate data.
 

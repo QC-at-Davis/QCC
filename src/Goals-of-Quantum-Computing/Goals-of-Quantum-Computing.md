@@ -8,7 +8,7 @@ They are as follows:
 
 > 1. Can a Quantum Computer execute algorithms which are considered uncomputable on classical computers?
 
-> 2. Given an algorithm a TM can compute but is intractable, can it be made tractable through Quantum Comptuing?
+> 2. Given an algorithm a TM can compute but is intractable, can it be made tractable through Quantum Computing?
 
 The second point can also be understood in the more broad terms of, "Can a Quantum Computer provide some speed-up of an algorithm that a classical computer cannot?"
 

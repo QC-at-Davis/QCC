@@ -1,1 +1,0 @@
-# DiVincenzo's Criteria
