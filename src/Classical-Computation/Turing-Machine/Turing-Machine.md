@@ -2,7 +2,7 @@
 
 Before we delve into what a Turing Machine is, let us present this definition of an __Algorithm__ as *a process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer*. In plain English, nothing more than series of steps that turns some data into a more desirable form (answer, solution, etc).
 
-With the above in mind, the Turing Machine isn't really a machine so much as an abstract model of computation. It was never meant to be implemented in real hardware. Rather, it was intended as a mathematical tool for studying the execution and output of algorithms. 
+With the above in mind, the Turing Machine isn't really a machine so much as an abstract model of computation. It was never meant to be implemented in real hardware. Rather, it was intended as a mathematical tool for studying the execution and output of algorithms.
 
 The machine derives its name from the late British computer scientist Alan Turing who came up with the model in a paper published in 1936.
 

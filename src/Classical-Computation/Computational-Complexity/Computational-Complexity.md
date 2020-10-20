@@ -11,7 +11,7 @@ It should be noted here that "time" gets translated to "number of operations" ow
 
 ## A Naive Approach
 
-If we're comparing two algorithms we could try to just measure the duration of time and the amount of memory in terms of seconds and units of storage respectively. 
+If we're comparing two algorithms we could try to just measure the duration of time and the amount of memory in terms of seconds and units of storage respectively.
 
 The problem with this approach is that it's highly platform specific meaning you might get different running times/memory usage if you used a different machine. Furthermore, doing multiple runs might even give different times owing to the nature of Operating Systems, other processes, etc.
 
@@ -24,7 +24,6 @@ The growth itself has quantifiable properties that computer scientists like to f
 The case that the majority are concerned with however, is the worst-case scenario. That is, given some input, what is the largest growth we can expect in terms of resource consumption?
 
 Such a property is mathematically formalized as Big-O notation.
-
 
 ## Big-O Notation
 
@@ -48,9 +47,9 @@ I have an algorithm who's resource consumption given some input data \\( n \\) g
 
 To find a suitable \\(g(n)\\) we just need to find some function that can, with some slight modification, outpace \\(f(n)\\)'s growth rate.
 
-We could choose something like \\(n!\\) but the goal of Big-O is to find the *best fitting bound* , one that still fits the definition but bounds \\(f(n)\\) as close as possible from above. 
+We could choose something like \\(n!\\) but the goal of Big-O is to find the *best fitting bound* , one that still fits the definition but bounds \\(f(n)\\) as close as possible from above.
 
-With that in mind, \\(10n^2\\) can easily grow faster than the given \\(f(n)\\). To truly satisfy the definition, we need to find an exact \\(n_0\\). The constant \\(10\\) in front of the \\(10n^2\\) already satisfies the first requirement of having a positive constant multiplier \\(c\\). 
+With that in mind, \\(10n^2\\) can easily grow faster than the given \\(f(n)\\). To truly satisfy the definition, we need to find an exact \\(n_0\\). The constant \\(10\\) in front of the \\(10n^2\\) already satisfies the first requirement of having a positive constant multiplier \\(c\\).
 
 We graph the two functions together and find our \\(n_0\\):
 
@@ -75,11 +74,11 @@ Two words you might hear thrown around quite frequently (especially in Quantum C
 
 If an algorithm is *intractable*, its Big-O time complexity is __greater__ than any polynomial or to be more formal, exceeds any variant of \\(O(n^k)\\) where \\(k\\) is some constant. The term *superpolynomial* is also equivalent. 
 
-If we look at the chart above, that would mean algorithms that have \\(O(2^n)\\) or \\(O(n!)\\) complexities are *intractable*. 
+If we look at the chart above, that would mean algorithms that have \\(O(2^n)\\) or \\(O(n!)\\) complexities are *intractable*.
 
 In the opposite sense, if an algorithm is *tractable* it means its Big-O time complexity is __less than__ or __equal to__ that of any polynomial. The term *subpolynomial* is also equivalent.
 
-If we go back to the chart, that would mean algorithms that have \\(O(log(n))\\), \\(O(1)\\), and \\(O(n)\\) time complexities can be considered to be tractable. 
+If we go back to the chart, that would mean algorithms that have \\(O(log(n))\\), \\(O(1)\\), and \\(O(n)\\) time complexities can be considered to be tractable.
 
 ## Complexity Classes
 
