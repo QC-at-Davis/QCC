@@ -2,14 +2,14 @@
 
 In the previous section, we looked at what exactly a Turing Machine (referred to as a "TM" henceforth) is and alluded to the __Church-Turing Thesis__ which states the following:
 
-> If any algorithm can be performed on *any* piece of hardware there is an equivalent algorithm for a Turing Machine which will perform the exact same task"
+> If any algorithm can be performed on *any* piece of hardware there is an equivalent algorithm for a Turing Machine which will perform the exact same task
 
 The acceptance of this thesis has the following effects:
 
 * Any problem that cannot be computed by a TM is not "computable" in the absolute sense
 * If a problem is believed to be computable, a TM capable of computing is possible
 
-With the feasibility of computation being well defined, computer scientists were also concerned with efficiency, that is, how long as well as how much memory would some problem need in order to be computed.
+With the feasibility of computation being well defined, computer scientists were also concerned with efficiency, that is, how long as well as how much memory would some problem need in order to be computed. <sup>1</sup>
 
 ## Complexity-Theoretic Church-Turing Thesis
 
@@ -21,7 +21,7 @@ It states the following:
 
 This property arises from the fact that any algorithmic process that could be solved in another model of computation can be SIMULATED on a TM.
 
-The "efficiently" in the thesis means that the *number of operations (or other resource consumed like memory) it takes to run an algorithm grows polynomially (or less) relative to the size of data inputted*. This idea of efficiency (data input size vs growth of the number of operations) will be explained in more detail in the next section and formalized considering that this is the universally accepted way of defining an algorithm's complexity.
+The "efficiently" in the thesis means that the *number of operations (or other resource consumed like memory) it takes to run an algorithm grows polynomially (or less) relative to the size of data inputted*. This idea of efficiency (data input size vs growth of the number of operations) will be explained in more detail in the next section and formalized considering that this is the universally accepted way of defining an algorithm's complexity. <sup>2</sup>
 
 ## Challenges to Complexity-Theoretic Church-Turing Thesis
 
@@ -33,6 +33,9 @@ The steps for the entire algorithm are presented below. Don't concern yourself t
 
 <p align="center">
   <img  src="/Classical-Computation/Church-Turing-Thesis/solovay-strassen.jpg">
+</p>
+<p align="center">
+   <i> Source: <a href=https://slideplayer.com/slide/5864331/> Public Key ciphers 1 Session 5. by Katrina Morrison </a> </i>
 </p>
 
 Note the step:
@@ -64,3 +67,8 @@ In the same decade as Deutsch, Richard Feynman also proposed the idea of Quantum
 Despite all these definitions, we still haven't reached the promised goal of understanding WHY we want Quantum Computing (other than Feynman's and Deutsch's goals). We do however, have an understanding of how the principles of classical computation have naturally led to the idea of Quantum Computing.
 
 In the following section, you'll be introduced to the ideas and some light math behind *Computational Complexity* which is how we characterized the performance of algorithms and *Complexity Classes*, where we categorize problems by how much time and space they take to solve.
+
+## Citations
+
+1. [Quantum Computing and Shor's Algorithm by Matthew Hayward - section on Church-Turing Thesis](https://quantum-algorithms.herokuapp.com/299/paper/node5.html)
+2. see 1.

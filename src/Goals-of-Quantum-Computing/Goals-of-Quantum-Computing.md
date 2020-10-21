@@ -30,7 +30,7 @@ time complexity to check each element within the domain of the function.
 
 ### Shor's Algorithm
 
-__Shor's Algorithm__ is an algorithm for integer factorization. It has garnered a lot of attention due to the fact that, should it be implementable in the future, can pose a threat to public-key cryptography which relies on the fact that integer factorization for large values is incredibly prohibitive to do on classical computers. 
+__Shor's Algorithm__ is an algorithm for integer factorization. It has garnered a lot of attention due to the fact that, should it be implementable in the future, can pose a threat to public-key cryptography which relies on the fact that integer factorization for large values is incredibly prohibitive to do on classical computers.
 
 The current fastest algorithm for integer factorization on classical computers is the __General Number Field Sieve__ which works in sub-exponential but superpolynomial time:
 

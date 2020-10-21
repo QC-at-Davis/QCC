@@ -12,9 +12,9 @@ At such small scales, Classical Physics and the Newtonian Mechanics we are intui
 
 Before we explain some phenomena, it's useful to know how they were identified in the first place.
 
-## Superposition 
+## Superposition
 
-Superposition is described as the *ability of a quantum system to be in multiple states at the same time until a measurement is performed*. 
+Superposition is described as the *ability of a quantum system to be in multiple states at the same time until a measurement is performed*.
 
 To make this vapid definition more useful to us, let's look at a physical example through an experiment known as the __Double-Slit Experiment__.
 
@@ -33,6 +33,9 @@ Now let's perform an experiment. We'll set up a beam of electrons aimed at a bar
 <p align="center">
   <img  src="/How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/double-slit.png" style="height: 60%; width: 60%; background-color: white;">
 </p>
+<p align="center">
+   <i> Source: <a href=https://en.wikipedia.org/wiki/Double-slit_experiment#/media/File:Double-slit.svg> Double-slit Experiment, Wikipedia Entry</a> </i>
+</p>
 
 (The last barrier has been intentionally hidden from display)
 
@@ -40,6 +43,9 @@ Before we turn on the beam, let's make a prediction about what we'll see. If we 
 
 <p align="center">
   <img  src="/How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/double-band.png" style="height: 40%; width: 40%; background-color: white;">
+</p>
+<p align="center">
+   <i> Source: <a href= https://plus.maths.org/content/physics-minute-double-slit-experiment-0> Physics in a minute: The double slit experiment</a> </i>
 </p>
 
 The electrons will just repeatedly hit the same two places, sort of like shooting tennis balls through the same double slit but larger.
@@ -49,6 +55,9 @@ If we turn on the beam, we get the following:
 <p align="center">
   <img  src="/How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/full-double-slit.png" style="height: 50%; width: 50%; background-color: white;">
 </p>
+<p align="center">
+   <i> Source: <a href=https://en.wikipedia.org/wiki/Double-slit_experiment#/media/File:Double-slit.svg> Double-slit Experiment, Wikipedia Entry</a> </i>
+</p>
 
 Note that the pattern produced is far from what we predicted! It's a continuously varying pattern of intensity, periodic in nature, that's a far stretch from what we predicted.
 
@@ -56,6 +65,9 @@ IT DOES however, match the pattern generated if we were to pass some kind of wav
 
 <p align="center">
   <img  src="/How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/water-double-slit.jpg" style="height: 50%; width: 50%; background-color: white;">
+</p>
+<p align="center">
+   <i> Source: <a href=https://www.youtube.com/watch?v=0cztIj1m7e4> Double-slit Experiment - Water Wave Interference Pattern</a> </i>
 </p>
 
 Intuitively, we'd have to think that electrons must somehow be waves instead of particles. But how can something with charge and treatable as a point-like mass just turn into a wave? 
@@ -80,7 +92,7 @@ Let's go back to our definition of what a superposition is:
 
 > Superposition is the ability of a quantum system to be in multiple states at the same time until a measurement is performed.
 
-The *states* mentioned are anything that can be measured about the particle such as location, energy, momentum, etc. In this case, our experiment concerns itself with location although the energy and momentum of a particle can be obtained from the wave function as well. 
+The *states* mentioned are anything that can be measured about the particle such as location, energy, momentum, etc. In this case, our experiment concerns itself with location although the energy and momentum of a particle can be obtained from the wave function as well.
 
 The wave function is what allows quantum systems to assume multiple states. The key here is the "probability" part, the particle or system of interest doesn't really represent ALL possible states so much as the chance it'll be in one or a "probability distribution". That's where the "measurement" part comes in.
 
@@ -92,13 +104,13 @@ We also know that due to this wave function, electrons actually look more like t
   <img  src="/How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/orbitals.jpg" style="height: 60%; width: 60%; background-color: white;">
 </p>
 
-the weird lobes and spheroids you see give the *probability* of an electron at a certain energy existing at a certain location around the nucleus. 
+the weird lobes and spheroids you see give the *probability* of an electron at a certain energy existing at a certain location around the nucleus.
 
 ## Entanglement
 
 Quantum entanglement occurs when two or more particles become "linked", be it through creation or interaction. Whatever happens to one immediately affects the other, regardless of how far apart they are.
 
-The more "formal" way of defining this is when the wave function of a quantum system (such as two or more particles) can't be described by two separate wave functions. That means that the measurement of one particle causes the function to collapse as a whole, resulting in the other particle exhibiting highly correlated behavior, far from random chance. 
+The more "formal" way of defining this is when the wave function of a quantum system (such as two or more particles) can't be described by two separate wave functions. That means that the measurement of one particle causes the function to collapse as a whole, resulting in the other particle exhibiting highly correlated behavior, far from random chance.
 
 A nice way to think of this is imagine having two quarters. They are placed exactly on their sides on a table. They can represent four possible combinations, each with a 25% chance of appearing should you hit the table and let them fall flat. The possibilities are represented in the table below:
 
@@ -116,7 +128,7 @@ When one coin falls, the other will fall the same way and your probability turns
 |Heads| 50% | 0% |
 |Tails| 0% | 50% |
 
-Now imagine the same thing happening over and over again, but the behavior remains when the cardboard is removed and the coins are infinitely far apart! 
+Now imagine the same thing happening over and over again, but the behavior remains when the cardboard is removed and the coins are infinitely far apart!
 
 This analogy is essentially what Entanglement is, the perfect correlation between two particles or groups of particles. 
 
@@ -128,4 +140,4 @@ The theorem states the following:
 
 > it is impossible to copy a quantum mechanical system in an unknown state to another quantum mechanical system
 
-This means that if I have some quantum system in superposition, I can't "copy" that superposition onto another quantum system and have two exact copies. The reasoning behind this does not have a nice physical analogue but once you're introduced to Dirac Notation, the proof should seem straightforward enough. 
+This means that if I have some quantum system in superposition, I can't "copy" that superposition onto another quantum system and have two exact copies. The reasoning behind this does not have a nice physical analogue but once you're introduced to Dirac Notation, the proof should seem straightforward enough.

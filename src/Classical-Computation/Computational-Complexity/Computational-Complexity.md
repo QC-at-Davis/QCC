@@ -43,7 +43,7 @@ In plain English, a function \\( f(n) \\) can be considered "Big-O" of \\( g(n) 
 
 Let's try a quick example.
 
-I have an algorithm who's resource consumption given some input data \\( n \\) grows by \\( f(n) = 2n^2 + n + 5 \\). 
+I have an algorithm who's resource consumption given some input data \\( n \\) grows by \\( f(n) = 2n^2 + n + 5 \\).
 
 To find a suitable \\(g(n)\\) we just need to find some function that can, with some slight modification, outpace \\(f(n)\\)'s growth rate.
 
@@ -65,6 +65,10 @@ With that understanding, the image below gives an idea for the different kinds o
 
 <p align="center">
   <img  src="/Classical-Computation/Computational-Complexity/big-O-chart.png">
+</p>
+
+<p align="center">
+   <i> Source: <a href=https://www.bigocheatsheet.com/> Big-O Cheat Sheet <a> </i>
 </p>
 Note: Elements in the above diagram is equivalent to data inputted
 

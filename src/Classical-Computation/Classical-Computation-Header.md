@@ -1,13 +1,16 @@
 # Classical Computation
 Before we can delve into the nitty-gritty of how Quantum Computers work, there are a number of ideas in Classical Computing that will help guide your understanding of why Quantum Computing is useful and what it has to offer.
 
-Not understanding these ideas won't stop you from jumping into coding but it helps to really understand the big picture that Quantum Computing is in. 
+Not understanding these ideas won't stop you from jumping into coding but it helps to really understand the big picture that Quantum Computing is in.
 
 ## What is "Classical Computation?"
-Classical Computation is just a fancier way of addressing the way we've been performing computing for the past 40 or so years: with 1s and 0s or more formally stated as **binary**. 
+Classical Computation is just a fancier way of addressing the way we've been performing computing for the past 40 or so years: with 1s and 0s or more formally stated as **binary**.
 
 <p align="center">
   <img  src="/Classical-Computation/binary-code.jpg">
+</p>
+<p align="center">
+   <i> Source: <a href=https://www.facebook.com/binarycoderobot/> Binary Code Robot </a> </i>
 </p>
 
 Computers represent and manipulate data all in binary, usually through millions of special switches (transistors) made of Silicon.
@@ -21,6 +24,6 @@ There are several things that are nice to know
 * the Church-Turing Thesis 
 * Computational Complexity
 
-The first three things serve as a foundation for understanding some basic principles in Theoretical Computer Science that then lead to motivations for Quantum Computing (henceforth refered to as "QC"). 
+The first three things serve as a foundation for understanding some basic principles in Theoretical Computer Science that then lead to motivations for Quantum Computing (henceforth referred to as "QC").
 
 The subsequent sections will explain these points in more detail.

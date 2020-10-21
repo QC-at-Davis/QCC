@@ -20,7 +20,7 @@ A more succinct and equivalent notation you'll see in this book is the following
 
 \\[ \vec r = \begin{bmatrix}10 \\\\ 11 \end{bmatrix} \\]
 
-where the \\(\hat{x}\\) and \\(\hat{y}\\) are implicit from the ordering of the numbers from top to bottom. 
+where the \\(\hat{x}\\) and \\(\hat{y}\\) are implicit from the ordering of the numbers from top to bottom.
 
 Vectors can be thought of even more abstractly as ways of grouping together related values of a system, like how in Physics we say a vector represents both *magnitude* and *direction* of a force. 
 
@@ -44,9 +44,9 @@ In the example above:
 
 \\[ \vec r = 10\hat{x} + 11\hat{y} \\] 
 
-Possesses another, more implicit meaning. 
+Possesses another, more implicit meaning.
 
-Most of us look at the \\(\hat{x}\\) and \\(\hat{y}\\) to just tell us to go some *n* units in those "directions". The "directions" however, are vectors themselves. 
+Most of us look at the \\(\hat{x}\\) and \\(\hat{y}\\) to just tell us to go some *n* units in those "directions". The "directions" however, are vectors themselves.
 
 More specifically, they are known as __unit vectors__ which have a *magnitude* (equivalent to length) of 1. Unit vectors always have that little arrow above them (a "hat") and are useful in defining any other arbitrary vector. The set of arbitrary vectors that can be created is known as the __span__ of the vector pair and as long as your vectors aren't parallel (if you overlap them, they don't stay in a single line) you can generate any other vector you want. 
 
@@ -115,12 +115,15 @@ An equally valid interpretation is to take the dot product of a vector with itse
 
 \\[ \left\lVert \vec a \right\rVert = \sqrt{\vec a \cdot \vec a} \\]
 
-There is also an elegant geometric interpation of the dot product: 
+There is also an elegant geometric interpretation of the dot product: 
 
 It is the "amount" that one vector overlaps or projects onto another vector as depicted in the image below:
 
 <p align="center">
   <img  src="/Mathematical-Tools/Linear-Algebra/vector-projection.png" style="height: 30%; width: 30%; background-color: white;">
+</p>
+<p align="center">
+   <i> Source: <a href=https://mathinsight.org/dot_product/> Math Insight - the dot product </a> </i>
 </p>
 
 That amount of "overlap" can also be interpreted as the magnitude (length) of the vector of interest times the cosine of the angle it makes with the vector it projects onto. 
@@ -204,6 +207,9 @@ A __transform__ simply means that we swap the rows for the columns or "rotate" t
 <p align="center">
   <img  src="/Mathematical-Tools/Linear-Algebra/transpose-animation.gif" style="height: 30%; width: 30%; background-color: white;">
 </p>
+<p align="center">
+   <i> Source: <a href=http://linearalgebra.math.umanitoba.ca/math1220/section-19.html> Transpose and Trace of a Matrix, University of Manitoba, Math 1220 Linear Algebra 1 by Michael Doob </a> </i>
+</p>
 
 If I have a matrix:
 
@@ -258,7 +264,7 @@ and
 
 \\[\vec a \cdot \vec b = \vec b \cdot \vec a\\]
 
-But with matrices, the order DOES matter because if I take that example above and switch the order, the dimensions are no longer valid to perform multiplication and even if they were valid, the resulting size of the matrix would be different as well. 
+But with matrices, the order DOES matter because if I take that example above and switch the order, the dimensions are no longer valid to perform multiplication and even if they were valid, the resulting size of the matrix would be different as well.
 
 This gives the following property:
 
@@ -317,7 +323,7 @@ The standard Dot Product was already well defined for our "dimensionless" explan
 
 However, we also introduced the accepted definition of vectors as being matrices fixed by 1 row or 1 column (row and column-based vectors respectively).
 
-This doesn't bode well because we now have to factor in the rules for matrix multiplication. We can't arbitrarily choose where to start multiplying and adding like we could with the standard dot product because with the normal dot product, orientation of the vector is nonexistent. 
+This doesn't bode well because we now have to factor in the rules for matrix multiplication. We can't arbitrarily choose where to start multiplying and adding like we could with the standard dot product because with the normal dot product, orientation of the vector is nonexistent.
 
 To make the problem a little more apparent, we can use the following. Imagine I want to perform a dot product on the two vectors:
 
@@ -347,7 +353,7 @@ Now we can perform matrix multiplication and get the dot product:
     \alpha_{1} \cdot \beta_{1} + \alpha_{2} \cdot \beta{2} 
 \\]
 
-Notice that we still get a single scalar value, which maintains the validity of our geometric intuition of the dot product: the amount one vector overlaps/projects onto another vector. 
+Notice that we still get a single scalar value, which maintains the validity of our geometric intuition of the dot product: the amount one vector overlaps/projects onto another vector.
 
 We can now define the dot product in terms of matrix multiplication like so:
 
@@ -365,7 +371,7 @@ We'll use our newfound definition for the dot product this time:
 
 Mathematicians do not like the idea of having a quantity with real physical implication (length of the vector) be defined in imaginary terms. Thus, we have to tweak our definition of the dot product even further.
 
-To guarantee a real result, we take the *conjugate* AND *transpose* of one of the vectors (the order of operations doesn't matter here) which gives us the following definition for the dot product: 
+To guarantee a real result, we take the *conjugate* AND *transpose* of one of the vectors (the order of operations doesn't matter here) which gives us the following definition for the dot product <sup>1</sup>:
 
 \\[ \vec \alpha \cdot \vec \beta = (\boldsymbol{\alpha}^\intercal)^{*} \cdot \boldsymbol{\beta} \\]
 
@@ -375,7 +381,7 @@ There is a special name for the conjugate transpose of a matrix: the __Hermitian
 
 Where we now refer to the matrix as "alpha dagger" in this new notation.
 
-Now we have arrived a truly rigorous definition of the dot product in terms of matrix multiplication. 
+Now we have arrived a truly rigorous definition of the dot product in terms of matrix multiplication.
 
 This "Complex Dot Product" will be used very frequently in manipulating Qubit states through the application of Hermitian Conjugates.
 
@@ -441,7 +447,7 @@ However, there is one specific setup that does lend itself very nicely to visual
     \end{bmatrix}
 \\]
 
-The following is known as a __linear transformation__. If you imagine that \\(a, b\\) and \\(c, d\\) represent two vectors, then by interpreting the dot product you know that vector \\(c_0, c_1\\) will scale each vector and when you add them together, you get a new vector, which should be the \\(c_0, c_1\\) vector but with each of its components in a new orientation and magnitude. 
+The following is known as a __linear transformation__. If you imagine that \\(a, b\\) and \\(c, d\\) represent two vectors, then by interpreting the dot product you know that vector \\(c_0, c_1\\) will scale each vector and when you add them together, you get a new vector, which should be the \\(c_0, c_1\\) vector but with each of its components in a new orientation and magnitude. <sup>2</sup>
 
 The __Eigenvector__ is a special vector that, when it has a matrix applied to it, only scales in magnitude. It can grow or shrink, flip directions as well but it has to maintain the same direction (lay on the same line).
 
@@ -451,6 +457,9 @@ The image below should sum all this up:
 
 <p align="center">
   <img  src="/Mathematical-Tools/Linear-Algebra/eigenvector.png" style="height: 30%; width: 30%; background-color: white;">
+</p>
+<p align="center">
+   <i> Source: <a href=https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors> Eigenvalues and Eigenvectors</a> </i>
 </p>
 
 Where "A" is the matrix and "x" is the eigenvector, with lambda being the eigenvalue. 
@@ -481,7 +490,7 @@ This looks rather similar to the relationship we defined above. If we match thin
 
 ## Vector Spaces
 
-A great deal of the complex mathematics in Quantum Mechanics are greatly simplified with the help of something known as a **Hilbert Space** In order to understand what a **Hilbert Space** is however, we have to look at something called a vector space. 
+A great deal of the complex mathematics in Quantum Mechanics are greatly simplified with the help of something known as a **Hilbert Space** In order to understand what a **Hilbert Space** is however, we have to look at something called a vector space.
 
 A **Vector Space** is defined as a set of vectors \\(V\\) with the operations of addition and scalar multiplication which follow the following properties (formally known as **axioms**), where \\(\vec u, \vec v, \vec w \\in V\\) and \\(c,d\\in \\mathbb{R} \\) (set of all real numbers).
 
@@ -511,7 +520,7 @@ Scaling a vector must produce a vector which is in the set \\(V\\)
 
 7.) \\(c \cdot (\vec u+ \vec v) = c \cdot \vec u + c \cdot \vec v\\)
 
-The Distributive Property: if I multiply the sum of vectors by a constant, it would produce the same result as multiplying each individual vector and then adding the result together 
+The Distributive Property: if I multiply the sum of vectors by a constant, it would produce the same result as multiplying each individual vector and then adding the result together
 
 8.) \\((c + d)\cdot u = c \cdot \vec u + d \cdot \vec u \\)
 
@@ -523,19 +532,20 @@ This shows the assocativity principle again, but we account for scalar multiplic
 
 10.) \\(1\cdot \vec u = \vec u\\)
 
-Scaling a vector by 1 should give the same vector back
+Scaling a vector by 1 should give the same vector back <sup>3</sup>
 
 The reason we present this to you is because of the fact that the "set of vectors" doesn't actually have to be just a set of vectors! It can be extended to many other mathematical entities, such as polynomials and arbitrary functions (so long as they follow the axioms above). If you are skeptical about this property, I encourage you to take some arbitrary polynomial and subject it to the above (multiplying a polynomial by a polynomial gives: another polynomial, so does addition, multiplying by a constant, etc.)
 
-What makes this highly desirable is we can work with incredibly complex functions using the tools linear algebra already gives us. 
+What makes this highly desirable is we can work with incredibly complex functions using the tools linear algebra already gives us.
 
-This brings us to the **Hilbert Space**, which is a __type__ of vector space that has a few more rules added to it but proves incredibly nice to work with when we reach core Quantum Mechanics 
+This brings us to the **Hilbert Space**, which is a __type__ of vector space that has a few more rules added to it but proves incredibly nice to work with when we reach core Quantum Mechanics
 
-## Hilbert Space
+## Hilbert Space <sup>4</sup>
 
 **Hilbert Space** is a type of vector space which satisfies the 10 axioms above but introduces a handful of others.
 
 ### Inner Product Operation
+
 One of the main definitions is that of an **inner product**. You'll remember that we introduced it as the **dot product** although that term is more specific to real numbered vectors which have a clear geometric interpretation 
 
 The notation for the inner product is slightly different from what we've presented for the dot product.
@@ -548,7 +558,7 @@ We now do the same thing but with angled brackets:
 
 \\[ \langle \vec a, \vec b \rangle \\]
 
-Furthermore, for the examples below we will stop treating the "things" in Hilber Space as vectors and encourage your to think of them as "elements", owing to the fact that the section of Vector Spaces already proves their ability to be used with arbitrary functions. 
+Furthermore, for the examples below we will stop treating the "things" in Hilbert Space as vectors and encourage your to think of them as "elements", owing to the fact that the section of Vector Spaces already proves their ability to be used with arbitrary functions.
 
 The inner product in Hilbert Space has a couple of rules which go as follows.
 
@@ -578,7 +588,7 @@ If we take the inner product of an element with itself, we are GUARANTEED a valu
 
 \\[\langle a, a\rangle = \mid a \mid^2 \geq 0 \\]
 
-### Separability 
+### Separability
 
 The idea of **separability** means that the Hilbert Space has a **countable**, **dense**, **subset**.
 
@@ -588,15 +598,15 @@ We know that the set of rational numbers \\(\mathbb{Q}\\) is a **subset** of \\(
 
 We also know that that \\(\mathbb{Q}\\) is **countable** as all rational values can be expressed as the ratio of two integers which themselves are countable (they are more properly known as *countably infinite* owing to the fact that the set of integers, also a subset of the real numbers, goes on to infinity).
 
-Furthermore, the set of rational numbers is **dense** meaning that we can find some rational number that can get arbitrarily close to an irrational number in the set of real numbers. A nice way of visualizing this is the fact that pi can be better and better approximated with fractions that have larger integer values in the numerator and denominator of a fraction. 
+Furthermore, the set of rational numbers is **dense** meaning that we can find some rational number that can get arbitrarily close to an irrational number in the set of real numbers. A nice way of visualizing this is the fact that pi can be better and better approximated with fractions that have larger integer values in the numerator and denominator of a fraction.
 
 ### Completeness
 
-__Completeness__ is the fact that as two values in the space get arbitrarily close to eachother, we should still get a value that exists within the space itself.
+__Completeness__ is the fact that as two values in the space get arbitrarily close to each other, we should still get a value that exists within the space itself.
 
-A more formal way of stating this is that the __Cauchy Sequence__ within the space will produce a value that also exists in the space. 
+A more formal way of stating this is that the __Cauchy Sequence__ within the space will produce a value that also exists in the space.
 
-## Types of Hilbert Space
+## Types of Hilbert Space <sup>5</sup>
 
 There are two types of Hilbert Spaces:
 
@@ -609,11 +619,11 @@ Some more detail on the distinction is given below
 
 In the Finite variation, the basis vectors that you can make other vectors with or more generally, the elements that permit you to make other elements, are finite.
 
-All the examples you saw with the dot product and matrices use a pair of finite, vectors. 
+All the examples you saw with the dot product and matrices use a pair of finite, vectors.
 
 ### Infinite Dimensional Hilbert Space
 
-In the infinite variation (and the one we'll be doing the great majority of our work in) we have a infinite number of basis elements to create other elements from. 
+In the infinite variation (and the one we'll be doing the great majority of our work in) we have a infinite number of basis elements to create other elements from.
 
 The importance of this will be made clear as we dive more into Core Quantum Mechanics but there is another property which should be committed to heart:
 
@@ -621,6 +631,14 @@ All functions in this space are **square integrable**
 
 This means the following property must be true:
 
-\\[ \int_{-\infty}^\infty \mid f(x)\mid^2 = finite \\] 
+\\[ \int_{-\infty}^\infty \mid f(x)\mid^2 = finite \\]
 
-We are guaranteed a finite value for such integrals. 
+We are guaranteed a finite value for such integrals.
+
+## Citations
+
+1. [DO YOU EVEN DOT PRODUCT BRO? - Andrew Dotson](https://www.youtube.com/watch?v=Qpm85nC2BBE&ab_channel=AndrewDotson)
+2. [Eigenvectors and Eigenvalues | Essence of Linear Algebra, chapter 14 - 3Blue1Brown](https://www.youtube.com/watch?v=PFDu9oVAE-g&ab_channel=3Blue1Brown)
+3. [Vector Spaces - The Definition - 3 Problems - patrickJMT](https://www.youtube.com/watch?v=8DYyKKCBDBQ&ab_channel=patrickJMT)
+4. [An Introduction to Hilbert Spaces - Faculty of Khan](https://www.youtube.com/watch?v=7zx3MT9FgT0&list=PLdgVBOaXkb9Bv466YnyxslT4gIlSZdtjw&index=2&ab_channel=FacultyofKhan)
+5. [Introduction to Hilbert Spaces - Important Examples - Faculty of Khan](https://www.youtube.com/watch?v=ua-Y4k0gq8w&list=PLdgVBOaXkb9Bv466YnyxslT4gIlSZdtjw&index=3&ab_channel=FacultyofKhan)

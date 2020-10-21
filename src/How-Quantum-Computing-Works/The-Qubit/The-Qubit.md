@@ -28,6 +28,9 @@ A final, important property of qubits is that although measurement will cause th
 <p align="center">
   <img  src="/How-Quantum-Computing-Works/The-Qubit/qubit.png" style="height: 50%; width: 50%; background-color: white;">
 </p>
+<p align="center">
+   <i> Source: <a href=https://medium.com/@kareldumon/the-computational-power-of-quantum-computers-an-intuitive-guide-9f788d1492b6> The Computational Power of Quantum Computers: an intuitive guide by Karel Dumon</a> </i>
+</p>
 
 This result should remind you of the probabilistic nature of Quantum Computation already hinted by the __BQP__ and __QMA__ complexity classes where we a problem needs to be solved correctly AT LEAST some fraction of the time to fall into the quantum complexity classes. 
 
@@ -72,6 +75,9 @@ The following image gives just a sneak-peek at some of the different kinds of ar
 <p align="center">
   <img  src="/How-Quantum-Computing-Works/The-Qubit/qubit-types.png" style="height: 95%; width: 95%; background-color: white;">
 </p>
+<p align="center">
+   <i> Source: <a href=https://science.sciencemag.org/content/354/6316/1090/tab-figures-data> Quest for Qubits by Gabriel Popkin </a> </i>
+</p>
 
 There are also several models of computation qubits are being used for. 
 
@@ -82,12 +88,15 @@ The following picture gives an example of a computation set up in the __circuit 
 <p align="center">
   <img  src="/How-Quantum-Computing-Works/The-Qubit/quantum-gates.jpeg" style="height: 60%; width: 60%; background-color: white;">
 </p>
+<p align="center">
+   <i> Source: <a href=https://medium.com/@jonathan_hui/qc-programming-with-quantum-gates-8996b667d256> QC - Programming with Quantum Gates (Single Qubits) by Jonathan Hui</a> </i>
+</p>
 
 Gates give a great degree of flexibility in the expression of algorithms and can represent a __Quantum Turing Machine (QTM)__ which is capable of executing any Quantum Algorithm.
 
 The circuit model is not the only one however, with __Adiabatic Quantum Computation (AQC)__ and __Gaussian Boson Sampling (GBS)__ being two other methods. Both use qubits with the properties above but can't implement a QTM, thereby limiting their ability to execute existing Quantum Algorithms. This doesn't make them any less useful however as both tackle different sets of problems in a more elegant (and/or efficient) fashion than the __circuit model__ does. 
 
-There are certain problems that cannot be expressed nicely in terms of gates that seem to fare better through expression through AQC or GBS. 
+There are certain problems that cannot be expressed nicely in terms of gates that seem to fare better through expression through AQC or GBS.
 
 ## Decoherence
 
