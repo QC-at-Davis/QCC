@@ -26,7 +26,7 @@ When the qubit is measured, we're guaranteed a \\(1\\) or \\(0\\) value but the 
 A final, important property of qubits is that although measurement will cause the qubit to collapse to \\(1\\) or \\(0\\), we can perform useful manipulations WITHIN the superposition state that affect the probability distribution. This is one of the great powers of QC. 
 
 <p align="center">
-  <img  src="/How-Quantum-Computing-Works/The-Qubit/qubit.png" style="height: 50%; width: 50%; background-color: white;">
+  <img  src="qubit.png" style="height: 50%; width: 50%; background-color: white;">
 </p>
 <p align="center">
    <i> Source: <a href=https://medium.com/@kareldumon/the-computational-power-of-quantum-computers-an-intuitive-guide-9f788d1492b6> The Computational Power of Quantum Computers: an intuitive guide by Karel Dumon</a> </i>
@@ -73,7 +73,7 @@ Owing to this diversity, the authors of this guide have opted not to present the
 The following image gives just a sneak-peek at some of the different kinds of architectures already in existence (with the exception of Topological Qubits, which are theorized but have yet to be implemented):
 
 <p align="center">
-  <img  src="/How-Quantum-Computing-Works/The-Qubit/qubit-types.png" style="height: 95%; width: 95%; background-color: white;">
+  <img  src="qubit-types.png" style="height: 95%; width: 95%; background-color: white;">
 </p>
 <p align="center">
    <i> Source: <a href=https://science.sciencemag.org/content/354/6316/1090/tab-figures-data> Quest for Qubits by Gabriel Popkin </a> </i>
@@ -86,7 +86,7 @@ The first and most commonly implemented is the __circuit model__ where individua
 The following picture gives an example of a computation set up in the __circuit model__, with each line representing a qubit and each box a gate that will manipulate the qubit. 
 
 <p align="center">
-  <img  src="/How-Quantum-Computing-Works/The-Qubit/quantum-gates.jpeg" style="height: 60%; width: 60%; background-color: white;">
+  <img  src="quantum-gates.jpeg" style="height: 60%; width: 60%; background-color: white;">
 </p>
 <p align="center">
    <i> Source: <a href=https://medium.com/@jonathan_hui/qc-programming-with-quantum-gates-8996b667d256> QC - Programming with Quantum Gates (Single Qubits) by Jonathan Hui</a> </i>

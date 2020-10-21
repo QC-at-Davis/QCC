@@ -32,7 +32,7 @@ The Solovay-Strassen test can *probabilistically* determine whether or not an in
 The steps for the entire algorithm are presented below. Don't concern yourself too much with anything beyond the first three lines.
 
 <p align="center">
-  <img  src="/Classical-Computation/Church-Turing-Thesis/solovay-strassen.jpg">
+  <img  src="solovay-strassen.jpg">
 </p>
 <p align="center">
    <i> Source: <a href=https://slideplayer.com/slide/5864331/> Public Key ciphers 1 Session 5. by Katrina Morrison </a> </i>

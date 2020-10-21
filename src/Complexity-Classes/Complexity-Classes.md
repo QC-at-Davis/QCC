@@ -7,7 +7,7 @@ This ties in nicely with Big-O and our definition of resource consumption based 
 The following Euler Diagram gives a nice graphical overview of the four most commonly encountered complexity-classes.
 
 <p align="center">
-  <img  src="/Complexity-Classes/four-complexities.png" style="height: 30%; width: 30%; background-color: white;">
+  <img  src="four-complexities.png" style="height: 30%; width: 30%; background-color: white;">
 </p>
 <p align="center">
    <i> Source: <a href=https://en.wikipedia.org/wiki/NP-completeness#/media/File:P_np_np-complete_np-hard.svg> Wikipedia Entry for NP-Completeness </a> </i>

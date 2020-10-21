@@ -176,7 +176,7 @@
 </blockquote>
 <p>In plain English, a function \( f(n) \) can be considered &quot;Big-O&quot; of \( g(n) \) if you can find a number to plug into n such as (\( n_0 \)) and a constant \(c \) such that there is a point where \( c \cdot g(n) \) exceeds all values of \( f(n) \).</p>
 <p align="center">
-  <img  src="/Classical-Computation/Computational-Complexity/big-O.png">
+  <img  src="big-O.png">
 </p>
 <p>Let's try a quick example.</p>
 <p>I have an algorithm who's resource consumption given some input data \( n \) grows by \( f(n) = 2n^2 + n + 5 \).</p>
@@ -185,7 +185,7 @@
 <p>With that in mind, \(10n^2\) can easily grow faster than the given \(f(n)\). To truly satisfy the definition, we need to find an exact \(n_0\). The constant \(10\) in front of the \(10n^2\) already satisfies the first requirement of having a positive constant multiplier \(c\).</p>
 <p>We graph the two functions together and find our \(n_0\):</p>
 <p align="center">
-  <img  src="/Classical-Computation/Computational-Complexity/big-O-example.png">
+  <img  src="big-O-example.png">
 </p>
 <p>With the function found, as well as a suitable \(n_0\) and \(c\), we can now say the following</p>
 <blockquote>
@@ -193,7 +193,7 @@
 </blockquote>
 <p>With that understanding, the image below gives an idea for the different kinds of complexities you'll frequently bump into in the computer science world, as well as how to think of them qualitatively (is \(O(n)\) good or bad? What about \(O(log(n))\)?)</p>
 <p align="center">
-  <img  src="/Classical-Computation/Computational-Complexity/big-O-chart.png">
+  <img  src="big-O-chart.png">
 </p>
 <p align="center">
    <i> Source: <a href=https://www.bigocheatsheet.com/> Big-O Cheat Sheet <a> </i>

@@ -38,7 +38,7 @@ The exact definition is presented below:
 In plain English, a function \\( f(n) \\) can be considered "Big-O" of \\( g(n) \\) if you can find a number to plug into n such as (\\( n_0 \\)) and a constant \\(c \\) such that there is a point where \\( c \cdot g(n) \\) exceeds all values of \\( f(n) \\).
 
 <p align="center">
-  <img  src="/Classical-Computation/Computational-Complexity/big-O.png">
+  <img  src="big-O.png">
 </p>
 
 Let's try a quick example.
@@ -54,7 +54,7 @@ With that in mind, \\(10n^2\\) can easily grow faster than the given \\(f(n)\\).
 We graph the two functions together and find our \\(n_0\\):
 
 <p align="center">
-  <img  src="/Classical-Computation/Computational-Complexity/big-O-example.png">
+  <img  src="big-O-example.png">
 </p>
 
 With the function found, as well as a suitable \\(n_0\\) and \\(c\\), we can now say the following
@@ -64,7 +64,7 @@ With the function found, as well as a suitable \\(n_0\\) and \\(c\\), we can now
 With that understanding, the image below gives an idea for the different kinds of complexities you'll frequently bump into in the computer science world, as well as how to think of them qualitatively (is \\(O(n)\\) good or bad? What about \\(O(log(n))\\)?)
 
 <p align="center">
-  <img  src="/Classical-Computation/Computational-Complexity/big-O-chart.png">
+  <img  src="big-O-chart.png">
 </p>
 
 <p align="center">

@@ -120,7 +120,7 @@ There is also an elegant geometric interpretation of the dot product:
 It is the "amount" that one vector overlaps or projects onto another vector as depicted in the image below:
 
 <p align="center">
-  <img  src="/Mathematical-Tools/Linear-Algebra/vector-projection.png" style="height: 30%; width: 30%; background-color: white;">
+  <img  src="vector-projection.png" style="height: 30%; width: 30%; background-color: white;">
 </p>
 <p align="center">
    <i> Source: <a href=https://mathinsight.org/dot_product/> Math Insight - the dot product </a> </i>
@@ -205,7 +205,7 @@ We use the \\(*\\) with vectors and matrices to represent the conjugate version.
 A __transform__ simply means that we swap the rows for the columns or "rotate" the matrix around its diagonal which always spans from the upper leftmost corner to the lower right corner in a clean diagonal (doesn't skip numbers) from one value to the next. 
 
 <p align="center">
-  <img  src="/Mathematical-Tools/Linear-Algebra/transpose-animation.gif" style="height: 30%; width: 30%; background-color: white;">
+  <img  src="transpose-animation.gif" style="height: 30%; width: 30%; background-color: white;">
 </p>
 <p align="center">
    <i> Source: <a href=http://linearalgebra.math.umanitoba.ca/math1220/section-19.html> Transpose and Trace of a Matrix, University of Manitoba, Math 1220 Linear Algebra 1 by Michael Doob </a> </i>
@@ -456,7 +456,7 @@ If this is true, there is an associated __Eigenvalue__ which performs the equiva
 The image below should sum all this up:
 
 <p align="center">
-  <img  src="/Mathematical-Tools/Linear-Algebra/eigenvector.png" style="height: 30%; width: 30%; background-color: white;">
+  <img  src="eigenvector.png" style="height: 30%; width: 30%; background-color: white;">
 </p>
 <p align="center">
    <i> Source: <a href=https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors> Eigenvalues and Eigenvectors</a> </i>

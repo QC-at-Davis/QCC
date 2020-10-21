@@ -27,7 +27,7 @@ Above the tape is a __head__ that can perform the following actions <sup>3</sup>
 The following diagram is a visual representation of the above:
 
 <p align="center">
-  <img  src="/Classical-Computation/Turing-Machine/turing-machine.png">
+  <img  src="turing-machine.png">
 </p>
 
 <p align="center">

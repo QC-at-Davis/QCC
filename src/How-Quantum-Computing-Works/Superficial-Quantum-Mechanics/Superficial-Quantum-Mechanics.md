@@ -23,7 +23,7 @@ To make this vapid definition more useful to us, let's look at a physical exampl
 For the large majority of our youthful education, we learn to think of the atom like this:
 
 <p align="center">
-  <img  src="/How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/bohr-model.gif" style="height: 60%; width: 60%; background-color: white;">
+  <img  src="bohr-model.gif" style="height: 60%; width: 60%; background-color: white;">
 </p>
 
 pay close attention to the electrons. The way they're illustrated in particular, as point-like masses orbiting around the nucleus with an associated negative charge.
@@ -31,7 +31,7 @@ pay close attention to the electrons. The way they're illustrated in particular,
 Now let's perform an experiment. We'll set up a beam of electrons aimed at a barrier with two slits and have another barrier behind it to see how the electrons come out:
 
 <p align="center">
-  <img  src="/How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/double-slit.png" style="height: 60%; width: 60%; background-color: white;">
+  <img  src="double-slit.png" style="height: 60%; width: 60%; background-color: white;">
 </p>
 <p align="center">
    <i> Source: <a href=https://en.wikipedia.org/wiki/Double-slit_experiment#/media/File:Double-slit.svg> Double-slit Experiment, Wikipedia Entry</a> </i>
@@ -42,7 +42,7 @@ Now let's perform an experiment. We'll set up a beam of electrons aimed at a bar
 Before we turn on the beam, let's make a prediction about what we'll see. If we go off what we know in the first image about electrons being these point-like masses, we should see the following:
 
 <p align="center">
-  <img  src="/How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/double-band.png" style="height: 40%; width: 40%; background-color: white;">
+  <img  src="double-band.png" style="height: 40%; width: 40%; background-color: white;">
 </p>
 <p align="center">
    <i> Source: <a href= https://plus.maths.org/content/physics-minute-double-slit-experiment-0> Physics in a minute: The double slit experiment</a> </i>
@@ -53,7 +53,7 @@ The electrons will just repeatedly hit the same two places, sort of like shootin
 If we turn on the beam, we get the following:
 
 <p align="center">
-  <img  src="/How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/full-double-slit.png" style="height: 50%; width: 50%; background-color: white;">
+  <img  src="full-double-slit.png" style="height: 50%; width: 50%; background-color: white;">
 </p>
 <p align="center">
    <i> Source: <a href=https://en.wikipedia.org/wiki/Double-slit_experiment#/media/File:Double-slit.svg> Double-slit Experiment, Wikipedia Entry</a> </i>
@@ -64,7 +64,7 @@ Note that the pattern produced is far from what we predicted! It's a continuousl
 IT DOES however, match the pattern generated if we were to pass some kind of wave through the two slits:
 
 <p align="center">
-  <img  src="/How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/water-double-slit.jpg" style="height: 50%; width: 50%; background-color: white;">
+  <img  src="water-double-slit.jpg" style="height: 50%; width: 50%; background-color: white;">
 </p>
 <p align="center">
    <i> Source: <a href=https://www.youtube.com/watch?v=0cztIj1m7e4> Double-slit Experiment - Water Wave Interference Pattern</a> </i>
@@ -79,7 +79,7 @@ Let's try just shooting one electron at a time. That should give us the two-band
 What do we see?
 
 <p align="center">
-  <img  src="/How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/single-particle.jpg" style="height: 60%; width: 60%; background-color: white;">
+  <img  src="single-particle.jpg" style="height: 60%; width: 60%; background-color: white;">
 </p>
 
 The same thing! Some how, individual electrons also seem to exhibit this __wave-particle duality__ where it can behave both as a wave and a particle! What is rather remarkable is that each electron isn't "communicating" or sharing information with the electrons after it but it seems as if the electrons "know" where they need to go on the barrier to create a wave interference pattern.
@@ -101,7 +101,7 @@ When the electrons in our experiment interacted with the barrier, the wave funct
 We also know that due to this wave function, electrons actually look more like this:
 
 <p align="center">
-  <img  src="/How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/orbitals.jpg" style="height: 60%; width: 60%; background-color: white;">
+  <img  src="orbitals.jpg" style="height: 60%; width: 60%; background-color: white;">
 </p>
 
 the weird lobes and spheroids you see give the *probability* of an electron at a certain energy existing at a certain location around the nucleus.

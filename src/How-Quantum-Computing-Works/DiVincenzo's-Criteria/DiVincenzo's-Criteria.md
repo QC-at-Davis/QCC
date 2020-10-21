@@ -42,7 +42,7 @@ In classical computing, it's possible to have a gate or set of gates that can, i
 
 Take for example, the NOR gate below:
 <p align="center">
-  <img  src="/How-Quantum-Computing-Works/DiVincenzo's-Criteria/universal-gate-nor.gif" style="height: 50%; width: 50%; background-color: white;">
+  <img  src="universal-gate-nor.gif" style="height: 50%; width: 50%; background-color: white;">
 </p>
 <p align="center">
    <i> Source: <a href=https://www.electronics-tutorials.ws/logic/universal-gates.html> Universal Logic Gates and Complete Sets </a> </i>
