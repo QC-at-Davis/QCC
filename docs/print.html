@@ -185,7 +185,7 @@ Feedback is welcome!
 <h2><a class="header" href="#what-is-classical-computation" id="what-is-classical-computation">What is &quot;Classical Computation?&quot;</a></h2>
 <p>Classical Computation is just a fancier way of addressing the way we've been performing computing for the past 40 or so years: with 1s and 0s or more formally stated as <strong>binary</strong>.</p>
 <p align="center">
-  <img  src="Classical-Computation//img/Classical-Computation/binary-code.jpg">
+  <img  src="Classical-Computation/binary-code.jpg">
 </p>
 <p align="center">
    <i> Source: <a href=https://www.facebook.com/binarycoderobot/> Binary Code Robot </a> </i>
@@ -1098,6 +1098,21 @@ y
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         

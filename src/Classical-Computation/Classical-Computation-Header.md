@@ -7,7 +7,7 @@ Not understanding these ideas won't stop you from jumping into coding but it hel
 Classical Computation is just a fancier way of addressing the way we've been performing computing for the past 40 or so years: with 1s and 0s or more formally stated as **binary**.
 
 <p align="center">
-  <img  src="/img/Classical-Computation/binary-code.jpg">
+  <img  src="binary-code.jpg">
 </p>
 <p align="center">
    <i> Source: <a href=https://www.facebook.com/binarycoderobot/> Binary Code Robot </a> </i>
