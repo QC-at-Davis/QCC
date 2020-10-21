@@ -123,6 +123,6 @@ These criteria are known as the __DiVincenzo Criteria__ and will be explained in
 
 ## Citations
 
-1. [[Quantum Computing and Shor's Algorithm by Matthew Hayward - section on Quantum Parallelism](https://quantum-algorithms.herokuapp.com/299/paper/node16.html)
+1. [Quantum Computing and Shor's Algorithm by Matthew Hayward - section on Quantum Parallelism](https://quantum-algorithms.herokuapp.com/299/paper/node16.html)
 2. [Decoherence - Quantum Computing's Greatest Obstacle by Tanisha Bassan](https://medium.com/hackernoon/decoherence-quantum-computers-greatest-obstacle-67c74ae962b6)
-3. See 1.
+3. See 2.
