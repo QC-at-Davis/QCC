@@ -168,19 +168,24 @@
 <p>The second point can also be understood in the more broad terms of, &quot;Can a Quantum Computer provide some speed-up of an algorithm that a classical computer cannot?&quot;</p>
 <h2><a class="header" href="#speed-up-examples" id="speed-up-examples">Speed-Up Examples</a></h2>
 <p>Some examples of these speed-ups are <strong>Grover's Algorithm</strong> and <strong>Shor's Algorithm</strong>, two of the most commonly cited algorithms in Quantum Computing.</p>
-<h3><a class="header" href="#grovers-algorithm" id="grovers-algorithm">Grover's Algorithm</a></h3>
-<p><strong>Grover's Algorithm</strong> can, given an output value and a function, find the specific input value required to produce that output value in: </p>
+<h3><a class="header" href="#grovers-algorithm-sup1sup" id="grovers-algorithm-sup1sup">Grover's Algorithm <sup>1</sup></a></h3>
+<p><strong>Grover's Algorithm</strong> can, given an output value and a function, find the specific input value required to produce that output value in:</p>
 <p>\[ O(\sqrt{n})\]</p>
 <p>time-complexity. This is fairly astounding considering that at the bare minimum, you need:</p>
 <p>\[ O(n) \]</p>
-<p>time complexity to check each element within the domain of the function. </p>
+<p>time complexity to check each element within the domain of the function.</p>
 <h3><a class="header" href="#shors-algorithm" id="shors-algorithm">Shor's Algorithm</a></h3>
 <p><strong>Shor's Algorithm</strong> is an algorithm for integer factorization. It has garnered a lot of attention due to the fact that, should it be implementable in the future, can pose a threat to public-key cryptography which relies on the fact that integer factorization for large values is incredibly prohibitive to do on classical computers.</p>
 <p>The current fastest algorithm for integer factorization on classical computers is the <strong>General Number Field Sieve</strong> which works in sub-exponential but superpolynomial time:</p>
 <p>\[ O(e^{1.9(log \ N)^{1/3}(log \ log \ N)^{2/3}}) \]</p>
 <p>Shor's promises the following speed-up:</p>
 <p>\[ O((log \ N)^{2} (log \ log \ N)(log \ log \ log \ N))\]</p>
-<p>An exponential speed-up over <strong>General Number Field Sieve</strong></p>
+<p>An exponential speed-up over <strong>General Number Field Sieve</strong> <sup>2</sup></p>
+<h2><a class="header" href="#citation" id="citation">Citation</a></h2>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Grover%27s_algorithm">Wikipedia Entry, Grover's Algorithm</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Shor%27s_algorithm">Wikipedia Entry, Shor's Algorithm</a></li>
+</ol>
 
                     </main>
 

@@ -360,19 +360,24 @@ Note: Elements in the above diagram is equivalent to data inputted
 <p>The second point can also be understood in the more broad terms of, &quot;Can a Quantum Computer provide some speed-up of an algorithm that a classical computer cannot?&quot;</p>
 <h2><a class="header" href="#speed-up-examples" id="speed-up-examples">Speed-Up Examples</a></h2>
 <p>Some examples of these speed-ups are <strong>Grover's Algorithm</strong> and <strong>Shor's Algorithm</strong>, two of the most commonly cited algorithms in Quantum Computing.</p>
-<h3><a class="header" href="#grovers-algorithm" id="grovers-algorithm">Grover's Algorithm</a></h3>
-<p><strong>Grover's Algorithm</strong> can, given an output value and a function, find the specific input value required to produce that output value in: </p>
+<h3><a class="header" href="#grovers-algorithm-sup1sup" id="grovers-algorithm-sup1sup">Grover's Algorithm <sup>1</sup></a></h3>
+<p><strong>Grover's Algorithm</strong> can, given an output value and a function, find the specific input value required to produce that output value in:</p>
 <p>\[ O(\sqrt{n})\]</p>
 <p>time-complexity. This is fairly astounding considering that at the bare minimum, you need:</p>
 <p>\[ O(n) \]</p>
-<p>time complexity to check each element within the domain of the function. </p>
+<p>time complexity to check each element within the domain of the function.</p>
 <h3><a class="header" href="#shors-algorithm" id="shors-algorithm">Shor's Algorithm</a></h3>
 <p><strong>Shor's Algorithm</strong> is an algorithm for integer factorization. It has garnered a lot of attention due to the fact that, should it be implementable in the future, can pose a threat to public-key cryptography which relies on the fact that integer factorization for large values is incredibly prohibitive to do on classical computers.</p>
 <p>The current fastest algorithm for integer factorization on classical computers is the <strong>General Number Field Sieve</strong> which works in sub-exponential but superpolynomial time:</p>
 <p>\[ O(e^{1.9(log \ N)^{1/3}(log \ log \ N)^{2/3}}) \]</p>
 <p>Shor's promises the following speed-up:</p>
 <p>\[ O((log \ N)^{2} (log \ log \ N)(log \ log \ log \ N))\]</p>
-<p>An exponential speed-up over <strong>General Number Field Sieve</strong></p>
+<p>An exponential speed-up over <strong>General Number Field Sieve</strong> <sup>2</sup></p>
+<h2><a class="header" href="#citation" id="citation">Citation</a></h2>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Grover%27s_algorithm">Wikipedia Entry, Grover's Algorithm</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Shor%27s_algorithm">Wikipedia Entry, Shor's Algorithm</a></li>
+</ol>
 <h1><a class="header" href="#complexity-classes-1" id="complexity-classes-1">Complexity Classes</a></h1>
 <p>Complexity classes are a way of <em>categorizing problems based on the resources required to solve them</em>.</p>
 <p>This ties in nicely with Big-O and our definition of resource consumption based on the size of an algorithm's input.</p>
@@ -570,15 +575,12 @@ Note: Elements in the above diagram is equivalent to data inputted
 <p align="center">
    <i> Source: <a href=https://medium.com/@kareldumon/the-computational-power-of-quantum-computers-an-intuitive-guide-9f788d1492b6> The Computational Power of Quantum Computers: an intuitive guide by Karel Dumon</a> </i>
 </p>
-<p>This result should remind you of the probabilistic nature of Quantum Computation already hinted by the <strong>BQP</strong> and <strong>QMA</strong> complexity classes where we a problem needs to be solved correctly AT LEAST some fraction of the time to fall into the quantum complexity classes. </p>
+<p>This result should remind you of the probabilistic nature of Quantum Computation already hinted by the <strong>BQP</strong> and <strong>QMA</strong> complexity classes where we a problem needs to be solved correctly AT LEAST some fraction of the time to fall into the quantum complexity classes.</p>
 <p>All of this seems more like a nuisance than something to accelerate computation but superposition allows for a property known as <strong>Inherent Parallelism</strong>.</p>
 <h3><a class="header" href="#inherent-parallelism" id="inherent-parallelism">Inherent Parallelism</a></h3>
-<p>In a classical computer, we know that you can use combinations of bits to represent data. Each bit can be in one of two states giving you:</p>
-<p>\[ n^{2} \]</p>
-<p>possible combinations, where \(n\) is the number of bits you have. Due to the nature of classical computation, you can only manipulate one combination at a time. </p>
-<p>In a quantum computer however, we know that superposition allows us to represent multiple states at once. That means with each qubit added we can have</p>
+<p>In a quantum computer, we know that superposition allows us to represent multiple states at once. That means with each qubit added gives us</p>
 <p>\[ 2^{n} \]</p>
-<p>possible combinations, where \(n\) is the number of qubits you have. Furthermore, we can manipulate qubits in this superposition state which is similar to working with ALL the possible states the classical computer could represent SIMULTANEOUSLY.</p>
+<p>possible states, where \(n\) is the number of qubits you have. <sup> 1 </sup> Furthermore, we can manipulate qubits in this superposition state which is similar to working with ALL the possible states the classical computer could represent SIMULTANEOUSLY.</p>
 <p>Superposition and Inherent Parallelism are only part of the Qubit story. Entanglement also plays an incredibly important role.</p>
 <h2><a class="header" href="#entanglement-1" id="entanglement-1">Entanglement</a></h2>
 <p>A solid grasp of the quantum mechanical definition of entanglement prior translates rather nicely to its context in QC. </p>
@@ -610,11 +612,11 @@ Note: Elements in the above diagram is equivalent to data inputted
 <p>There are certain problems that cannot be expressed nicely in terms of gates that seem to fare better through expression through AQC or GBS.</p>
 <h2><a class="header" href="#decoherence" id="decoherence">Decoherence</a></h2>
 <p>Decoherence is the last property that all qubits have. However, unlike superposition and entanglement it is not required and highly undesirable.</p>
-<p>Decoherence is when a <em>quantum system reverts to a classical system through interaction with its environment</em>. </p>
+<p>Decoherence is when a <em>quantum system reverts to a classical system through interaction with its environment</em>. <sup> 2 </sup></p>
 <p>A classical system has no ability for superposition let alone entanglement. As a result, if decoherence occurs during qubit manipulation, errors are introduced as well as data lost.</p>
 <p>To prevent such things from happening, most qubit architectures have there own ways of isolating qubits from the environment. The <strong>superconducting loop</strong> architecture for example, is prone to decoherence due to thermal fluctuations and magnetic disturbance, requiring the whole computer to be immersed in a specialized cooling apparatus and magnetic shielding. </p>
-<p>On top of this, many existing Quantum Computers will also use <strong>Quantum Error Correction (QEC)</strong> to recover from such errors and prolong the period of time available for computation. These protocols are drastically different from standard <strong>Error Correction Codes (ECC)</strong> owing to the fact that quantum mechanics introduces the <strong>No-Cloning Theorem</strong> which states that we can't copy a qubit while it's in the superposition state. This is different from the classical realm where I can literally just attach a wire and copy a \(1\) or \(0\). </p>
-<p>To subvert this, most QEC protocols use entanglement to determine if a qubit state changed in an undesirable fashion and to correct such an error without having to know the exact state of the qubit. </p>
+<p>On top of this, many existing Quantum Computers will also use <strong>Quantum Error Correction (QEC)</strong> to recover from such errors and prolong the period of time available for computation. <sup> 3 </sup> These protocols are drastically different from standard <strong>Error Correction Codes (ECC)</strong> owing to the fact that quantum mechanics introduces the <strong>No-Cloning Theorem</strong> which states that we can't copy a qubit while it's in the superposition state. This is different from the classical realm where I can literally just attach a wire and copy a \(1\) or \(0\).</p>
+<p>To subvert this, most QEC protocols use entanglement to determine if a qubit state changed in an undesirable fashion and to correct such an error without having to know the exact state of the qubit.</p>
 <h2><a class="header" href="#criteria-for-quantum-computing" id="criteria-for-quantum-computing">Criteria for Quantum Computing</a></h2>
 <p>At this point, you understand that the criteria a qubit must satisfy are:</p>
 <ul>
@@ -624,7 +626,13 @@ Note: Elements in the above diagram is equivalent to data inputted
 <p>Decoherence and the No-Cloning Theorem aren't necessary but are just consequences of the quantum mechanical principles qubits work in. </p>
 <p>Beyond this, there is an even larger set of criteria that need to be satisfied for a device to be considered a true Quantum Computer.</p>
 <p>At this point in time, most platforms satisfy the criteria to varying degrees but none has managed to satisfy all of them. Properties of certain qubit architectures even prohibit the realization of some of the criteria. </p>
-<p>These criteria are known as the <strong>DiVincenzo Criteria</strong> and will be explained in the next section. The utility of knowing these criteria is it gives you an idea of the current state of QC, what things a Quantum Computer AS A WHOLE should be able to do, and the future of the field. </p>
+<p>These criteria are known as the <strong>DiVincenzo Criteria</strong> and will be explained in the next section. The utility of knowing these criteria is it gives you an idea of the current state of QC, what things a Quantum Computer AS A WHOLE should be able to do, and the future of the field.</p>
+<h2><a class="header" href="#citations-2" id="citations-2">Citations</a></h2>
+<ol>
+<li>[<a href="https://quantum-algorithms.herokuapp.com/299/paper/node16.html">Quantum Computing and Shor's Algorithm by Matthew Hayward - section on Quantum Parallelism</a></li>
+<li><a href="https://medium.com/hackernoon/decoherence-quantum-computers-greatest-obstacle-67c74ae962b6">Decoherence - Quantum Computing's Greatest Obstacle by Tanisha Bassan</a></li>
+<li>See 1.</li>
+</ol>
 <h1><a class="header" href="#divincenzos-criteria-sup1sup" id="divincenzos-criteria-sup1sup">DiVincenzo's Criteria <sup>1</sup></a></h1>
 <p>In the previous section, we identified the criteria required for qubits. Now we move onto those necessary to construct a Quantum Computer.</p>
 <p>These criteria were proposed in 2000 by physicist David P. DiVincenzo. The end-goal is to have a Quantum Computer capable of performing the quantum simulations needed for the Quantum Many-Body Problem as well as executing Quantum Algorithms.</p>
@@ -670,7 +678,7 @@ Combining multiple NOR gates makes it possible to achieve any other desired set 
 <p>A <strong>stationary qubit</strong> is one that remains in the Quantum Computer that generated while a <strong>flying qubit</strong> is one that can be transmitted back and forth between Quantum Computers.</p>
 <p>Converting between them should allow information to be reliably sent and received without fear of decoherence, which falls into the last criteria of <em>The ability to faithfully transmit flying qubits between specified locations</em>.</p>
 <p>Progress in these areas has been an ongoing challenge, especially considering that decoherence inevitably happens in any environment outside of the Quantum Computer's control.</p>
-<h2><a class="header" href="#citations-2" id="citations-2">Citations</a></h2>
+<h2><a class="header" href="#citations-3" id="citations-3">Citations</a></h2>
 <ol>
 <li><a href="https://en.wikipedia.org/wiki/DiVincenzo%27s_criteria">Wikipedia Entry, DiVincenzo's Criteria</a></li>
 <li><a href="http://michaelnielsen.org/blog/the-solovay-kitaev-algorithm/">Michael Nielsen - The Solovay-Kitaev Algorithm</a></li>
@@ -1068,7 +1076,7 @@ y
 <p>This means the following property must be true:</p>
 <p>\[ \int_{-\infty}^\infty \mid f(x)\mid^2 = finite \]</p>
 <p>We are guaranteed a finite value for such integrals.</p>
-<h2><a class="header" href="#citations-3" id="citations-3">Citations</a></h2>
+<h2><a class="header" href="#citations-4" id="citations-4">Citations</a></h2>
 <ol>
 <li><a href="https://www.youtube.com/watch?v=Qpm85nC2BBE&amp;ab_channel=AndrewDotson">DO YOU EVEN DOT PRODUCT BRO? - Andrew Dotson</a></li>
 <li><a href="https://www.youtube.com/watch?v=PFDu9oVAE-g&amp;ab_channel=3Blue1Brown">Eigenvectors and Eigenvalues | Essence of Linear Algebra, chapter 14 - 3Blue1Brown</a></li>

@@ -16,9 +16,9 @@ The second point can also be understood in the more broad terms of, "Can a Quant
 
 Some examples of these speed-ups are __Grover's Algorithm__ and __Shor's Algorithm__, two of the most commonly cited algorithms in Quantum Computing.
 
-### Grover's Algorithm
+### Grover's Algorithm <sup>1</sup>
 
-__Grover's Algorithm__ can, given an output value and a function, find the specific input value required to produce that output value in: 
+__Grover's Algorithm__ can, given an output value and a function, find the specific input value required to produce that output value in:
 
 \\[ O(\sqrt{n})\\]
 
@@ -26,7 +26,7 @@ time-complexity. This is fairly astounding considering that at the bare minimum,
 
 \\[ O(n) \\]
 
-time complexity to check each element within the domain of the function. 
+time complexity to check each element within the domain of the function.
 
 ### Shor's Algorithm
 
@@ -40,4 +40,9 @@ Shor's promises the following speed-up:
 
 \\[ O((log \ N)^{2} (log \ log \ N)(log \ log \ log \ N))\\]
 
-An exponential speed-up over __General Number Field Sieve__
+An exponential speed-up over __General Number Field Sieve__ <sup>2</sup>
+
+## Citation
+
+1. [Wikipedia Entry, Grover's Algorithm](https://en.wikipedia.org/wiki/Grover%27s_algorithm)
+2. [Wikipedia Entry, Shor's Algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm)

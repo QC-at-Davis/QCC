@@ -32,23 +32,17 @@ A final, important property of qubits is that although measurement will cause th
    <i> Source: <a href=https://medium.com/@kareldumon/the-computational-power-of-quantum-computers-an-intuitive-guide-9f788d1492b6> The Computational Power of Quantum Computers: an intuitive guide by Karel Dumon</a> </i>
 </p>
 
-This result should remind you of the probabilistic nature of Quantum Computation already hinted by the __BQP__ and __QMA__ complexity classes where we a problem needs to be solved correctly AT LEAST some fraction of the time to fall into the quantum complexity classes. 
+This result should remind you of the probabilistic nature of Quantum Computation already hinted by the __BQP__ and __QMA__ complexity classes where we a problem needs to be solved correctly AT LEAST some fraction of the time to fall into the quantum complexity classes.
 
 All of this seems more like a nuisance than something to accelerate computation but superposition allows for a property known as __Inherent Parallelism__.
 
-### Inherent Parallelism 
+### Inherent Parallelism
 
-In a classical computer, we know that you can use combinations of bits to represent data. Each bit can be in one of two states giving you:
-
-\\[ n^{2} \\]
-
-possible combinations, where \\(n\\) is the number of bits you have. Due to the nature of classical computation, you can only manipulate one combination at a time. 
-
-In a quantum computer however, we know that superposition allows us to represent multiple states at once. That means with each qubit added we can have
+In a quantum computer, we know that superposition allows us to represent multiple states at once. That means with each qubit added gives us
 
 \\[ 2^{n} \\]
 
-possible combinations, where \\(n\\) is the number of qubits you have. Furthermore, we can manipulate qubits in this superposition state which is similar to working with ALL the possible states the classical computer could represent SIMULTANEOUSLY.
+possible states, where \\(n\\) is the number of qubits you have. <sup> 1 </sup> Furthermore, we can manipulate qubits in this superposition state which is similar to working with ALL the possible states the classical computer could represent SIMULTANEOUSLY.
 
 Superposition and Inherent Parallelism are only part of the Qubit story. Entanglement also plays an incredibly important role.
 
@@ -102,15 +96,15 @@ There are certain problems that cannot be expressed nicely in terms of gates tha
 
 Decoherence is the last property that all qubits have. However, unlike superposition and entanglement it is not required and highly undesirable.
 
-Decoherence is when a *quantum system reverts to a classical system through interaction with its environment*. 
+Decoherence is when a *quantum system reverts to a classical system through interaction with its environment*. <sup> 2 </sup>
 
 A classical system has no ability for superposition let alone entanglement. As a result, if decoherence occurs during qubit manipulation, errors are introduced as well as data lost.
 
 To prevent such things from happening, most qubit architectures have there own ways of isolating qubits from the environment. The __superconducting loop__ architecture for example, is prone to decoherence due to thermal fluctuations and magnetic disturbance, requiring the whole computer to be immersed in a specialized cooling apparatus and magnetic shielding. 
 
-On top of this, many existing Quantum Computers will also use __Quantum Error Correction (QEC)__ to recover from such errors and prolong the period of time available for computation. These protocols are drastically different from standard __Error Correction Codes (ECC)__ owing to the fact that quantum mechanics introduces the __No-Cloning Theorem__ which states that we can't copy a qubit while it's in the superposition state. This is different from the classical realm where I can literally just attach a wire and copy a \\(1\\) or \\(0\\). 
+On top of this, many existing Quantum Computers will also use __Quantum Error Correction (QEC)__ to recover from such errors and prolong the period of time available for computation. <sup> 3 </sup> These protocols are drastically different from standard __Error Correction Codes (ECC)__ owing to the fact that quantum mechanics introduces the __No-Cloning Theorem__ which states that we can't copy a qubit while it's in the superposition state. This is different from the classical realm where I can literally just attach a wire and copy a \\(1\\) or \\(0\\).
 
-To subvert this, most QEC protocols use entanglement to determine if a qubit state changed in an undesirable fashion and to correct such an error without having to know the exact state of the qubit. 
+To subvert this, most QEC protocols use entanglement to determine if a qubit state changed in an undesirable fashion and to correct such an error without having to know the exact state of the qubit.
 
 ## Criteria for Quantum Computing
 
@@ -125,4 +119,10 @@ Beyond this, there is an even larger set of criteria that need to be satisfied f
 
 At this point in time, most platforms satisfy the criteria to varying degrees but none has managed to satisfy all of them. Properties of certain qubit architectures even prohibit the realization of some of the criteria. 
 
-These criteria are known as the __DiVincenzo Criteria__ and will be explained in the next section. The utility of knowing these criteria is it gives you an idea of the current state of QC, what things a Quantum Computer AS A WHOLE should be able to do, and the future of the field. 
+These criteria are known as the __DiVincenzo Criteria__ and will be explained in the next section. The utility of knowing these criteria is it gives you an idea of the current state of QC, what things a Quantum Computer AS A WHOLE should be able to do, and the future of the field.
+
+## Citations
+
+1. [[Quantum Computing and Shor's Algorithm by Matthew Hayward - section on Quantum Parallelism](https://quantum-algorithms.herokuapp.com/299/paper/node16.html)
+2. [Decoherence - Quantum Computing's Greatest Obstacle by Tanisha Bassan](https://medium.com/hackernoon/decoherence-quantum-computers-greatest-obstacle-67c74ae962b6)
+3. See 1.

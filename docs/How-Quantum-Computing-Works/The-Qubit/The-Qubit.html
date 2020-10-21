@@ -173,15 +173,12 @@
 <p align="center">
    <i> Source: <a href=https://medium.com/@kareldumon/the-computational-power-of-quantum-computers-an-intuitive-guide-9f788d1492b6> The Computational Power of Quantum Computers: an intuitive guide by Karel Dumon</a> </i>
 </p>
-<p>This result should remind you of the probabilistic nature of Quantum Computation already hinted by the <strong>BQP</strong> and <strong>QMA</strong> complexity classes where we a problem needs to be solved correctly AT LEAST some fraction of the time to fall into the quantum complexity classes. </p>
+<p>This result should remind you of the probabilistic nature of Quantum Computation already hinted by the <strong>BQP</strong> and <strong>QMA</strong> complexity classes where we a problem needs to be solved correctly AT LEAST some fraction of the time to fall into the quantum complexity classes.</p>
 <p>All of this seems more like a nuisance than something to accelerate computation but superposition allows for a property known as <strong>Inherent Parallelism</strong>.</p>
 <h3><a class="header" href="#inherent-parallelism" id="inherent-parallelism">Inherent Parallelism</a></h3>
-<p>In a classical computer, we know that you can use combinations of bits to represent data. Each bit can be in one of two states giving you:</p>
-<p>\[ n^{2} \]</p>
-<p>possible combinations, where \(n\) is the number of bits you have. Due to the nature of classical computation, you can only manipulate one combination at a time. </p>
-<p>In a quantum computer however, we know that superposition allows us to represent multiple states at once. That means with each qubit added we can have</p>
+<p>In a quantum computer, we know that superposition allows us to represent multiple states at once. That means with each qubit added gives us</p>
 <p>\[ 2^{n} \]</p>
-<p>possible combinations, where \(n\) is the number of qubits you have. Furthermore, we can manipulate qubits in this superposition state which is similar to working with ALL the possible states the classical computer could represent SIMULTANEOUSLY.</p>
+<p>possible states, where \(n\) is the number of qubits you have. <sup> 1 </sup> Furthermore, we can manipulate qubits in this superposition state which is similar to working with ALL the possible states the classical computer could represent SIMULTANEOUSLY.</p>
 <p>Superposition and Inherent Parallelism are only part of the Qubit story. Entanglement also plays an incredibly important role.</p>
 <h2><a class="header" href="#entanglement" id="entanglement">Entanglement</a></h2>
 <p>A solid grasp of the quantum mechanical definition of entanglement prior translates rather nicely to its context in QC. </p>
@@ -213,11 +210,11 @@
 <p>There are certain problems that cannot be expressed nicely in terms of gates that seem to fare better through expression through AQC or GBS.</p>
 <h2><a class="header" href="#decoherence" id="decoherence">Decoherence</a></h2>
 <p>Decoherence is the last property that all qubits have. However, unlike superposition and entanglement it is not required and highly undesirable.</p>
-<p>Decoherence is when a <em>quantum system reverts to a classical system through interaction with its environment</em>. </p>
+<p>Decoherence is when a <em>quantum system reverts to a classical system through interaction with its environment</em>. <sup> 2 </sup></p>
 <p>A classical system has no ability for superposition let alone entanglement. As a result, if decoherence occurs during qubit manipulation, errors are introduced as well as data lost.</p>
 <p>To prevent such things from happening, most qubit architectures have there own ways of isolating qubits from the environment. The <strong>superconducting loop</strong> architecture for example, is prone to decoherence due to thermal fluctuations and magnetic disturbance, requiring the whole computer to be immersed in a specialized cooling apparatus and magnetic shielding. </p>
-<p>On top of this, many existing Quantum Computers will also use <strong>Quantum Error Correction (QEC)</strong> to recover from such errors and prolong the period of time available for computation. These protocols are drastically different from standard <strong>Error Correction Codes (ECC)</strong> owing to the fact that quantum mechanics introduces the <strong>No-Cloning Theorem</strong> which states that we can't copy a qubit while it's in the superposition state. This is different from the classical realm where I can literally just attach a wire and copy a \(1\) or \(0\). </p>
-<p>To subvert this, most QEC protocols use entanglement to determine if a qubit state changed in an undesirable fashion and to correct such an error without having to know the exact state of the qubit. </p>
+<p>On top of this, many existing Quantum Computers will also use <strong>Quantum Error Correction (QEC)</strong> to recover from such errors and prolong the period of time available for computation. <sup> 3 </sup> These protocols are drastically different from standard <strong>Error Correction Codes (ECC)</strong> owing to the fact that quantum mechanics introduces the <strong>No-Cloning Theorem</strong> which states that we can't copy a qubit while it's in the superposition state. This is different from the classical realm where I can literally just attach a wire and copy a \(1\) or \(0\).</p>
+<p>To subvert this, most QEC protocols use entanglement to determine if a qubit state changed in an undesirable fashion and to correct such an error without having to know the exact state of the qubit.</p>
 <h2><a class="header" href="#criteria-for-quantum-computing" id="criteria-for-quantum-computing">Criteria for Quantum Computing</a></h2>
 <p>At this point, you understand that the criteria a qubit must satisfy are:</p>
 <ul>
@@ -227,7 +224,13 @@
 <p>Decoherence and the No-Cloning Theorem aren't necessary but are just consequences of the quantum mechanical principles qubits work in. </p>
 <p>Beyond this, there is an even larger set of criteria that need to be satisfied for a device to be considered a true Quantum Computer.</p>
 <p>At this point in time, most platforms satisfy the criteria to varying degrees but none has managed to satisfy all of them. Properties of certain qubit architectures even prohibit the realization of some of the criteria. </p>
-<p>These criteria are known as the <strong>DiVincenzo Criteria</strong> and will be explained in the next section. The utility of knowing these criteria is it gives you an idea of the current state of QC, what things a Quantum Computer AS A WHOLE should be able to do, and the future of the field. </p>
+<p>These criteria are known as the <strong>DiVincenzo Criteria</strong> and will be explained in the next section. The utility of knowing these criteria is it gives you an idea of the current state of QC, what things a Quantum Computer AS A WHOLE should be able to do, and the future of the field.</p>
+<h2><a class="header" href="#citations" id="citations">Citations</a></h2>
+<ol>
+<li>[<a href="https://quantum-algorithms.herokuapp.com/299/paper/node16.html">Quantum Computing and Shor's Algorithm by Matthew Hayward - section on Quantum Parallelism</a></li>
+<li><a href="https://medium.com/hackernoon/decoherence-quantum-computers-greatest-obstacle-67c74ae962b6">Decoherence - Quantum Computing's Greatest Obstacle by Tanisha Bassan</a></li>
+<li>See 1.</li>
+</ol>
 
                     </main>
 
