@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Computational Complexity - Quantum Computing Codex</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded "><a href="../../Introduction/Introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="expanded "><a href="../../Classical-Computation/Classical-Computation-Header.html"><strong aria-hidden="true">2.</strong> Classical Computation</a></li><li><ol class="section"><li class="expanded "><a href="../../Classical-Computation/Turing-Machine/Turing-Machine.html"><strong aria-hidden="true">2.1.</strong> The Turing Machine</a></li><li class="expanded "><a href="../../Classical-Computation/Church-Turing-Thesis/Church-Turing-Thesis.html"><strong aria-hidden="true">2.2.</strong> Church-Turing Thesis</a></li><li class="expanded "><a href="../../Classical-Computation/Computational-Complexity/Computational-Complexity.html" class="active"><strong aria-hidden="true">2.3.</strong> Computational Complexity</a></li></ol></li><li class="expanded "><a href="../../Goals-of-Quantum-Computing/Goals-of-Quantum-Computing.html"><strong aria-hidden="true">3.</strong> Goals of Quantum Computing</a></li><li class="expanded "><a href="../../Complexity-Classes/Complexity-Classes.html"><strong aria-hidden="true">4.</strong> Complexity Classes</a></li><li class="expanded "><a href="../../How-Quantum-Computing-Works/How-Quantum-Computing-Works.html"><strong aria-hidden="true">5.</strong> How Quantum Computing Works</a></li><li><ol class="section"><li class="expanded "><a href="../../How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/Superficial-Quantum-Mechanics.html"><strong aria-hidden="true">5.1.</strong> Superficial Quantum Mechanics</a></li><li class="expanded "><a href="../../How-Quantum-Computing-Works/The-Qubit/The-Qubit.html"><strong aria-hidden="true">5.2.</strong> The Qubit</a></li><li class="expanded "><a href="../../How-Quantum-Computing-Works/DiVincenzo's-Criteria/DiVincenzo's-Criteria.html"><strong aria-hidden="true">5.3.</strong> DiVincenzo's Criteria</a></li></ol></li><li class="expanded "><a href="../../Mathematical-Tools/Mathematical-Tools.html"><strong aria-hidden="true">6.</strong> Mathematical Tools</a></li><li><ol class="section"><li class="expanded "><a href="../../Mathematical-Tools/Linear-Algebra/Linear-Algebra.html"><strong aria-hidden="true">6.1.</strong> Linear Algebra</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Quantum Computing Codex</h1>
+
+                        <div class="right-buttons">
+                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#computational-complexity" id="computational-complexity">Computational Complexity</a></h1>
+<p>Computational Complexity is a concept used in Computer Science to characterize the resources required for an algorithm to solve a certain problem.</p>
+<p>The two resources Computer Scientists are most concerned about are:</p>
+<ul>
+<li>Time (how long does it take?)</li>
+<li>Space (how much storage does it need?)</li>
+</ul>
+<p>It should be noted here that &quot;time&quot; gets translated to &quot;number of operations&quot; owing to its ease in comparison of other algorithms.</p>
+<h2><a class="header" href="#a-naive-approach" id="a-naive-approach">A Naive Approach</a></h2>
+<p>If we're comparing two algorithms we could try to just measure the duration of time and the amount of memory in terms of seconds and units of storage respectively.</p>
+<p>The problem with this approach is that it's highly platform specific meaning you might get different running times/memory usage if you used a different machine. Furthermore, doing multiple runs might even give different times owing to the nature of Operating Systems, other processes, etc.</p>
+<p>This proves to be rather problematic in comparing algorithm performance as there isn't any sense of a frame of reference for us.</p>
+<p>Luckily, there is one property of algorithms that remains the same regardless of what machine it runs on: <em>The growth of resource consumption relative to its input.</em></p>
+<p>The growth itself has quantifiable properties that computer scientists like to focus on, such as the best-case, worst-case, and average-case scenarios.</p>
+<p>The case that the majority are concerned with however, is the worst-case scenario. That is, given some input, what is the largest growth we can expect in terms of resource consumption?</p>
+<p>Such a property is mathematically formalized as Big-O notation.</p>
+<h2><a class="header" href="#big-o-notation" id="big-o-notation">Big-O Notation</a></h2>
+<p>Big-O notation is a way of defining the upper-bound of an algorithms growth relative to its input or in plain English, the &quot;worst case scenario&quot;. </p>
+<p>The &quot;growth&quot; usually defaults to time complexity and therefore, number of operations unless there has been explicit statement that it is memory complexity that is being analyzed.</p>
+<p>The exact definition is presented below:</p>
+<blockquote>
+<p>\( f(n) = O(g(n)) \) if there exists a positive integer \( n_0 \) and a positive constant \( c \), such that \( f(n) \le c \cdot g(n) \hspace{0.5cm} \forall \hspace{0.1cm} n \ge n_0 \)</p>
+</blockquote>
+<p>In plain English, a function \( f(n) \) can be considered &quot;Big-O&quot; of \( g(n) \) if you can find a number to plug into n such as (\( n_0 \)) and a constant \(c \) such that there is a point where \( c \cdot g(n) \) exceeds all values of \( f(n) \).</p>
+<p align="center">
+  <img  src="/Classical-Computation/Computational-Complexity/big-O.png">
+</p>
+<p>Let's try a quick example.</p>
+<p>I have an algorithm who's resource consumption given some input data \( n \) grows by \( f(n) = 2n^2 + n + 5 \).</p>
+<p>To find a suitable \(g(n)\) we just need to find some function that can, with some slight modification, outpace \(f(n)\)'s growth rate.</p>
+<p>We could choose something like \(n!\) but the goal of Big-O is to find the <em>best fitting bound</em> , one that still fits the definition but bounds \(f(n)\) as close as possible from above.</p>
+<p>With that in mind, \(10n^2\) can easily grow faster than the given \(f(n)\). To truly satisfy the definition, we need to find an exact \(n_0\). The constant \(10\) in front of the \(10n^2\) already satisfies the first requirement of having a positive constant multiplier \(c\).</p>
+<p>We graph the two functions together and find our \(n_0\):</p>
+<p align="center">
+  <img  src="/Classical-Computation/Computational-Complexity/big-O-example.png">
+</p>
+<p>With the function found, as well as a suitable \(n_0\) and \(c\), we can now say the following</p>
+<blockquote>
+<p>The function \(f(n)\) is has Big-O of \(n^2\) time complexity.</p>
+</blockquote>
+<p>With that understanding, the image below gives an idea for the different kinds of complexities you'll frequently bump into in the computer science world, as well as how to think of them qualitatively (is \(O(n)\) good or bad? What about \(O(log(n))\)?)</p>
+<p align="center">
+  <img  src="/Classical-Computation/Computational-Complexity/big-O-chart.png">
+</p>
+<p align="center">
+   <i> Source: <a href=https://www.bigocheatsheet.com/> Big-O Cheat Sheet <a> </i>
+</p>
+Note: Elements in the above diagram is equivalent to data inputted
+<h2><a class="header" href="#tractability" id="tractability">Tractability</a></h2>
+<p>Two words you might hear thrown around quite frequently (especially in Quantum Computing) is the idea of &quot;tractability&quot;.</p>
+<p>If an algorithm is <em>intractable</em>, its Big-O time complexity is <strong>greater</strong> than any polynomial or to be more formal, exceeds any variant of \(O(n^k)\) where \(k\) is some constant. The term <em>superpolynomial</em> is also equivalent. </p>
+<p>If we look at the chart above, that would mean algorithms that have \(O(2^n)\) or \(O(n!)\) complexities are <em>intractable</em>.</p>
+<p>In the opposite sense, if an algorithm is <em>tractable</em> it means its Big-O time complexity is <strong>less than</strong> or <strong>equal to</strong> that of any polynomial. The term <em>subpolynomial</em> is also equivalent.</p>
+<p>If we go back to the chart, that would mean algorithms that have \(O(log(n))\), \(O(1)\), and \(O(n)\) time complexities can be considered to be tractable.</p>
+<h2><a class="header" href="#complexity-classes" id="complexity-classes">Complexity Classes</a></h2>
+<p>Complexity classes are a way of categorizing problems that take the same amount of resources to solve. You won't need to know what exactly the classes are for understanding the motivations behind Quantum Computing in the next section but it does help in understanding the degree of difficulty certain problems are considered to have as well as a more formal definition of the motivations you'll see soon.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../Classical-Computation/Church-Turing-Thesis/Church-Turing-Thesis.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../Goals-of-Quantum-Computing/Goals-of-Quantum-Computing.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../../Classical-Computation/Church-Turing-Thesis/Church-Turing-Thesis.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../../Goals-of-Quantum-Computing/Goals-of-Quantum-Computing.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
