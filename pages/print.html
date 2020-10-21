@@ -1,0 +1,1156 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Quantum Computing Codex</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
+                <ol class="chapter"><li class="expanded "><a href="Introduction/Introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="expanded "><a href="Classical-Computation/Classical-Computation-Header.html"><strong aria-hidden="true">2.</strong> Classical Computation</a></li><li><ol class="section"><li class="expanded "><a href="Classical-Computation/Turing-Machine/Turing-Machine.html"><strong aria-hidden="true">2.1.</strong> The Turing Machine</a></li><li class="expanded "><a href="Classical-Computation/Church-Turing-Thesis/Church-Turing-Thesis.html"><strong aria-hidden="true">2.2.</strong> Church-Turing Thesis</a></li><li class="expanded "><a href="Classical-Computation/Computational-Complexity/Computational-Complexity.html"><strong aria-hidden="true">2.3.</strong> Computational Complexity</a></li></ol></li><li class="expanded "><a href="Goals-of-Quantum-Computing/Goals-of-Quantum-Computing.html"><strong aria-hidden="true">3.</strong> Goals of Quantum Computing</a></li><li class="expanded "><a href="Complexity-Classes/Complexity-Classes.html"><strong aria-hidden="true">4.</strong> Complexity Classes</a></li><li class="expanded "><a href="How-Quantum-Computing-Works/How-Quantum-Computing-Works.html"><strong aria-hidden="true">5.</strong> How Quantum Computing Works</a></li><li><ol class="section"><li class="expanded "><a href="How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/Superficial-Quantum-Mechanics.html"><strong aria-hidden="true">5.1.</strong> Superficial Quantum Mechanics</a></li><li class="expanded "><a href="How-Quantum-Computing-Works/The-Qubit/The-Qubit.html"><strong aria-hidden="true">5.2.</strong> The Qubit</a></li><li class="expanded "><a href="How-Quantum-Computing-Works/DiVincenzo's-Criteria/DiVincenzo's-Criteria.html"><strong aria-hidden="true">5.3.</strong> DiVincenzo's Criteria</a></li></ol></li><li class="expanded "><a href="Mathematical-Tools/Mathematical-Tools.html"><strong aria-hidden="true">6.</strong> Mathematical Tools</a></li><li><ol class="section"><li class="expanded "><a href="Mathematical-Tools/Linear-Algebra/Linear-Algebra.html"><strong aria-hidden="true">6.1.</strong> Linear Algebra</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Quantum Computing Codex</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
+<pre><code>!!!WORK IN PROGRESS!!!
+
+The content of this book is INCOMPLETE and may contain unintended FACTUAL and TYPOGRAPHICAL ERRORS.
+
+This is NOT MEANT TO BE A COMPLETE PRODUCT and is subject to revision at ANY TIME.
+
+Continue reading at your own disgression.
+
+Feedback is welcome!
+</code></pre>
+<p align="center">
+  <img  src="Introduction//Introduction/QCAD_horizontal_patch.png">
+</p>
+<p>Welcome to the <strong>Quantum Computing Codex (QCC)</strong> created by <strong>Quantum Computing at Davis (QCaD)</strong> !</p>
+<h2><a class="header" href="#purpose" id="purpose">Purpose</a></h2>
+<p>This book is designed as guide for those interested in Quantum Computing but just don't know where to start as well as a suitable reference for seasoned Quantum Computing Developers.</p>
+<p>The QCC was created in response to the &quot;gap&quot; in Quantum Computing resources between &quot;What is Quantum Computing&quot; vs. Research papers, with very little thorough documentation that would permit a beginner to reach a desired level of proficiency </p>
+<h2><a class="header" href="#citation-system" id="citation-system">Citation System</a></h2>
+<p>The contents of this book are by no means the work of one individual, relying on an amalgamation of sources that have been presented in what is believed to be the most beginner friendly way possible.</p>
+<h3><a class="header" href="#text" id="text">Text</a></h3>
+<p>In most cases, you will find a superscript number after a sentence or section. You can scroll to the bottom of the page to find the corresponding name of the source and a URL to it.</p>
+<p>However, some sections may have the superscript in the header. This means the subsequent text was heavily based on its original source, and is done to point out that most of the modification lay in summarization or the paraphrasing of details before incorporation in this work. </p>
+<p>It is also possible to find smaller superscripts in a section of text that already has a superscript. This is to denote the introduction of work from another source and its overlap with the existing body of text. </p>
+<h3><a class="header" href="#images" id="images">Images</a></h3>
+<p>Each image is immediately followed by a link to the source. This link is not included in the bottom of each page.</p>
+<h1><a class="header" href="#classical-computation" id="classical-computation">Classical Computation</a></h1>
+<p>Before we can delve into the nitty-gritty of how Quantum Computers work, there are a number of ideas in Classical Computing that will help guide your understanding of why Quantum Computing is useful and what it has to offer.</p>
+<p>Not understanding these ideas won't stop you from jumping into coding but it helps to really understand the big picture that Quantum Computing is in.</p>
+<h2><a class="header" href="#what-is-classical-computation" id="what-is-classical-computation">What is &quot;Classical Computation?&quot;</a></h2>
+<p>Classical Computation is just a fancier way of addressing the way we've been performing computing for the past 40 or so years: with 1s and 0s or more formally stated as <strong>binary</strong>.</p>
+<p align="center">
+  <img  src="Classical-Computation//Classical-Computation/binary-code.jpg">
+</p>
+<p align="center">
+   <i> Source: <a href=https://www.facebook.com/binarycoderobot/> Binary Code Robot </a> </i>
+</p>
+<p>Computers represent and manipulate data all in binary, usually through millions of special switches (transistors) made of Silicon.</p>
+<p>The server delivering the contents of this book, the smartphone in your pocket, and the device you're reading this on are all examples of &quot;Classical Computers&quot; which operate using binary to store and manipulate data.</p>
+<h2><a class="header" href="#what-do-i-need-to-know-from-classical-computation" id="what-do-i-need-to-know-from-classical-computation">What do I need to know from Classical Computation?</a></h2>
+<p>There are several things that are nice to know</p>
+<ul>
+<li>What a Turing Machine is</li>
+<li>the Church-Turing Thesis </li>
+<li>Computational Complexity</li>
+</ul>
+<p>The first three things serve as a foundation for understanding some basic principles in Theoretical Computer Science that then lead to motivations for Quantum Computing (henceforth referred to as &quot;QC&quot;).</p>
+<p>The subsequent sections will explain these points in more detail.</p>
+<h1><a class="header" href="#the-turing-machine" id="the-turing-machine">The Turing Machine</a></h1>
+<p>Before we delve into what a Turing Machine is, let us present this definition of an <strong>Algorithm</strong> as <em>a process or set of rules to be followed in calculations or other problem-solving operations, especially by a computer</em> <sup>1</sup>. In plain English, nothing more than series of steps that turns some data into a more desirable form (answer, solution, etc).</p>
+<p>With the above in mind, the Turing Machine isn't really a machine so much as an abstract model of computation. It was never meant to be implemented in real hardware. Rather, it was intended as a mathematical tool for studying the execution and output of algorithms.</p>
+<p>The machine derives its name from the late British computer scientist Alan Turing who came up with the model in a paper published in 1936 <sup>2</sup>.</p>
+<p>Its goal at the time was to allow people to figure out the extent and limitations of computation and what it could and could not do.</p>
+<h2><a class="header" href="#how-it-works" id="how-it-works">How it Works</a></h2>
+<p>This &quot;machine&quot; consists of a infinite <strong>tape</strong> that is divided into an infinite number of <strong>cells</strong>.</p>
+<p>Inside each cell can be the following:</p>
+<ul>
+<li>a <code>1</code></li>
+<li>a <code>0</code></li>
+<li>nothing</li>
+</ul>
+<p>Above the tape is a <strong>head</strong> that can perform the following actions <sup>3</sup></p>
+<ul>
+<li>freely move about the tape (left/right)</li>
+<li>read a cell</li>
+<li>write to a cell</li>
+<li>change its internal state (which determines the next course of action for the head)</li>
+<li>end the computation</li>
+</ul>
+<p>The following diagram is a visual representation of the above:</p>
+<p align="center">
+  <img  src="Classical-Computation/Turing-Machine//Classical-Computation/Turing-Machine/turing-machine.png">
+</p>
+<p align="center">
+   <i> Source: <a href=https://www.sciencedirect.com/science/article/pii/B9780444826183500887> Quantum-Logical Computer by August Stern </a> </i>
+</p>
+<p>The model itself is made more remarkable by the <strong>Church-Turing Thesis</strong> which you'll be introduced to in the next section.</p>
+<p>Citations:</p>
+<ol>
+<li><a href="https://www.google.com/search?sxsrf=ALeKk03AhA_grrmIg-ZNfZFQusF0Nav9Ew%3A1603221517710&amp;source=hp&amp;ei=DTiPX9zNKKG2ggf-6Y4g&amp;q=algorithm&amp;oq=algorithm&amp;gs_lcp=CgZwc3ktYWIQAzIECCMQJzIKCAAQsQMQyQMQQzIICAAQsQMQgwEyBQgAELEDMgIIADIFCAAQsQMyAgguMgUILhCxAzICCAAyAggAOgcILhAnEJMCOgQILhBDOggILhCxAxCDAToLCC4QsQMQxwEQowI6CgguEOoCECcQkwI6BwgjEOoCECc6BwguEOoCECc6DQguEMcBEKMCECcQkwI6CggAELEDEIMBEEM6BwgjECcQnQI6BAgAEEM6BwgAELEDEEM6DAgjECcQnQIQRhD6AToNCAAQsQMQgwEQyQMQQzoFCAAQyQM6CAgAELEDEMkDOgQIABAKOgcIABAUEIcCOgoILhDJAxAnEJMCOg0IABCxAxCDARAUEIcCULcDWM65AWChuwFoLXAAeAaAAaMEiAH5KZIBCjAuMzAuMS41LTGYAQCgAQGqAQdnd3Mtd2l6sAEK&amp;sclient=psy-ab&amp;ved=0ahUKEwiciLrI8cPsAhUhm-AKHf60AwQQ4dUDCAk&amp;uact=5">Google Definition</a></li>
+<li><a href="https://www.britannica.com/biography/Alan-Turing">Encyclopedia Britannica Entry on Alan Turing</a></li>
+<li><a href="https://quantum-algorithms.herokuapp.com/299/paper/node5.html">Quantum Computing and Shor's Algorithm by Matthew Hayward - section on Turing Machines</a></li>
+</ol>
+<h1><a class="header" href="#church-turing-thesis" id="church-turing-thesis">Church-Turing Thesis</a></h1>
+<p>In the previous section, we looked at what exactly a Turing Machine (referred to as a &quot;TM&quot; henceforth) is and alluded to the <strong>Church-Turing Thesis</strong> which states the following:</p>
+<blockquote>
+<p>If any algorithm can be performed on <em>any</em> piece of hardware there is an equivalent algorithm for a Turing Machine which will perform the exact same task</p>
+</blockquote>
+<p>The acceptance of this thesis has the following effects:</p>
+<ul>
+<li>Any problem that cannot be computed by a TM is not &quot;computable&quot; in the absolute sense</li>
+<li>If a problem is believed to be computable, a TM capable of computing is possible</li>
+</ul>
+<p>With the feasibility of computation being well defined, computer scientists were also concerned with efficiency, that is, how long as well as how much memory would some problem need in order to be computed. <sup>1</sup></p>
+<h2><a class="header" href="#complexity-theoretic-church-turing-thesis" id="complexity-theoretic-church-turing-thesis">Complexity-Theoretic Church-Turing Thesis</a></h2>
+<p>In the 1960s and 70s, a number of observations about the efficiency of algorithms on non-TM models of computation led to the creation of a &quot;strengthened&quot; Church-Turing thesis, more formally known as the &quot;Complexity-Theoretic Church-Turing Thesis&quot;.</p>
+<p>It states the following:</p>
+<blockquote>
+<p>Any algorithmic process can be simulated efficiently using a TM</p>
+</blockquote>
+<p>This property arises from the fact that any algorithmic process that could be solved in another model of computation can be SIMULATED on a TM.</p>
+<p>The &quot;efficiently&quot; in the thesis means that the <em>number of operations (or other resource consumed like memory) it takes to run an algorithm grows polynomially (or less) relative to the size of data inputted</em>. This idea of efficiency (data input size vs growth of the number of operations) will be explained in more detail in the next section and formalized considering that this is the universally accepted way of defining an algorithm's complexity. <sup>2</sup></p>
+<h2><a class="header" href="#challenges-to-complexity-theoretic-church-turing-thesis" id="challenges-to-complexity-theoretic-church-turing-thesis">Challenges to Complexity-Theoretic Church-Turing Thesis</a></h2>
+<p>In the mid-1970s, an algorithm created by Robert Solovay and Volker Strassen known as the Solovay-Strassen Test challenged the Complexity-Theoretic Church-Turing Thesis by given an algorithmic process THAT COULD NOT be simulated efficiently using a Turing Machine.</p>
+<p>The Solovay-Strassen test can <em>probabilistically</em> determine whether or not an integer is prime. Probabilistically means that even when the algorithm tells you an integer is prime or not, there exists the possibility that result is incorrect. However, if you repeatedly run the test, you can decrease the uncertainty to a desirable point and get closer to a more accurate result.</p>
+<p>The steps for the entire algorithm are presented below. Don't concern yourself too much with anything beyond the first three lines.</p>
+<p align="center">
+  <img  src="Classical-Computation/Church-Turing-Thesis//Classical-Computation/Church-Turing-Thesis/solovay-strassen.jpg">
+</p>
+<p align="center">
+   <i> Source: <a href=https://slideplayer.com/slide/5864331/> Public Key ciphers 1 Session 5. by Katrina Morrison </a> </i>
+</p>
+<p>Note the step:</p>
+<p><em>Choose a random integer a such that \(1 \le a \le n\)</em></p>
+<p>The &quot;random&quot; part here is troubling because there exists no efficient method of choosing a random integer on a TM, especially not a <em>truly</em> random integer.</p>
+<h2><a class="header" href="#beyond-the-tm" id="beyond-the-tm">Beyond the TM</a></h2>
+<p>To be more specific, there is no efficient method on a <em>Deterministic</em> Turing Machine. The TM that was presented to you in the &quot;Turing Machine&quot; section is a <em>Deterministic Turing Machine</em> (now referred to as a DTM henceforth) because each symbol on the tape refers to one and only one course of action (move one cell left/right, erase, write, etc.).</p>
+<p>There does however, exist an efficient method on a <em>Probabilistic Turing Machine</em> which chooses between possible actions according to a probability distribution rather than a fixed set of instructions. The probabilistic TM falls into a class of TMs known as <em>Non-Deterministic Turing Machines</em> (referred to as a NTM henceforth) which, instead of having one symbol correspond to one course of action, can have them correspond to a set of different actions from which one is chosen through some procedure.</p>
+<p>With the Probabilistic TM, the Complexity-Theoretic Church-Turing thesis was revised to the following:</p>
+<blockquote>
+<p>Any algorithmic process can be simulated efficiently using a <em>probabilistic</em> Turing Machine</p>
+</blockquote>
+<p>Thereby allowing the Church-Turing thesis to maintain its efficiency over such algorithms as the Solovay-Strassen test and anything that requires non-deterministic operations (such as choosing a random integer).</p>
+<h2><a class="header" href="#dawn-of-quantum-computing" id="dawn-of-quantum-computing">Dawn of Quantum Computing</a></h2>
+<p>Solovay-Strassen wouldn't be the only challenge to the Complexity-Theoretic Church Turing thesis. Due to the revision of the thesis from a normal TM to a probabilistic TM, computer scientists wondered if there was some &quot;ultimate&quot; thesis, one that would encompass all simulations of other models of computation efficiently. Motivated by this, in 1985 the British physicist David Deutsch attempted to come up with a computational model that would allow one to simulate ANY arbitrary physical system. Due to the ultimately Quantum Mechanical nature of the physical world, Deutsch posed the idea of computing devices based on quantum mechanics.</p>
+<p>In the same decade as Deutsch, Richard Feynman also proposed the idea of Quantum Computing for simulating physical systems, namely, the <em>Quantum Many-Body Problem</em> where due to quantum entanglement between microscopic particles (which you'll be introduced to in more advanced sections), the amount of information required for a classical computer to handle is too prohibitive and we must instead, use approximations.</p>
+<h2><a class="header" href="#onwards-to-motivations-for-quantum-computing" id="onwards-to-motivations-for-quantum-computing">Onwards to Motivations for Quantum Computing</a></h2>
+<p>Despite all these definitions, we still haven't reached the promised goal of understanding WHY we want Quantum Computing (other than Feynman's and Deutsch's goals). We do however, have an understanding of how the principles of classical computation have naturally led to the idea of Quantum Computing.</p>
+<p>In the following section, you'll be introduced to the ideas and some light math behind <em>Computational Complexity</em> which is how we characterized the performance of algorithms and <em>Complexity Classes</em>, where we categorize problems by how much time and space they take to solve.</p>
+<h2><a class="header" href="#citations" id="citations">Citations</a></h2>
+<ol>
+<li><a href="https://quantum-algorithms.herokuapp.com/299/paper/node5.html">Quantum Computing and Shor's Algorithm by Matthew Hayward - section on Church-Turing Thesis</a></li>
+<li>see 1.</li>
+</ol>
+<h1><a class="header" href="#computational-complexity" id="computational-complexity">Computational Complexity</a></h1>
+<p>Computational Complexity is a concept used in Computer Science to characterize the resources required for an algorithm to solve a certain problem.</p>
+<p>The two resources Computer Scientists are most concerned about are:</p>
+<ul>
+<li>Time (how long does it take?)</li>
+<li>Space (how much storage does it need?)</li>
+</ul>
+<p>It should be noted here that &quot;time&quot; gets translated to &quot;number of operations&quot; owing to its ease in comparison of other algorithms.</p>
+<h2><a class="header" href="#a-naive-approach" id="a-naive-approach">A Naive Approach</a></h2>
+<p>If we're comparing two algorithms we could try to just measure the duration of time and the amount of memory in terms of seconds and units of storage respectively.</p>
+<p>The problem with this approach is that it's highly platform specific meaning you might get different running times/memory usage if you used a different machine. Furthermore, doing multiple runs might even give different times owing to the nature of Operating Systems, other processes, etc.</p>
+<p>This proves to be rather problematic in comparing algorithm performance as there isn't any sense of a frame of reference for us.</p>
+<p>Luckily, there is one property of algorithms that remains the same regardless of what machine it runs on: <em>The growth of resource consumption relative to its input.</em></p>
+<p>The growth itself has quantifiable properties that computer scientists like to focus on, such as the best-case, worst-case, and average-case scenarios.</p>
+<p>The case that the majority are concerned with however, is the worst-case scenario. That is, given some input, what is the largest growth we can expect in terms of resource consumption?</p>
+<p>Such a property is mathematically formalized as Big-O notation.</p>
+<h2><a class="header" href="#big-o-notation" id="big-o-notation">Big-O Notation</a></h2>
+<p>Big-O notation is a way of defining the upper-bound of an algorithms growth relative to its input or in plain English, the &quot;worst case scenario&quot;. </p>
+<p>The &quot;growth&quot; usually defaults to time complexity and therefore, number of operations unless there has been explicit statement that it is memory complexity that is being analyzed.</p>
+<p>The exact definition is presented below:</p>
+<blockquote>
+<p>\( f(n) = O(g(n)) \) if there exists a positive integer \( n_0 \) and a positive constant \( c \), such that \( f(n) \le c \cdot g(n) \hspace{0.5cm} \forall \hspace{0.1cm} n \ge n_0 \)</p>
+</blockquote>
+<p>In plain English, a function \( f(n) \) can be considered &quot;Big-O&quot; of \( g(n) \) if you can find a number to plug into n such as (\( n_0 \)) and a constant \(c \) such that there is a point where \( c \cdot g(n) \) exceeds all values of \( f(n) \).</p>
+<p align="center">
+  <img  src="Classical-Computation/Computational-Complexity//Classical-Computation/Computational-Complexity/big-O.png">
+</p>
+<p>Let's try a quick example.</p>
+<p>I have an algorithm who's resource consumption given some input data \( n \) grows by \( f(n) = 2n^2 + n + 5 \).</p>
+<p>To find a suitable \(g(n)\) we just need to find some function that can, with some slight modification, outpace \(f(n)\)'s growth rate.</p>
+<p>We could choose something like \(n!\) but the goal of Big-O is to find the <em>best fitting bound</em> , one that still fits the definition but bounds \(f(n)\) as close as possible from above.</p>
+<p>With that in mind, \(10n^2\) can easily grow faster than the given \(f(n)\). To truly satisfy the definition, we need to find an exact \(n_0\). The constant \(10\) in front of the \(10n^2\) already satisfies the first requirement of having a positive constant multiplier \(c\).</p>
+<p>We graph the two functions together and find our \(n_0\):</p>
+<p align="center">
+  <img  src="Classical-Computation/Computational-Complexity//Classical-Computation/Computational-Complexity/big-O-example.png">
+</p>
+<p>With the function found, as well as a suitable \(n_0\) and \(c\), we can now say the following</p>
+<blockquote>
+<p>The function \(f(n)\) is has Big-O of \(n^2\) time complexity.</p>
+</blockquote>
+<p>With that understanding, the image below gives an idea for the different kinds of complexities you'll frequently bump into in the computer science world, as well as how to think of them qualitatively (is \(O(n)\) good or bad? What about \(O(log(n))\)?)</p>
+<p align="center">
+  <img  src="Classical-Computation/Computational-Complexity//Classical-Computation/Computational-Complexity/big-O-chart.png">
+</p>
+<p align="center">
+   <i> Source: <a href=https://www.bigocheatsheet.com/> Big-O Cheat Sheet <a> </i>
+</p>
+Note: Elements in the above diagram is equivalent to data inputted
+<h2><a class="header" href="#tractability" id="tractability">Tractability</a></h2>
+<p>Two words you might hear thrown around quite frequently (especially in Quantum Computing) is the idea of &quot;tractability&quot;.</p>
+<p>If an algorithm is <em>intractable</em>, its Big-O time complexity is <strong>greater</strong> than any polynomial or to be more formal, exceeds any variant of \(O(n^k)\) where \(k\) is some constant. The term <em>superpolynomial</em> is also equivalent. </p>
+<p>If we look at the chart above, that would mean algorithms that have \(O(2^n)\) or \(O(n!)\) complexities are <em>intractable</em>.</p>
+<p>In the opposite sense, if an algorithm is <em>tractable</em> it means its Big-O time complexity is <strong>less than</strong> or <strong>equal to</strong> that of any polynomial. The term <em>subpolynomial</em> is also equivalent.</p>
+<p>If we go back to the chart, that would mean algorithms that have \(O(log(n))\), \(O(1)\), and \(O(n)\) time complexities can be considered to be tractable.</p>
+<h2><a class="header" href="#complexity-classes" id="complexity-classes">Complexity Classes</a></h2>
+<p>Complexity classes are a way of categorizing problems that take the same amount of resources to solve. You won't need to know what exactly the classes are for understanding the motivations behind Quantum Computing in the next section but it does help in understanding the degree of difficulty certain problems are considered to have as well as a more formal definition of the motivations you'll see soon.</p>
+<h1><a class="header" href="#goals-of-quantum-computing" id="goals-of-quantum-computing">Goals of Quantum Computing</a></h1>
+<p>In the previous sections, we covered the idea of Turing Machines, the Church-Turing Thesis, as well as giving the mathematically accepted definition of complexity and how we can use it to quantitatively understand algorithm performance.</p>
+<p>With all that behind you, you'll be able to understand the two main interests driving Quantum Computing.</p>
+<p>They are as follows:</p>
+<blockquote>
+<ol>
+<li>Can a Quantum Computer execute algorithms which are considered uncomputable on classical computers?</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>Given an algorithm a TM can compute but is intractable, can it be made tractable through Quantum Computing?</li>
+</ol>
+</blockquote>
+<p>The second point can also be understood in the more broad terms of, &quot;Can a Quantum Computer provide some speed-up of an algorithm that a classical computer cannot?&quot;</p>
+<h2><a class="header" href="#speed-up-examples" id="speed-up-examples">Speed-Up Examples</a></h2>
+<p>Some examples of these speed-ups are <strong>Grover's Algorithm</strong> and <strong>Shor's Algorithm</strong>, two of the most commonly cited algorithms in Quantum Computing.</p>
+<h3><a class="header" href="#grovers-algorithm" id="grovers-algorithm">Grover's Algorithm</a></h3>
+<p><strong>Grover's Algorithm</strong> can, given an output value and a function, find the specific input value required to produce that output value in: </p>
+<p>\[ O(\sqrt{n})\]</p>
+<p>time-complexity. This is fairly astounding considering that at the bare minimum, you need:</p>
+<p>\[ O(n) \]</p>
+<p>time complexity to check each element within the domain of the function. </p>
+<h3><a class="header" href="#shors-algorithm" id="shors-algorithm">Shor's Algorithm</a></h3>
+<p><strong>Shor's Algorithm</strong> is an algorithm for integer factorization. It has garnered a lot of attention due to the fact that, should it be implementable in the future, can pose a threat to public-key cryptography which relies on the fact that integer factorization for large values is incredibly prohibitive to do on classical computers.</p>
+<p>The current fastest algorithm for integer factorization on classical computers is the <strong>General Number Field Sieve</strong> which works in sub-exponential but superpolynomial time:</p>
+<p>\[ O(e^{1.9(log \ N)^{1/3}(log \ log \ N)^{2/3}}) \]</p>
+<p>Shor's promises the following speed-up:</p>
+<p>\[ O((log \ N)^{2} (log \ log \ N)(log \ log \ log \ N))\]</p>
+<p>An exponential speed-up over <strong>General Number Field Sieve</strong></p>
+<h1><a class="header" href="#complexity-classes-1" id="complexity-classes-1">Complexity Classes</a></h1>
+<p>Complexity classes are a way of <em>categorizing problems based on the resources required to solve them</em>.</p>
+<p>This ties in nicely with Big-O and our definition of resource consumption based on the size of an algorithm's input.</p>
+<p>The following Euler Diagram gives a nice graphical overview of the four most commonly encountered complexity-classes.</p>
+<p align="center">
+  <img  src="Complexity-Classes//Complexity-Classes/four-complexities.png" style="height: 30%; width: 30%; background-color: white;">
+</p>
+<p align="center">
+   <i> Source: <a href=https://en.wikipedia.org/wiki/NP-completeness#/media/File:P_np_np-complete_np-hard.svg> Wikipedia Entry for NP-Completeness </a> </i>
+</p>
+<h2><a class="header" href="#decision-problem" id="decision-problem">Decision Problem</a></h2>
+<p>All the problems that the four categories above (P, NP, NP-Complete, NP-Hard) describe are known as <em>Decision Problems</em>.</p>
+<p>A <em>Decision Problem</em> is any problem that has a <strong>yes</strong> or <strong>no</strong> answer. For Example:</p>
+<ul>
+<li>Given an integer, is it even or odd?</li>
+<li>Given a graph, does a Hamiltonian Cycle exist in it? (Given a bunch of points with lines between them, does a line exist that goes through each point exactly ONCE exist?)</li>
+</ul>
+<h2><a class="header" href="#p" id="p">P</a></h2>
+<p><strong>P</strong> is the set of all decision problems that can be solved in polynomial time by a Deterministic TM (DTM), hence the letter &quot;P&quot; for &quot;Polynomial time&quot; <sup>1</sup></p>
+<p>Recall that a DTM is a TM where each symbol on the tape corresponds to one and only one course of action.</p>
+<p>Problems that fall into the <strong>P</strong> Complexity Class are:</p>
+<ul>
+<li>Identifying palindromes (Does a word remain the same if read from right to left as it is left to right?)</li>
+<li>Recognizing Substrings (given two strings <em>a</em> and <em>b</em>, can we find <em>b</em> in its entirety inside <em>a</em>?)</li>
+<li>Finding the Greatest Common Divisor of two numbers</li>
+</ul>
+<h2><a class="header" href="#np" id="np">NP</a></h2>
+<p><strong>NP</strong> is the set of all decision problems that can be solved in polynomial time by a Non-Deterministic Turing Machine (NTM), hence &quot;NP&quot; for &quot;Non-Deterministic Polynomial time&quot;. Alternatively, <strong>NP</strong> is the set of decision problems which can be <em>verified</em> in polynomial time by a DTM.<sup>2</sup></p>
+<p>Recall that an NTM is a TM where each symbol on the tape can correspond to a set of different actions each time an instruction is executed.</p>
+<p>A problem that falls into NP is Integer Factorization where, given two numbers \(n\) and \(m\), does an integer \(f\) exist constrained by \(1 &lt; f &lt; m \) such that \(f\) divides \(n\)? Finding the solution will require some algorithm on an NTM but to actually verify if the solution is correct we just have to perform the division \(n / f \) which can be done in polynomial time by a DTM. <sup>3</sup></p>
+<h2><a class="header" href="#np-complete" id="np-complete">NP-Complete</a></h2>
+<p><strong>NP-Complete</strong> is the set of problems that other problems in <strong>NP</strong> can be <em>reduced</em> to in polynomial time by a DTM.</p>
+<p>This means if we can find an algorithm that can efficiently solve an <strong>NP-Complete</strong> problem, then other problems in <strong>NP</strong> can also be solved efficiently <em>IF</em> they can be reduced to the <strong>NP-Complete</strong> problem form. </p>
+<p>A problem that falls into <strong>NP-Complete</strong> is the <strong>3-SAT problem</strong>.</p>
+<p>You're given a set of boolean variables arranged in the following configuration:</p>
+<pre><code>(X or Y or Z) AND
+(B or D or F) AND
+(J or K or L) AND
+...
+</code></pre>
+<p>and you need to find the proper value for each boolean variable that will make the entire expression return &quot;True&quot;.</p>
+<p>It has been proven that every problem in NP is reducible to this problem. IF a polynomial time algorithm can be found to solve 3-SAT, it can solve every problem in NP efficiently. <sup>4</sup></p>
+<h2><a class="header" href="#np-hard" id="np-hard">NP-Hard</a></h2>
+<p><strong>NP-Hard</strong> is the set of problems that are at least as hard as the <strong>NP-Complete</strong> problems. <strong>NP-Hard</strong> problems don't have to be in NP and they don't have to be decision problems either.</p>
+<p>If you go back to the Euler Diagram, you'll find that it intersects with <strong>NP</strong> but also goes beyond it.</p>
+<p>A more precise definition is that a problem \( X \) can be considered <strong>NP-Hard</strong> if there is an <strong>NP-Complete</strong> problem \( Y \) such that \(Y \) can be reduced to \(X \).</p>
+<p>Since any <strong>NP-Complete</strong> problem can be reduced to any other <strong>NP-Complete</strong> problem in polynomial time, all <strong>NP-Complete</strong> problems can be reduced to any <strong>NP-Hard</strong> problem in polynomial time. Therefore, if you can find a solution to one <strong>NP-Hard</strong> problem in polynomial time, there is a solution to ALL <strong>NP</strong> problems in polynomial time.</p>
+<p>A significant NP-Hard problem is the <strong>Halting Problem</strong> which states that given a program and its input, can you determine if the program will stop?. This is a decision problem but does not fall into <strong>NP</strong>. Any <strong>NP-Complete</strong> problem can be reduced to this one. <sup>5</sup></p>
+<h2><a class="header" href="#qc-complexity" id="qc-complexity">QC Complexity</a></h2>
+<p>In the realm of QC, there are analogues to the classes you've seen above. One of the yet unsolved questions in QC is where these classes lay with respect to other classes like P and NP. Finding this out is highly desirable because it could lead to the discovery of more problems that can be reduced or made faster on Quantum Computers that was once prohibitive to perform on classical computers.</p>
+<p>There are two QC Complexity Classes you may encounter that are described here for the purpose of being thorough. Keep in mind that you do not need to know how a Quantum Computer works yet to understand these classes. The four classes above as well as the provided explanation should be enough for now.</p>
+<h3><a class="header" href="#bqp" id="bqp">BQP</a></h3>
+<p><strong>BQP</strong> or <strong>Bounded-Error Quantum Polynomial Time</strong> (a mouthful), is a class of decision problems that is solvable by a Quantum Computer in polynomial time with an error probability of at most \( 1/3 \) for all instances. <sup>6</sup></p>
+<p>It seems incredibly odd that we have to worry about &quot;error&quot; in our result but this comes from the nature of Quantum Computing, and Quantum Mechanics itself. In the quantum realm, the absolutes of our physical world give way to probabilities. The singular, absolute answers that Classical Computation gives are non-existent as Quantum Computers give answers in a kind of probability distribution. </p>
+<p>This means that most quantum computing algorithms have to be run multiple times (similar to the Solovay-Strassen Test mentioned in the Church-Turing Thesis section) to obtain an accurate answer.</p>
+<p>The classical analogue to <strong>BQP</strong> is <strong>BPP</strong> or <strong>Bounded-Error Probabilistic Polynomial Time</strong> which goes back to NTMs and the introduction of a probabilistic TM. In <strong>BPP</strong>, decision problems exist that are solvable in polynomial time with an error probability of at most, \( 1/3 \) by a probabilistic TM. <strong>BPP</strong> in turn, is the probabilistically bound relative of the more familiar <strong>P</strong> complexity class you should be familiar with which works with DTMs.<sup>7</sup> </p>
+<p>Shor's Algorithm falls into the BQP Complexity class as well as some other notable problems such like the simulation of quantum systems and the Discrete Logarithm (to be explained in later sections, but of great importance to cryptographic systems).<sup>8</sup></p>
+<h3><a class="header" href="#qma" id="qma">QMA</a></h3>
+<p><strong>QMA</strong> or <strong>Quantum Merlin Arthur</strong> is class of decision problems for which a Quantum Computer can verify a solution in polynomial time. If this sounds familiar, it can be considered the quantum analogue of the <strong>NP</strong> class <sup>9</sup>. It still has the error probability component you saw in <strong>BQP</strong> but it's a little more nuanced.</p>
+<p>If the answer to the solution is YES, verification should be correct \( 2/3 \) of the time but if it is NO, verification should not say it is correct with an error of \( 1/3 \). There is some flexibility in these fractional bounds in that you can redefine them and the problem can still be considered to be in <strong>QMA</strong> but the accepted standard is \( 2/3 \) vs \( 1/3 \) <sup>10</sup></p>
+<h2><a class="header" href="#citations-1" id="citations-1">Citations</a></h2>
+<ol>
+<li><a href="https://stackoverflow.com/questions/1857244/what-are-the-differences-between-np-np-complete-and-np-hard">Stack Overflow, What are the Differences Between NP, NP-Complete, and NP-Hard?</a></li>
+<li><a href="https://en.wikipedia.org/wiki/NP_(complexity)">Wikipedia Entry, NP (complexity)</a></li>
+<li>see 1.</li>
+<li>see 1.</li>
+<li>see 1.</li>
+<li><a href="https://en.wikipedia.org/wiki/BQP">Wikipedia Entry, BQP</a></li>
+<li><a href="https://en.wikipedia.org/wiki/BPP_(complexity)">Wikipedia Entry, BPP (complexity)</a></li>
+<li>see 6.</li>
+<li><a href="https://www.cs.cmu.edu/%7Eodonnell/quantum15/lecture24.pdf">CMU 18-859BB, Fall 2015 Lecture 24: Quantum Merlin-Arthur by Ryan O'Donnell &amp; Sidhanth Mohanty</a></li>
+<li><a href="https://en.wikipedia.org/wiki/QMA">Wikipedia Entry, QMA</a></li>
+</ol>
+<h1><a class="header" href="#how-quantum-computing-works" id="how-quantum-computing-works">How Quantum Computing Works</a></h1>
+<p>Up until now, you've received a hearty dose of all these formal definitions and goals for Quantum Computing but we've never really touched on HOW it works besides hinting at it in the explanation of <strong>BQP</strong> time complexity.</p>
+<p>Now that you know the goals and driving motivations for Quantum Computing, you can start to understand its principles of operation in context of performance and how they can give an avenue to those speed-ups witnessed.</p>
+<p>There are three main topics we'd like to go over:</p>
+<ul>
+<li>Quantum Mechanics</li>
+<li>The Qubit</li>
+<li>DiVincenzo's Criteria</li>
+</ul>
+<p>Quantum mechanics will dictate the behavior of the Qubit, which is the fundamental unit of computation that Quantum Computers use, while DiVincenzo's Criteria are the criteria that need to be satisfied to have a Quantum Computer that can execute Quantum Algorithms and simulations.</p>
+<h1><a class="header" href="#superficial-quantum-mechanics" id="superficial-quantum-mechanics">Superficial Quantum Mechanics</a></h1>
+<p>Before we can start to understand how Qubits operate, there are some ideas in Quantum Mechanics you need to have a strong understanding of. A mastery of this material will prove invaluable in understanding the Bloch Sphere and Dirac Notation, two mathematical tools crucial to any quantum programmer.</p>
+<p>The &quot;superficial&quot; in the title is intentional, as the concepts presented in this section are important but are introduced in a way that is as removed as possible from the actual underlying Quantum Mechanical phenomena, which will be investigated when you get introduced to the math that pairs with the field.</p>
+<h2><a class="header" href="#what-are-quantum-mechanics" id="what-are-quantum-mechanics">What are Quantum Mechanics?</a></h2>
+<p>Quantum Mechanics is the mathematical framework used to describe the behavior of motion and interaction in subatomic particles.</p>
+<p>At such small scales, Classical Physics and the Newtonian Mechanics we are intuitively familiar with in our daily lives completely falls apart and unusual properties such as <strong>Superposition</strong> and <strong>Entanglement</strong> begin to appear. </p>
+<p>Before we explain some phenomena, it's useful to know how they were identified in the first place.</p>
+<h2><a class="header" href="#superposition" id="superposition">Superposition</a></h2>
+<p>Superposition is described as the <em>ability of a quantum system to be in multiple states at the same time until a measurement is performed</em>.</p>
+<p>To make this vapid definition more useful to us, let's look at a physical example through an experiment known as the <strong>Double-Slit Experiment</strong>.</p>
+<h3><a class="header" href="#double-slit-experiment" id="double-slit-experiment">Double-Slit Experiment</a></h3>
+<p>For the large majority of our youthful education, we learn to think of the atom like this:</p>
+<p align="center">
+  <img  src="How-Quantum-Computing-Works/Superficial-Quantum-Mechanics//How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/bohr-model.gif" style="height: 60%; width: 60%; background-color: white;">
+</p>
+<p>pay close attention to the electrons. The way they're illustrated in particular, as point-like masses orbiting around the nucleus with an associated negative charge.</p>
+<p>Now let's perform an experiment. We'll set up a beam of electrons aimed at a barrier with two slits and have another barrier behind it to see how the electrons come out:</p>
+<p align="center">
+  <img  src="How-Quantum-Computing-Works/Superficial-Quantum-Mechanics//How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/double-slit.png" style="height: 60%; width: 60%; background-color: white;">
+</p>
+<p align="center">
+   <i> Source: <a href=https://en.wikipedia.org/wiki/Double-slit_experiment#/media/File:Double-slit.svg> Double-slit Experiment, Wikipedia Entry</a> </i>
+</p>
+<p>(The last barrier has been intentionally hidden from display)</p>
+<p>Before we turn on the beam, let's make a prediction about what we'll see. If we go off what we know in the first image about electrons being these point-like masses, we should see the following:</p>
+<p align="center">
+  <img  src="How-Quantum-Computing-Works/Superficial-Quantum-Mechanics//How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/double-band.png" style="height: 40%; width: 40%; background-color: white;">
+</p>
+<p align="center">
+   <i> Source: <a href= https://plus.maths.org/content/physics-minute-double-slit-experiment-0> Physics in a minute: The double slit experiment</a> </i>
+</p>
+<p>The electrons will just repeatedly hit the same two places, sort of like shooting tennis balls through the same double slit but larger.</p>
+<p>If we turn on the beam, we get the following:</p>
+<p align="center">
+  <img  src="How-Quantum-Computing-Works/Superficial-Quantum-Mechanics//How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/full-double-slit.png" style="height: 50%; width: 50%; background-color: white;">
+</p>
+<p align="center">
+   <i> Source: <a href=https://en.wikipedia.org/wiki/Double-slit_experiment#/media/File:Double-slit.svg> Double-slit Experiment, Wikipedia Entry</a> </i>
+</p>
+<p>Note that the pattern produced is far from what we predicted! It's a continuously varying pattern of intensity, periodic in nature, that's a far stretch from what we predicted.</p>
+<p>IT DOES however, match the pattern generated if we were to pass some kind of wave through the two slits:</p>
+<p align="center">
+  <img  src="How-Quantum-Computing-Works/Superficial-Quantum-Mechanics//How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/water-double-slit.jpg" style="height: 50%; width: 50%; background-color: white;">
+</p>
+<p align="center">
+   <i> Source: <a href=https://www.youtube.com/watch?v=0cztIj1m7e4> Double-slit Experiment - Water Wave Interference Pattern</a> </i>
+</p>
+<p>Intuitively, we'd have to think that electrons must somehow be waves instead of particles. But how can something with charge and treatable as a point-like mass just turn into a wave? </p>
+<p>Perhaps there is a problem with our experimental setup itself. Maybe, because we're shooting a stream of electrons through the double-slits the electrons are interacting with themselves in such a way that when they hit the barrier they produce a wave interference pattern. </p>
+<p>Let's try just shooting one electron at a time. That should give us the two-band pattern we predicted earlier. </p>
+<p>What do we see?</p>
+<p align="center">
+  <img  src="How-Quantum-Computing-Works/Superficial-Quantum-Mechanics//How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/single-particle.jpg" style="height: 60%; width: 60%; background-color: white;">
+</p>
+<p>The same thing! Some how, individual electrons also seem to exhibit this <strong>wave-particle duality</strong> where it can behave both as a wave and a particle! What is rather remarkable is that each electron isn't &quot;communicating&quot; or sharing information with the electrons after it but it seems as if the electrons &quot;know&quot; where they need to go on the barrier to create a wave interference pattern.</p>
+<p>This led physicist Erwin Schrodinger to formulate the idea that the electron wasn't really a particle so much as a wave spread out throughout space. This idea is extendable to other quantum mechanical systems and has a mathematical counterpart known as the <strong>Schrodinger Equation</strong>.</p>
+<p>The <strong>Schrodinger Equation</strong> is a <em>partial different equation</em>, which means that solving it doesn't give you a number but another function. This function is known as the <strong>Wave Function</strong> which <em>describes the probability a quantum mechanical system will be in a certain configuration</em>.</p>
+<p>Let's go back to our definition of what a superposition is:</p>
+<blockquote>
+<p>Superposition is the ability of a quantum system to be in multiple states at the same time until a measurement is performed.</p>
+</blockquote>
+<p>The <em>states</em> mentioned are anything that can be measured about the particle such as location, energy, momentum, etc. In this case, our experiment concerns itself with location although the energy and momentum of a particle can be obtained from the wave function as well.</p>
+<p>The wave function is what allows quantum systems to assume multiple states. The key here is the &quot;probability&quot; part, the particle or system of interest doesn't really represent ALL possible states so much as the chance it'll be in one or a &quot;probability distribution&quot;. That's where the &quot;measurement&quot; part comes in.</p>
+<p>When the electrons in our experiment interacted with the barrier, the wave function of the electron &quot;collapses&quot;, thus forcing the electron to exist in one single location. What used to be an infinite distribution of probabilities must &quot;pick&quot; one value and stick with it. That means that while the particle still acts as a wave, we can't really extract any information because we can only do so through measurement which causes the whole thing to fall apart. To be more precise, we can only measure one thing at a time which means all other desirable data is permanently lost.</p>
+<p>We also know that due to this wave function, electrons actually look more like this:</p>
+<p align="center">
+  <img  src="How-Quantum-Computing-Works/Superficial-Quantum-Mechanics//How-Quantum-Computing-Works/Superficial-Quantum-Mechanics/orbitals.jpg" style="height: 60%; width: 60%; background-color: white;">
+</p>
+<p>the weird lobes and spheroids you see give the <em>probability</em> of an electron at a certain energy existing at a certain location around the nucleus.</p>
+<h2><a class="header" href="#entanglement" id="entanglement">Entanglement</a></h2>
+<p>Quantum entanglement occurs when two or more particles become &quot;linked&quot;, be it through creation or interaction. Whatever happens to one immediately affects the other, regardless of how far apart they are.</p>
+<p>The more &quot;formal&quot; way of defining this is when the wave function of a quantum system (such as two or more particles) can't be described by two separate wave functions. That means that the measurement of one particle causes the function to collapse as a whole, resulting in the other particle exhibiting highly correlated behavior, far from random chance.</p>
+<p>A nice way to think of this is imagine having two quarters. They are placed exactly on their sides on a table. They can represent four possible combinations, each with a 25% chance of appearing should you hit the table and let them fall flat. The possibilities are represented in the table below:</p>
+<table><thead><tr><th></th><th>Heads</th><th>Tails</th></tr></thead><tbody>
+<tr><td>Heads</td><td>25%</td><td>25%</td></tr>
+<tr><td>Tails</td><td>25%</td><td>25%</td></tr>
+</tbody></table>
+<p>Now, perform the same setup but tape a piece of cardboard between the same side (connect Heads to Heads for example).</p>
+<p>When one coin falls, the other will fall the same way and your probability turns into the following:</p>
+<table><thead><tr><th></th><th>Heads</th><th>Tails</th></tr></thead><tbody>
+<tr><td>Heads</td><td>50%</td><td>0%</td></tr>
+<tr><td>Tails</td><td>0%</td><td>50%</td></tr>
+</tbody></table>
+<p>Now imagine the same thing happening over and over again, but the behavior remains when the cardboard is removed and the coins are infinitely far apart!</p>
+<p>This analogy is essentially what Entanglement is, the perfect correlation between two particles or groups of particles. </p>
+<h2><a class="header" href="#no-cloning-theorem" id="no-cloning-theorem">No-Cloning Theorem</a></h2>
+<p>The <strong>No-Cloning Theorem</strong> is mentioned less frequently than superposition and entanglement owing to the fact that is isn't so much a property qubits need as a consequence of quantum mechanics.</p>
+<p>The theorem states the following:</p>
+<blockquote>
+<p>it is impossible to copy a quantum mechanical system in an unknown state to another quantum mechanical system</p>
+</blockquote>
+<p>This means that if I have some quantum system in superposition, I can't &quot;copy&quot; that superposition onto another quantum system and have two exact copies. The reasoning behind this does not have a nice physical analogue but once you're introduced to Dirac Notation, the proof should seem straightforward enough.</p>
+<h1><a class="header" href="#the-qubit" id="the-qubit">The Qubit</a></h1>
+<p>In the previous section, we went over several key principles of Quantum Mechanics that govern the most fundamental operations of QC.</p>
+<p>In this section, we look at the Qubit, analogous to the &quot;bit&quot; encountered in classical computers as being the fundamental unit of computation. By using multiple bits and manipulating them in certain ways, we can represent, store, and manipulate data to our desired form.</p>
+<p>Unlike the bit however, Qubits can leverage the properties of <strong>superposition</strong> and <strong>entanglement</strong> we mentioned prior.</p>
+<p>Furthermore, for anything to qualify as a qubit it MUST have the above two properties. </p>
+<h2><a class="header" href="#superposition-1" id="superposition-1">Superposition</a></h2>
+<p>You're already familiar with the idea of superposition as a consequence of the <strong>wave function</strong> quantum systems have but now we need to understand how to put this in the context of QC.</p>
+<p>We know our classical bit can only have the values \(1\) and \(0\). There is no inbetween, it's one or the other.</p>
+<p>Now let's recall what the official definition of <strong>superposition</strong> is: </p>
+<blockquote>
+<p>the ability of a quantum system to be in multiple states at the same time until a measurement is performed.*</p>
+</blockquote>
+<p>Our prior example of the Double-Slit experiment defined &quot;states&quot; to be equivalent to &quot;locations&quot; although we also mentioned that &quot;any observable property&quot; could be considered a state.</p>
+<p>The qubit itself is a quantum mechanical system and therefore can exhibit the property of superposition with a twist: the states that we're interested in isn't location but the probability of it being a \(1\) or a \(0\).</p>
+<p>When the qubit is measured, we're guaranteed a \(1\) or \(0\) value but the qubit can also be set to a superposition of the two values meaning that it has a probability distribution of being \(1\) or \(0\) before being measured! </p>
+<p>A final, important property of qubits is that although measurement will cause the qubit to collapse to \(1\) or \(0\), we can perform useful manipulations WITHIN the superposition state that affect the probability distribution. This is one of the great powers of QC. </p>
+<p align="center">
+  <img  src="How-Quantum-Computing-Works/The-Qubit//How-Quantum-Computing-Works/The-Qubit/qubit.png" style="height: 50%; width: 50%; background-color: white;">
+</p>
+<p align="center">
+   <i> Source: <a href=https://medium.com/@kareldumon/the-computational-power-of-quantum-computers-an-intuitive-guide-9f788d1492b6> The Computational Power of Quantum Computers: an intuitive guide by Karel Dumon</a> </i>
+</p>
+<p>This result should remind you of the probabilistic nature of Quantum Computation already hinted by the <strong>BQP</strong> and <strong>QMA</strong> complexity classes where we a problem needs to be solved correctly AT LEAST some fraction of the time to fall into the quantum complexity classes. </p>
+<p>All of this seems more like a nuisance than something to accelerate computation but superposition allows for a property known as <strong>Inherent Parallelism</strong>.</p>
+<h3><a class="header" href="#inherent-parallelism" id="inherent-parallelism">Inherent Parallelism</a></h3>
+<p>In a classical computer, we know that you can use combinations of bits to represent data. Each bit can be in one of two states giving you:</p>
+<p>\[ n^{2} \]</p>
+<p>possible combinations, where \(n\) is the number of bits you have. Due to the nature of classical computation, you can only manipulate one combination at a time. </p>
+<p>In a quantum computer however, we know that superposition allows us to represent multiple states at once. That means with each qubit added we can have</p>
+<p>\[ 2^{n} \]</p>
+<p>possible combinations, where \(n\) is the number of qubits you have. Furthermore, we can manipulate qubits in this superposition state which is similar to working with ALL the possible states the classical computer could represent SIMULTANEOUSLY.</p>
+<p>Superposition and Inherent Parallelism are only part of the Qubit story. Entanglement also plays an incredibly important role.</p>
+<h2><a class="header" href="#entanglement-1" id="entanglement-1">Entanglement</a></h2>
+<p>A solid grasp of the quantum mechanical definition of entanglement prior translates rather nicely to its context in QC. </p>
+<p>Just as particles can become entangled, so too can qubits but in a controlled fashion. </p>
+<p>Entanglement is particularly useful in Quantum Computing for cryptographic systems as well as quite literally being able to simulate the entanglement that proves to be so prohibitive in the Quantum Many-Body Problem.</p>
+<h2><a class="header" href="#a-note-on-platform-diversity" id="a-note-on-platform-diversity">A Note on Platform Diversity</a></h2>
+<p>Before we can proceed any further, there is a &quot;diversity&quot; among QC platforms that needs to be addressed.</p>
+<p>All existing platforms <em>guarantee</em> the properties of superposition and entanglement explained above. They also all suffer from the threat of <strong>decoherence</strong> which will be explained after this. Beyond that and things start to get kind of hairy.</p>
+<p>Owing to the rapid development and infancy of the field, the hardware implementation for actual qubits varies widely. Unlike how classical computation has already settled for universally using silicon and switches called &quot;transistors&quot; to manipulate 1s and 0s, QC is still trying to figure out what qubit design is &quot;best&quot;. There is plenty of contention over which one is better, with each kind of implementation having its own pros and cons.</p>
+<p>Owing to this diversity, the authors of this guide have opted not to present the hardware details too early, instead focusing on each platform individually after developing the knowledge that still remains universally applicable in QC. </p>
+<p>The following image gives just a sneak-peek at some of the different kinds of architectures already in existence (with the exception of Topological Qubits, which are theorized but have yet to be implemented):</p>
+<p align="center">
+  <img  src="How-Quantum-Computing-Works/The-Qubit//How-Quantum-Computing-Works/The-Qubit/qubit-types.png" style="height: 95%; width: 95%; background-color: white;">
+</p>
+<p align="center">
+   <i> Source: <a href=https://science.sciencemag.org/content/354/6316/1090/tab-figures-data> Quest for Qubits by Gabriel Popkin </a> </i>
+</p>
+<p>There are also several models of computation qubits are being used for. </p>
+<p>The first and most commonly implemented is the <strong>circuit model</strong> where individual qubits are manipulated using <strong>gates</strong>. By using a set of gates, we can arrange them in a sequence and put a qubit through it to achieve some desired result. This very similar to how current classical computers use combinations of logic gates to manipulate 1's and 0's and therefore, one of the most intuitive models. </p>
+<p>The following picture gives an example of a computation set up in the <strong>circuit model</strong>, with each line representing a qubit and each box a gate that will manipulate the qubit. </p>
+<p align="center">
+  <img  src="How-Quantum-Computing-Works/The-Qubit//How-Quantum-Computing-Works/The-Qubit/quantum-gates.jpeg" style="height: 60%; width: 60%; background-color: white;">
+</p>
+<p align="center">
+   <i> Source: <a href=https://medium.com/@jonathan_hui/qc-programming-with-quantum-gates-8996b667d256> QC - Programming with Quantum Gates (Single Qubits) by Jonathan Hui</a> </i>
+</p>
+<p>Gates give a great degree of flexibility in the expression of algorithms and can represent a <strong>Quantum Turing Machine (QTM)</strong> which is capable of executing any Quantum Algorithm.</p>
+<p>The circuit model is not the only one however, with <strong>Adiabatic Quantum Computation (AQC)</strong> and <strong>Gaussian Boson Sampling (GBS)</strong> being two other methods. Both use qubits with the properties above but can't implement a QTM, thereby limiting their ability to execute existing Quantum Algorithms. This doesn't make them any less useful however as both tackle different sets of problems in a more elegant (and/or efficient) fashion than the <strong>circuit model</strong> does. </p>
+<p>There are certain problems that cannot be expressed nicely in terms of gates that seem to fare better through expression through AQC or GBS.</p>
+<h2><a class="header" href="#decoherence" id="decoherence">Decoherence</a></h2>
+<p>Decoherence is the last property that all qubits have. However, unlike superposition and entanglement it is not required and highly undesirable.</p>
+<p>Decoherence is when a <em>quantum system reverts to a classical system through interaction with its environment</em>. </p>
+<p>A classical system has no ability for superposition let alone entanglement. As a result, if decoherence occurs during qubit manipulation, errors are introduced as well as data lost.</p>
+<p>To prevent such things from happening, most qubit architectures have there own ways of isolating qubits from the environment. The <strong>superconducting loop</strong> architecture for example, is prone to decoherence due to thermal fluctuations and magnetic disturbance, requiring the whole computer to be immersed in a specialized cooling apparatus and magnetic shielding. </p>
+<p>On top of this, many existing Quantum Computers will also use <strong>Quantum Error Correction (QEC)</strong> to recover from such errors and prolong the period of time available for computation. These protocols are drastically different from standard <strong>Error Correction Codes (ECC)</strong> owing to the fact that quantum mechanics introduces the <strong>No-Cloning Theorem</strong> which states that we can't copy a qubit while it's in the superposition state. This is different from the classical realm where I can literally just attach a wire and copy a \(1\) or \(0\). </p>
+<p>To subvert this, most QEC protocols use entanglement to determine if a qubit state changed in an undesirable fashion and to correct such an error without having to know the exact state of the qubit. </p>
+<h2><a class="header" href="#criteria-for-quantum-computing" id="criteria-for-quantum-computing">Criteria for Quantum Computing</a></h2>
+<p>At this point, you understand that the criteria a qubit must satisfy are:</p>
+<ul>
+<li>Superposition</li>
+<li>Entanglement</li>
+</ul>
+<p>Decoherence and the No-Cloning Theorem aren't necessary but are just consequences of the quantum mechanical principles qubits work in. </p>
+<p>Beyond this, there is an even larger set of criteria that need to be satisfied for a device to be considered a true Quantum Computer.</p>
+<p>At this point in time, most platforms satisfy the criteria to varying degrees but none has managed to satisfy all of them. Properties of certain qubit architectures even prohibit the realization of some of the criteria. </p>
+<p>These criteria are known as the <strong>DiVincenzo Criteria</strong> and will be explained in the next section. The utility of knowing these criteria is it gives you an idea of the current state of QC, what things a Quantum Computer AS A WHOLE should be able to do, and the future of the field. </p>
+<h1><a class="header" href="#divincenzos-criteria-sup1sup" id="divincenzos-criteria-sup1sup">DiVincenzo's Criteria <sup>1</sup></a></h1>
+<p>In the previous section, we identified the criteria required for qubits. Now we move onto those necessary to construct a Quantum Computer.</p>
+<p>These criteria were proposed in 2000 by physicist David P. DiVincenzo. The end-goal is to have a Quantum Computer capable of performing the quantum simulations needed for the Quantum Many-Body Problem as well as executing Quantum Algorithms.</p>
+<p>There are seven criteria in total, the first five focus solely on the computational nature of the machine itself. The other two do with the transmission of information through qubits.</p>
+<p>These criteria are as follows:</p>
+<ol>
+<li>A scalable physical system with well characterized qubit</li>
+<li>The ability to initialize the state of the qubits to a simple fiducial state</li>
+<li>Long relevant decoherence times</li>
+<li>A &quot;universal&quot; set of quantum gates</li>
+<li>A qubit-specific measurement capability</li>
+</ol>
+<p>With the remaining two being:</p>
+<ol start="6">
+<li>The ability to interconvert stationary and flying qubits</li>
+<li>The ability to faithfully transmit flying qubits between specified locations</li>
+</ol>
+<p>Let's go ahead and break down some of these criteria.</p>
+<h2><a class="header" href="#scalable-physical-system-with-well-characterized-qubit" id="scalable-physical-system-with-well-characterized-qubit">Scalable Physical System with Well Characterized Qubit</a></h2>
+<p>A <strong>well-characterized</strong> qubit is one with a well-defined <strong>Hamiltonian</strong>, the Hamiltonian being a a function that can tell you the energy (given as the sum of Potential and Kinetic Energies) when the qubit is in a certain configuration.</p>
+<p>A <strong>scalable physical system</strong> means that not only should we have the ability to control one qubit, but many, many more. This is one of the greater challenges most QC platforms face because linearly increasing the number of qubits often results in an exponential increase in the experimental setup which renders any speed-up moot.</p>
+<h2><a class="header" href="#initialize-the-state-of-qubits-to-a-simple-fiducial-state" id="initialize-the-state-of-qubits-to-a-simple-fiducial-state">Initialize the State of Qubits to a Simple Fiducial State</a></h2>
+<p>Prior to executing a computation, the qubits should be in a well defined state. Usually, most platforms tend for the lowest energy state (accepted to be equivalent to \(0\) in classical computation) however, it can be any arbitrary state so long as it is well defined.</p>
+<h2><a class="header" href="#long-relevant-decoherence-times" id="long-relevant-decoherence-times">Long Relevant Decoherence Times</a></h2>
+<p>In the section on qubits, we mentioned that a constant problem Quantum Computers must deal with is prevent qubits from decohering, causing data loss and introducing error to computations.</p>
+<p>We want the time to decoherence to be long enough so that we can perform useful operations on the qubit.</p>
+<h2><a class="header" href="#a-universal-set-of-quantum-gates" id="a-universal-set-of-quantum-gates">A &quot;Universal&quot; Set of Quantum Gates</a></h2>
+<p>In classical computing, it's possible to have a gate or set of gates that can, in turn, create any other possible configuration of gates.</p>
+<p>Take for example, the NOR gate below:</p>
+<p align="center">
+  <img  src="How-Quantum-Computing-Works/DiVincenzo's-Criteria//How-Quantum-Computing-Works/DiVincenzo's-Criteria/universal-gate-nor.gif" style="height: 50%; width: 50%; background-color: white;">
+</p>
+<p align="center">
+   <i> Source: <a href=https://www.electronics-tutorials.ws/logic/universal-gates.html> Universal Logic Gates and Complete Sets </a> </i>
+</p>
+Combining multiple NOR gates makes it possible to achieve any other desired set of gates.
+<p>We want the same property in Quantum Computing, having a set of gates that can be used to create any other set of gates. This is particularly useful because it allows us to take existing Quantum Algorithms and &quot;translate&quot; them into a form more suitable for physical implementation or at the very least, into the operations we can currently perform. </p>
+<p>However, this proves to be a bit problematic considering that the superposition mentioned before is an infinite spectrum between \(1\) and \(0\), making exact gate set by gate set simulation impossible.</p>
+<p>It is possible however, to have a set of gates simulate another set with an extremely good approximation. This is a result of the <strong>Solovay-Kitaev Theorem</strong> which shows that you can take any desired qubit operation and decompose it into a sequence of gates to approximate it. <sup>2</sup></p>
+<h2><a class="header" href="#qubit-specific-measurement-capability" id="qubit-specific-measurement-capability">Qubit Specific Measurement Capability</a></h2>
+<p>After performing a computation, you want to obtain the state of the qubit which should be your result. The Quantum Computer in question should be able to obtain this information accurately.</p>
+<h2><a class="header" href="#ability-to-interconvert-stationary-and-flying-qubits" id="ability-to-interconvert-stationary-and-flying-qubits">Ability to Interconvert Stationary and Flying Qubits</a></h2>
+<p>A <strong>stationary qubit</strong> is one that remains in the Quantum Computer that generated while a <strong>flying qubit</strong> is one that can be transmitted back and forth between Quantum Computers.</p>
+<p>Converting between them should allow information to be reliably sent and received without fear of decoherence, which falls into the last criteria of <em>The ability to faithfully transmit flying qubits between specified locations</em>.</p>
+<p>Progress in these areas has been an ongoing challenge, especially considering that decoherence inevitably happens in any environment outside of the Quantum Computer's control.</p>
+<h2><a class="header" href="#citations-2" id="citations-2">Citations</a></h2>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/DiVincenzo%27s_criteria">Wikipedia Entry, DiVincenzo's Criteria</a></li>
+<li><a href="http://michaelnielsen.org/blog/the-solovay-kitaev-algorithm/">Michael Nielsen - The Solovay-Kitaev Algorithm</a></li>
+</ol>
+<h1><a class="header" href="#mathematical-tools" id="mathematical-tools">Mathematical Tools</a></h1>
+<p>Before we can take the leap into understanding how gates work and understanding existing quantum circuits/algorithms, you'll need to have a few mathematical tools under your belt</p>
+<p>They have been split into four sections</p>
+<ul>
+<li>Linear Algebra</li>
+<li>Dirac Notation</li>
+<li>Core Quantum Mechanics</li>
+<li>Bloch Sphere</li>
+</ul>
+<p><strong>Linear Algebra</strong> is the bare minimum you'll need to hit the ground running. We start simple with vectors and move our way up to the Outer Product, all key tools you'll need to express qubit operations.</p>
+<p>Once the math is settled, we introduce a new, succinct way of expressing a lot of the <strong>Linear Algebra</strong> you see called <strong>Dirac Notation</strong> which is the icing on the cake.</p>
+<p><strong>Core Quantum Mechanics</strong> digs further into the Quantum Mechanics that <strong>Dirac Notation</strong> was intended for as well as giving key insights into some of the peculiarities of QC. </p>
+<p>We top things off with a visual grand finale, the <strong>Bloch Sphere</strong> which provides a nice way of actually &quot;seeing&quot; the superposition state a singular qubit is in. </p>
+<h1><a class="header" href="#linear-algebra" id="linear-algebra">Linear Algebra</a></h1>
+<p>The following are a number of operations in Linear Algebra that are core to QC. It is highly recommended you make yourself familiar with these operations and practice as necessary.</p>
+<p>Their exact mapping to Quantum Computing/Mechanics will not be explained now but will be revealed soon enough within the sections on <strong>Dirac Notation</strong> and <strong>Core Quantum Mechanics</strong></p>
+<h2><a class="header" href="#vectors" id="vectors">Vectors</a></h2>
+<p>A <strong>Vector</strong> should be thought of as a quantity with <em>more than one piece of information</em>.</p>
+<p>You may already be familiar with this kind of notation:</p>
+<p>\[ \vec r = 10\hat{x} + 11\hat{y} \]</p>
+<p>where a vector is always given as some lower-case letter with an arrow on top. </p>
+<p>This simply means that if I give you a point on the XY plane (say, \( (1,1)\) ) and I ask you to apply the above vector to it, you move 10 units in the X-direction and 11 units in the y-direction to obtain a new location: \((11, 12)\) </p>
+<p>A more succinct and equivalent notation you'll see in this book is the following:</p>
+<p>\[ \vec r = \begin{bmatrix}10 \\ 11 \end{bmatrix} \]</p>
+<p>where the \(\hat{x}\) and \(\hat{y}\) are implicit from the ordering of the numbers from top to bottom.</p>
+<p>Vectors can be thought of even more abstractly as ways of grouping together related values of a system, like how in Physics we say a vector represents both <em>magnitude</em> and <em>direction</em> of a force. </p>
+<p>The &quot;direction&quot; component makes sense because after all, it does tell you where something will end up but the magnitude part is a little more elusive. We think of &quot;magnitude&quot; as how strong something is. It would seem intuitive to link that to how long the vector is but how do we extract that information given the two values which are reserved for telling us where to go?</p>
+<p>The answer lies in the pythagorean theorem. Given the following vector:</p>
+<p>\[ \vec r = \begin{bmatrix} r_{1} \\ r_{2} \\ \vdots \\ r_{n} \end{bmatrix} \]</p>
+<p>We find its length like so:</p>
+<p>\[ \left\lVert \vec r \right\rVert = \sqrt{r_{1}^2 + r_{2}^2 \cdots + r_{n}^2 } = magnitude \]</p>
+<p>Where the double vertical bars around the vector indicate that we want its length. </p>
+<p>In Quantum Mechanics, vectors are used to represent the state that a system is in as well, which leads us to the topic of <strong>Linear Combinations</strong></p>
+<h3><a class="header" href="#linear-combinations-and-span" id="linear-combinations-and-span">Linear Combinations and Span</a></h3>
+<p>In the example above:</p>
+<p>\[ \vec r = 10\hat{x} + 11\hat{y} \] </p>
+<p>Possesses another, more implicit meaning.</p>
+<p>Most of us look at the \(\hat{x}\) and \(\hat{y}\) to just tell us to go some <em>n</em> units in those &quot;directions&quot;. The &quot;directions&quot; however, are vectors themselves.</p>
+<p>More specifically, they are known as <strong>unit vectors</strong> which have a <em>magnitude</em> (equivalent to length) of 1. Unit vectors always have that little arrow above them (a &quot;hat&quot;) and are useful in defining any other arbitrary vector. The set of arbitrary vectors that can be created is known as the <strong>span</strong> of the vector pair and as long as your vectors aren't parallel (if you overlap them, they don't stay in a single line) you can generate any other vector you want. </p>
+<p>The \(\hat{x}\) and \(\hat{y}\) vectors are defined like so:</p>
+<p>\[ \hat{x} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}\]</p>
+<p>\[ \hat{y} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}\]</p>
+<p>We can define any vector we want as a <strong>linear combination</strong> of the two vectors.  This means that if I wanted to create a vector representing -10 steps in the X-direction and 20 steps in the Y-direction, I take \(\hat{x}\), scale it by -10 (making it longer by 10 units and go in the -x direction) and \(\hat{y}\), scale it by 20 (make it longer by 20 units) and combine them to get the following:</p>
+<p>\[ \vec r = -10\hat{x} + 20\hat{y}\]</p>
+<p>Or to be more verbose:</p>
+<p>\[ \begin{bmatrix} -10 \\ 20 \end{bmatrix} = -10 \cdot \begin{bmatrix} 1 \\ 0 \end{bmatrix} + 20 \cdot \begin{bmatrix} 0 \\ 1 \end{bmatrix} \]</p>
+<p>Now let's take things one step further. The only reason we use the \(\hat{x}\) and \(\hat{y}\) vectors is because of convenience. They lie directly on the x and y-axes we're already so accustomed to defining the locations of things with. </p>
+<p>We could just as easily define the following pair of vectors:</p>
+<p>\[ \vec \alpha = \begin{bmatrix} 3 \\ 0 \end{bmatrix} \]</p>
+<p>\[ \vec \beta = \begin{bmatrix} -2 \\ 5 \end{bmatrix} \]</p>
+<p>And get any other vector we want through the following linear combination:</p>
+<p>\[ \vec \gamma = c_0 \vec \alpha + c_1 \vec \beta \]</p>
+<p>Where \(c_0\) and \(c_1\) are constant values that tell us how to scale the vectors so they can be added and get us to a point of interest. You should also note that the pair of vectors didn't have to be unit vectors either. </p>
+<p>This ability to create vectors from linear combinations of others is key to many qubit manipulations as quantum states can be represented as a <em>combination</em> between two base vector pairs which, can be arbitrarily defined! </p>
+<h2><a class="header" href="#inner-product" id="inner-product">Inner Product</a></h2>
+<p>The <strong>Inner Product</strong> or more commonly known as the <strong>Dot Product</strong> is a kind of multiplication for vectors. </p>
+<p>Recall that when we multiply a vector by a constant (more formally known as a <strong>scalar</strong>), we just multiply each element in the vector to get another vector of the same dimension.</p>
+<p>Here's an example:</p>
+<p>\[ \vec r = \begin{bmatrix} 1 \\ 0 \\ 3 \end{bmatrix} \]
+\[ c = 2\]
+\[c \cdot \vec r = 2 \cdot \begin{bmatrix} 1 \\ 0 \\ 3 \end{bmatrix} \ = \begin{bmatrix} 2 \cdot 1 \\ 2 \cdot 0 \\ 2 \cdot 3 \end{bmatrix} = \begin{bmatrix} 2 \\ 0 \\ 6 \end{bmatrix}\]</p>
+<p>The geometric interpration of this is that we have shrunk or extended (<em>scaled</em>) the vector in length. </p>
+<p>The <strong>Dot Product</strong> is rather similar but we no longer have a constant, replacing it with another vector. The vector in question must have the SAME NUMBER OF ELEMENTS as the the vector being multiplied.</p>
+<p>It is generalized like so:</p>
+<p>\[ \vec a = \begin{bmatrix} a_1 \\ a_2 \\ \ldots \\ a_n \end{bmatrix} \quad\quad \vec b =  \begin{bmatrix} b_1 \\ b_2 \\ \ldots \\ b_n \end{bmatrix} \]
+\[ \vec a \cdot \vec b = (a_1 \cdot b_1) + (a_2 \cdot b_2) + \ldots + (a_n \cdot b_n) \]</p>
+<p>We took each element in the same position of each vector, multiplied the values, and then added each subsequent time to get a single value/scalar.</p>
+<p>The following is an example with real numbers:</p>
+<p>\[\vec a = \begin{bmatrix} 5 \\ -1 \\ 3 \end{bmatrix} \quad\quad \vec b = \begin{bmatrix} 3 \\ 2 \\ 1 \end{bmatrix} \]</p>
+<p>\[\vec a \cdot \vec b = (5 \cdot 3) + (-1 \cdot 2) + (3 \cdot 1) = 15 + -2 + 3 = 16 \]</p>
+<p>With this knowledge, we can redefine what it means to find the magnitude of a vector. In the beginning, we said that you could find it by taking each of its components, squaring them, adding them up and then taking the square root of it all. In essence, an augmented pythagorean theorem.</p>
+<p>An equally valid interpretation is to take the dot product of a vector with itself and square that. The dot product merely acts as a neat alias for the squaring and square root operations making things slightly more succinct:</p>
+<p>\[ \left\lVert \vec a \right\rVert = \sqrt{\vec a \cdot \vec a} \]</p>
+<p>There is also an elegant geometric interpretation of the dot product: </p>
+<p>It is the &quot;amount&quot; that one vector overlaps or projects onto another vector as depicted in the image below:</p>
+<p align="center">
+  <img  src="Mathematical-Tools/Linear-Algebra//Mathematical-Tools/Linear-Algebra/vector-projection.png" style="height: 30%; width: 30%; background-color: white;">
+</p>
+<p align="center">
+   <i> Source: <a href=https://mathinsight.org/dot_product/> Math Insight - the dot product </a> </i>
+</p>
+<p>That amount of &quot;overlap&quot; can also be interpreted as the magnitude (length) of the vector of interest times the cosine of the angle it makes with the vector it projects onto. </p>
+<p>The ability to do a dot product ties very closely with more advanced operations in linear algebra like <strong>matrix multiplication</strong> and the <strong>complex dot product</strong> which adds some more rules on top of the existing dot product presented here. </p>
+<h2><a class="header" href="#matrices" id="matrices">Matrices</a></h2>
+<p>Recall that we defined vectors as a quantity with <em>more than one piece of information</em>. </p>
+<p>Matrices can also possess the same definition but to an even <em>greater</em> extent.</p>
+<p>Note that vectors can only have a bunch of numbers &quot;single file&quot;. They stay in one single row or column. With matrices, you can have any arbitrary number of rows AND columns. </p>
+<p>They are represented as such:</p>
+<p>\[
+\boldsymbol{A_{m,n}} = 
+\begin{bmatrix}
+a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1,n} \\
+a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2,n} \\
+\vdots  &amp; \vdots  &amp; \ddots &amp; \vdots  \\
+a_{m,1} &amp; a_{m,2} &amp; \cdots &amp; a_{m,n} 
+\end{bmatrix} 
+\]</p>
+<p>Where we use a bold, upper-case letter to represent the matrix and access a singular value in the matrix through 1-based indexing and the notation \(A_{m,n}\), where \(m = row \enspace index\) and \(n = column \enspace index\). </p>
+<p>When we describe matrices, one of the first things we care about is the size, which is simply defined as the number of rows by the number of columns. In the example above, we would give the size as follows:</p>
+<p>\[ m \times n\]</p>
+<h3><a class="header" href="#vectors-as-matrices" id="vectors-as-matrices">Vectors as Matrices</a></h3>
+<p>Something that should be given special attention is the fact that we now define vectors as being a matrix but with a row or column size restricted to 1 (i.e. \(m \times 1\) or \(1 \times n\)). We let the other dimension be arbitrarily defined. </p>
+<p>Doing this introduces two types of vectors and we must now pay attention to their orientation: the <strong>row vector</strong> and the <strong>column vector</strong> </p>
+<p>The <strong>row vector</strong> has dimensions \(1 \times n\) and looks like the following:</p>
+<p>\[ \vec a = \begin{bmatrix} a_1 &amp; a_2 &amp; a_3 &amp; \cdots &amp; a_n \end{bmatrix} \]</p>
+<p>The <strong>column vector</strong> has dimensions \(m \times 1 \) and looks like the following:</p>
+<p>\[ \vec b = \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ \cdots \\ b_n \end{bmatrix} \]</p>
+<p>Quantum mechanics usually favors the column vector representation which is what this guide adheres to. The actual orientation is arbitrary for representing the actual values contained but for certain operations it becomes something one must be aware of. </p>
+<p>With this knowledge, there are two important operations you need to be able to perform with matrices: find the <strong>Conjugate</strong> and <strong>Transpose</strong> given any vector/matrix. </p>
+<h3><a class="header" href="#conjugate" id="conjugate">Conjugate</a></h3>
+<p>Matrices and Vectors are not just limited to holding groups of integers and it is not uncommon to encounter complex numbers when dealing with them in Quantum Mechanics.</p>
+<p>A common operation you'll see is to find the <strong>conjugate</strong> where if I had something like \(a+bi\), applying conjugation gives me \(a-bi\) and vice versa if I was given \(a-bi\). Note that the real component of the complex number remains untouched. </p>
+<p>For vectors and matrices, this just means finding the conjugate for each element: </p>
+<p>Given a vector:</p>
+<p>\[ \vec h = \begin{bmatrix} 1+i \\ 3-2i \\ 9+4i \end{bmatrix} \]</p>
+<p>The conjugate would be like so:</p>
+<p>\[ \vec h^* = \begin{bmatrix} 1-i \\ 3+2i \\ 9-4i \end{bmatrix}\]</p>
+<p>Given a matrix:</p>
+<p>\[ \boldsymbol{A} = \begin{bmatrix} 1+2i &amp; -4i \\ 9+7i &amp; 10 \end{bmatrix} \]</p>
+<p>The conjugate is:</p>
+<p>\[ \boldsymbol{A}^* = \begin{bmatrix} 1-2i &amp; 4i \\ 9-7i &amp; 10 \end{bmatrix} \]</p>
+<p>We use the \(*\) with vectors and matrices to represent the conjugate version.</p>
+<h3><a class="header" href="#transpose" id="transpose">Transpose</a></h3>
+<p>A <strong>transform</strong> simply means that we swap the rows for the columns or &quot;rotate&quot; the matrix around its diagonal which always spans from the upper leftmost corner to the lower right corner in a clean diagonal (doesn't skip numbers) from one value to the next. </p>
+<p align="center">
+  <img  src="Mathematical-Tools/Linear-Algebra//Mathematical-Tools/Linear-Algebra/transpose-animation.gif" style="height: 30%; width: 30%; background-color: white;">
+</p>
+<p align="center">
+   <i> Source: <a href=http://linearalgebra.math.umanitoba.ca/math1220/section-19.html> Transpose and Trace of a Matrix, University of Manitoba, Math 1220 Linear Algebra 1 by Michael Doob </a> </i>
+</p>
+<p>If I have a matrix:</p>
+<p>\[\boldsymbol{A} = 
+\begin{bmatrix} 
+1 &amp; 2 &amp; 3 \\ 
+4 &amp; 5 &amp; 6 \\
+7 &amp; 8 &amp; 9
+\end{bmatrix} 
+\]</p>
+<p>its transform will be the following:
+\[\boldsymbol{A}^\intercal = 
+\begin{bmatrix} 
+1 &amp; 4 &amp; 7 \\ 
+2 &amp; 5 &amp; 8 \\
+3 &amp; 6 &amp; 9
+\end{bmatrix} 
+\]</p>
+<p>Where the \(T\) denotes the transformed matrix. </p>
+<p>For column and row vectors, the manipulation is even easier as you're restricted to a single row or column. </p>
+<p>If you have a vector like so:</p>
+<p>\[ \boldsymbol{H} = \begin{bmatrix} 3 \\ 4 \\ 8 \end{bmatrix} \]</p>
+<p>Then the transform would give the following:</p>
+<p>\[ \boldsymbol{H}^\intercal = \begin{bmatrix} 3 &amp; 4 &amp; 8 \end{bmatrix} \]</p>
+<h2><a class="header" href="#matrix-multiplication" id="matrix-multiplication">Matrix Multiplication</a></h2>
+<p>Just as we can perform multiplication on vectors through the dot product, we can also do it for matrices.</p>
+<p>Instead of focusing on individual elements however, we must turn our focus to whole rows and columns, treating them as vectors and then performing a dot product.</p>
+<p>Before we can show how it is performed, there is also a dimension-matching requirement, similar to how vectors need to have the same number of elements for a dot product to be performed.</p>
+<p>The requirement is that <em>the number of columns in first matrix must match the number of rows in the second matrix</em>. Furthermore, the dimensions of the resulting matrix are equal to the <em>number of rows in the first matrix followed by the number of columns in the other matrix</em>.</p>
+<p>For example, if we are multiplying a \(3 \times 5\) matrix by a \(5 \times 9\) matrix, we know that we can perform matrix multiplication because the columns in first matrix (5) match with the rows in the second matrix (5). Furthermore, we can deduce the size of the final matrix to be \(3 \times 9\) from the rows in the first by the columns in the last.</p>
+<p>You may have already noticed that this requirement leads to a rather counter-intuitive behavior you don't normally see in multiplication.</p>
+<p>In multiplication with numbers, and even the dot product, the order of your values does not matter:</p>
+<p>\[2 \times 3 = 3 \times 2\]</p>
+<p>and</p>
+<p>\[\vec a \cdot \vec b = \vec b \cdot \vec a\]</p>
+<p>But with matrices, the order DOES matter because if I take that example above and switch the order, the dimensions are no longer valid to perform multiplication and even if they were valid, the resulting size of the matrix would be different as well.</p>
+<p>This gives the following property:</p>
+<p>\[ \boldsymbol{A} \cdot \boldsymbol{B}  \neq \boldsymbol{B} \cdot \boldsymbol{A} \]</p>
+<p>Therefore, one has to exercise care when stating which matrix is getting multiplied by another matrix.</p>
+<p>Now let us look at how the actual multiplication is performed.</p>
+<p>Let us take an example of two matrices below:</p>
+<p>\[
+\boldsymbol{A} = 
+\begin{bmatrix}
+a_{1,1} &amp; a_{1,2} &amp; a_{1,3} \\
+a_{2,1} &amp; a_{2,2} &amp; a_{2,3} \\
+\end{bmatrix}
+\quad
+\boldsymbol{B} = 
+\begin{bmatrix}
+b_{1,1} &amp; b_{1,2} \\
+b_{2,1} &amp; b_{2,2} \\
+b_{3,1} &amp; b_{3,2} 
+\end{bmatrix}
+\]</p>
+<p>First, we need to make sure the dimensions check out. Matrix A has the dimensions \(2 \times 3\) while matrix B has the dimensions \(3 \times 2\). We want to perform \(\boldsymbol{A} \cdot \boldsymbol{B}\). The columns of A match the rows of B in size and furthermore, we can deduce the resulting matrix must have the dimensions of \(2 \times 2\). We can therefore perform the operation.</p>
+<p>It goes like so:</p>
+<p>\[
+\begin{bmatrix}
+a_{1,1} &amp; a_{1,2} &amp; a_{1,3} \\
+a_{2,1} &amp; a_{2,2} &amp; a_{2,3} \\
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+b_{1,1} &amp; b_{1,2} \\
+b_{2,1} &amp; b_{2,2} \\
+b_{3,1} &amp; b_{3,2} 
+\end{bmatrix} = 
+\begin{bmatrix}
+a_{1,1} \cdot b_{1,1} + a_{1,2} \cdot b_{2,1} + a_{1,3} \cdot b_{3,1} &amp; a_{1,1} \cdot b_{1,2} + a_{1,2} \cdot b_{2,2} + a_{1,3} \cdot b_{3,2} \\
+a_{2,1} \cdot b_{1,1} + a_{2,2} \cdot b_{2,1} + a_{2,3} \cdot b_{3,1} &amp; a_{2,1} \cdot b_{1,2} + a_{2,2} \cdot b_{2,2} + a_{2,3} \cdot b_{3,2}
+\end{bmatrix}
+\]</p>
+<p>Notice that to get the first row of values in the resulting matrix, we take the dot product of the first row of the first matrix with with the first column of the second matrix, then the second column of the second matrix. For the second row of the result, take the dot product with the first column of the second matrix, then the second column again.</p>
+<p>This pattern holds true for any kind of matrix multiplication, where you take the rows in the first matrix and iterate through the columns in the second matrix, dot producting each and producing a single value that gets put into the final matrix. </p>
+<h2><a class="header" href="#complex-dot-product" id="complex-dot-product">Complex Dot Product</a></h2>
+<p>The standard Dot Product was already well defined for our &quot;dimensionless&quot; explanation, where vectors were just groupings without any orientation.</p>
+<p>However, we also introduced the accepted definition of vectors as being matrices fixed by 1 row or 1 column (row and column-based vectors respectively).</p>
+<p>This doesn't bode well because we now have to factor in the rules for matrix multiplication. We can't arbitrarily choose where to start multiplying and adding like we could with the standard dot product because with the normal dot product, orientation of the vector is nonexistent.</p>
+<p>To make the problem a little more apparent, we can use the following. Imagine I want to perform a dot product on the two vectors:</p>
+<p>\[ \vec \alpha = \begin{bmatrix} \alpha_{1} \\ \alpha_{1} \end{bmatrix} \quad \vec \beta = \begin{bmatrix} \beta_{1} \\ \beta_{2} \end{bmatrix} \]</p>
+<p>If you use the dimension-matching criteria mentioned earlier, you'll bump into our first problem: the dimensions simply don't permit multiplication. We have \(2 \times 1\) matrix getting multiplied by a \(2 \times 1\) matrix. The number of columns in the first DOES NOT match the number of rows in the second. </p>
+<p>To fix this, we use a matrix operation we're already familiar with: the transform.</p>
+<p>We apply it on \( \vec \alpha \) to get \( \vec \alpha^\intercal \) and thus produce the following pair:</p>
+<p>\[ \vec \alpha^\intercal = \begin{bmatrix} \alpha_{1} &amp; \alpha_{1} \end{bmatrix} \quad \vec \beta = \begin{bmatrix} \beta_{1} \\ \beta_{2} \end{bmatrix} \]</p>
+<p>Now we can perform matrix multiplication and get the dot product:</p>
+<p>\[ \vec \alpha^\intercal \cdot \vec \beta = 
+\begin{bmatrix} 
+\alpha_{1} &amp;
+\alpha_{2}
+\end{bmatrix} 
+\cdot 
+\begin{bmatrix} 
+\beta_{1} \\
+\beta_{2}
+\end{bmatrix} 
+=
+\alpha_{1} \cdot \beta_{1} + \alpha_{2} \cdot \beta{2} 
+\]</p>
+<p>Notice that we still get a single scalar value, which maintains the validity of our geometric intuition of the dot product: the amount one vector overlaps/projects onto another vector.</p>
+<p>We can now define the dot product in terms of matrix multiplication like so:</p>
+<p>\[ \vec \alpha \cdot \vec \beta = \boldsymbol{\alpha}^\intercal \cdot \boldsymbol{\beta} \]</p>
+<p>There is however, yet another problem that needs to be addressed. Imaginary numbers play a key role in Quantum Mechanics and it is impossible to avoid the topic of using them.</p>
+<p>Let us take the example finding the magnitude of a vector with imaginary values. Remember, the only thing introducing imaginary numbers here does is changing the nature of the y-axis so it represents complex values (those with &quot;i&quot; in them) while the x-axis remains real.</p>
+<p>We'll use our newfound definition for the dot product this time:</p>
+<p>\[\vec a = \begin{bmatrix} i \\ 0 \end{bmatrix} \]
+\[\left\lVert \vec a \right\rVert = \sqrt{\vec a \cdot \vec a} = \sqrt{\boldsymbol{a} \cdot \boldsymbol{a}^\intercal} 
+= \sqrt{\begin{bmatrix} i &amp; 0 \end{bmatrix} \cdot \begin{bmatrix} i \\ 0 \end{bmatrix}} = \sqrt{i^{2}} = i\]</p>
+<p>Mathematicians do not like the idea of having a quantity with real physical implication (length of the vector) be defined in imaginary terms. Thus, we have to tweak our definition of the dot product even further.</p>
+<p>To guarantee a real result, we take the <em>conjugate</em> AND <em>transpose</em> of one of the vectors (the order of operations doesn't matter here) which gives us the following definition for the dot product <sup>1</sup>:</p>
+<p>\[ \vec \alpha \cdot \vec \beta = (\boldsymbol{\alpha}^\intercal)^{*} \cdot \boldsymbol{\beta} \]</p>
+<p>There is a special name for the conjugate transpose of a matrix: the <strong>Hermitian Conjugate</strong>. Due to the general laziness of mathemticians, there is a notation for this operation:</p>
+<p>\[ (\boldsymbol{\alpha}^\intercal)^* = (\boldsymbol{\alpha}^{*})^\intercal = \boldsymbol{\alpha}^\dagger \]</p>
+<p>Where we now refer to the matrix as &quot;alpha dagger&quot; in this new notation.</p>
+<p>Now we have arrived a truly rigorous definition of the dot product in terms of matrix multiplication.</p>
+<p>This &quot;Complex Dot Product&quot; will be used very frequently in manipulating Qubit states through the application of Hermitian Conjugates.</p>
+<h2><a class="header" href="#outer-product" id="outer-product">Outer Product</a></h2>
+<p>The Outer Product can always be thought of as the naive brother of the Inner Product. </p>
+<p>Instead of the summation that usually happens when we apply the dot product to each row versus column of the first and second matrices respectively, we just multiply!</p>
+<p>Given two vectors as matrices:</p>
+<p>\[ \boldsymbol{u} = 
+\begin{bmatrix} 
+u_1 \\ 
+u_2 \\ 
+\vdots \\
+u_m
+\end{bmatrix}
+\quad
+\boldsymbol{v} = 
+\begin{bmatrix}
+v_1 \\
+v_2 \\
+\vdots \\
+v_n
+\end{bmatrix}
+\]</p>
+<p>The cross product looks like the following:
+\[ \boldsymbol{u} \otimes \boldsymbol{v} =
+\begin{bmatrix}
+u_1v_1 &amp; u_1v_2 &amp; \cdots &amp; u_1v_n \\
+u_2v_1 &amp; u_2v_2 &amp; \cdots &amp; u_2v_n \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+u_mv_1 &amp; u_mv_2 &amp; \cdots &amp; u_mv_n
+\end{bmatrix}
+\]</p>
+<p>We just take one element from one vector and then multiply it once with each element from the other vector. This produces a row inside the matrix and we repeat the process for the second, third, fourth element until we hit the end, producing a full matrix.</p>
+<p>The outer product is used for combining the states of quantum systems. </p>
+<h2><a class="header" href="#eigenvectors-and-eigenvalues" id="eigenvectors-and-eigenvalues">Eigenvectors and Eigenvalues</a></h2>
+<p>Matrix multiplication, when generalized to any kind of matrix, does not have the most intuitive geometrical interpretation.</p>
+<p>However, there is one specific setup that does lend itself very nicely to visualization and it is this:</p>
+<p>\[ 
+\begin{bmatrix} 
+a &amp; b \\
+c &amp; d \\
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+c_0 \\
+c_1
+\end{bmatrix}
+=
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+\]</p>
+<p>The following is known as a <strong>linear transformation</strong>. If you imagine that \(a, b\) and \(c, d\) represent two vectors, then by interpreting the dot product you know that vector \(c_0, c_1\) will scale each vector and when you add them together, you get a new vector, which should be the \(c_0, c_1\) vector but with each of its components in a new orientation and magnitude. <sup>2</sup></p>
+<p>The <strong>Eigenvector</strong> is a special vector that, when it has a matrix applied to it, only scales in magnitude. It can grow or shrink, flip directions as well but it has to maintain the same direction (lay on the same line).</p>
+<p>If this is true, there is an associated <strong>Eigenvalue</strong> which performs the equivalent action the matrix would in terms of scaling. </p>
+<p>The image below should sum all this up:</p>
+<p align="center">
+  <img  src="Mathematical-Tools/Linear-Algebra//Mathematical-Tools/Linear-Algebra/eigenvector.png" style="height: 30%; width: 30%; background-color: white;">
+</p>
+<p align="center">
+   <i> Source: <a href=https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors> Eigenvalues and Eigenvectors</a> </i>
+</p>
+<p>Where &quot;A&quot; is the matrix and &quot;x&quot; is the eigenvector, with lambda being the eigenvalue. </p>
+<h2><a class="header" href="#eigenfunctions-and-eigenvalues" id="eigenfunctions-and-eigenvalues">Eigenfunctions and Eigenvalues</a></h2>
+<p>An <strong>Eigenfunction</strong> and its <strong>Eigenvalue</strong> have a similar relationship to that of the eigenvector and eigenvalue. We have some function that undergoes some transformation but could be equivalently represented as a function multiplied by a constant. </p>
+<p>The &quot;transformation&quot; is a placeholder for the idea of an &quot;operator&quot; which we'll explore in more detail when we get to Core Quantum Mechanics. It's essentially something that acts upon a function to produce yet another function. </p>
+<p>Just as the relationship for eigenvector and eigenvalue is expressed like so:</p>
+<p>\[\boldsymbol{A} \vec x = \lambda \vec x\]</p>
+<p>The relationship between eigenfunction and eigenvalue is:</p>
+<p>\[\hat{O}f = qf\]</p>
+<p>where \(q\) is a constant, \(f\) a function and \(\hat{O}\) an operator.</p>
+<p>An example is the following:</p>
+<p>We can define \(\frac{d}{dx} \) to be an operator that works on a function defined in terms of x. As mentioned above, an operator should take some function and produce another function. We pick the function \(e^{3x}\) and get the following:</p>
+<p>\[\frac{d}{dx}(e^{3x}) = 3e^{3x}\]</p>
+<p>This looks rather similar to the relationship we defined above. If we match things up, we know our constant \(q\) should be \(3\) (our eigenvalue) and that our eigenfunction is \(e^{3x}\).</p>
+<h2><a class="header" href="#vector-spaces" id="vector-spaces">Vector Spaces</a></h2>
+<p>A great deal of the complex mathematics in Quantum Mechanics are greatly simplified with the help of something known as a <strong>Hilbert Space</strong> In order to understand what a <strong>Hilbert Space</strong> is however, we have to look at something called a vector space.</p>
+<p>A <strong>Vector Space</strong> is defined as a set of vectors \(V\) with the operations of addition and scalar multiplication which follow the following properties (formally known as <strong>axioms</strong>), where \(\vec u, \vec v, \vec w \in V\) and \(c,d\in \mathbb{R} \) (set of all real numbers).</p>
+<p>1.)  \( (\vec u + \vec v) \in V \)</p>
+<p>Adding two vectors in \(V\) should produce another vector that is in \(V\)</p>
+<p>2.) \(\vec u + \vec v = \vec v + \vec u\)</p>
+<p>Commutativity, the order of addition should not matter</p>
+<p>3.)  \(\vec u + (\vec v + \vec w) = (\vec u + \vec v) + \vec w\)</p>
+<p>Associativity, the way additions can be grouped should not matter either </p>
+<p>4.)  \(\vec 0 + \vec u = \vec u\)</p>
+<p>The existence of the 0 vector which, when added with any vector produces the same vector</p>
+<p>5.)  \(\vec v + -\vec v = 0\)</p>
+<p>All vectors must have inverses which, when added to their counterpart sum to 0</p>
+<p>6.) \(c \cdot \vec u \in V\)</p>
+<p>Scaling a vector must produce a vector which is in the set \(V\)</p>
+<p>7.) \(c \cdot (\vec u+ \vec v) = c \cdot \vec u + c \cdot \vec v\)</p>
+<p>The Distributive Property: if I multiply the sum of vectors by a constant, it would produce the same result as multiplying each individual vector and then adding the result together</p>
+<p>8.) \((c + d)\cdot u = c \cdot \vec u + d \cdot \vec u \)</p>
+<p>If you flip the values in prior rule where the constants are the ones being added, the distributive property still holds true</p>
+<p>9.) \( c \cdot (d \cdot \vec u) = (c \cdot d) \cdot \vec u \)</p>
+<p>This shows the assocativity principle again, but we account for scalar multiplication of the vectors</p>
+<p>10.) \(1\cdot \vec u = \vec u\)</p>
+<p>Scaling a vector by 1 should give the same vector back <sup>3</sup></p>
+<p>The reason we present this to you is because of the fact that the &quot;set of vectors&quot; doesn't actually have to be just a set of vectors! It can be extended to many other mathematical entities, such as polynomials and arbitrary functions (so long as they follow the axioms above). If you are skeptical about this property, I encourage you to take some arbitrary polynomial and subject it to the above (multiplying a polynomial by a polynomial gives: another polynomial, so does addition, multiplying by a constant, etc.)</p>
+<p>What makes this highly desirable is we can work with incredibly complex functions using the tools linear algebra already gives us.</p>
+<p>This brings us to the <strong>Hilbert Space</strong>, which is a <strong>type</strong> of vector space that has a few more rules added to it but proves incredibly nice to work with when we reach core Quantum Mechanics</p>
+<h2><a class="header" href="#hilbert-space-sup4sup" id="hilbert-space-sup4sup">Hilbert Space <sup>4</sup></a></h2>
+<p><strong>Hilbert Space</strong> is a type of vector space which satisfies the 10 axioms above but introduces a handful of others.</p>
+<h3><a class="header" href="#inner-product-operation" id="inner-product-operation">Inner Product Operation</a></h3>
+<p>One of the main definitions is that of an <strong>inner product</strong>. You'll remember that we introduced it as the <strong>dot product</strong> although that term is more specific to real numbered vectors which have a clear geometric interpretation </p>
+<p>The notation for the inner product is slightly different from what we've presented for the dot product.</p>
+<p>Where the dot product was represented like so: </p>
+<p>\[ \vec a \cdot \vec b \] </p>
+<p>We now do the same thing but with angled brackets:</p>
+<p>\[ \langle \vec a, \vec b \rangle \]</p>
+<p>Furthermore, for the examples below we will stop treating the &quot;things&quot; in Hilbert Space as vectors and encourage your to think of them as &quot;elements&quot;, owing to the fact that the section of Vector Spaces already proves their ability to be used with arbitrary functions.</p>
+<p>The inner product in Hilbert Space has a couple of rules which go as follows.</p>
+<h4><a class="header" href="#conjugate-symmetry" id="conjugate-symmetry">Conjugate Symmetry</a></h4>
+<p><strong>Conjugate Symmetry</strong> states that the inner product of two elements in Hilbert Space is the conjugate of the inner products but in opposite order.</p>
+<p>This gives the following:</p>
+<p>\[\langle a , b \rangle =  \langle b, a \rangle^*\]</p>
+<h4><a class="header" href="#linearity-with-respect-to-the-first-vector" id="linearity-with-respect-to-the-first-vector">Linearity With Respect to the First Vector</a></h4>
+<p>\[\langle a, bc + de \rangle  = b\langle a, c\rangle + d\langle a, e\rangle \]</p>
+<p>\(a, c, e\) are all elements of the Hilbert Space while \(b, d\) are real constants. </p>
+<h4><a class="header" href="#antilinearity-with-respect-to-the-second-vector" id="antilinearity-with-respect-to-the-second-vector">Antilinearity With Respect to the Second Vector</a></h4>
+<p>\[\langle ab + cd, e \rangle = a^* \langle b, e \rangle + c^* \langle c, e \rangle\]</p>
+<p>\(b, d, e\) are all elements of the Hilbert Space while \(a, c\) are real constants. Notice that unlike the above property, the conjugates of the constants have to be taken in order for the equality to hold. </p>
+<h4><a class="header" href="#positive-definite" id="positive-definite">Positive Definite</a></h4>
+<p>If we take the inner product of an element with itself, we are GUARANTEED a value greater than 0, unless the element in question is 0 itself which just produces 0</p>
+<p>\[\langle a, a\rangle = \mid a \mid^2 \geq 0 \]</p>
+<h3><a class="header" href="#separability" id="separability">Separability</a></h3>
+<p>The idea of <strong>separability</strong> means that the Hilbert Space has a <strong>countable</strong>, <strong>dense</strong>, <strong>subset</strong>.</p>
+<p>Let's break that down with a comparison to the real numbers \(\mathbb{R}\) which also possess this property of separability. </p>
+<p>We know that the set of rational numbers \(\mathbb{Q}\) is a <strong>subset</strong> of \(\mathbb{R}\) as \(\mathbb{R}\) contains both rational AND irrational numbers. </p>
+<p>We also know that that \(\mathbb{Q}\) is <strong>countable</strong> as all rational values can be expressed as the ratio of two integers which themselves are countable (they are more properly known as <em>countably infinite</em> owing to the fact that the set of integers, also a subset of the real numbers, goes on to infinity).</p>
+<p>Furthermore, the set of rational numbers is <strong>dense</strong> meaning that we can find some rational number that can get arbitrarily close to an irrational number in the set of real numbers. A nice way of visualizing this is the fact that pi can be better and better approximated with fractions that have larger integer values in the numerator and denominator of a fraction.</p>
+<h3><a class="header" href="#completeness" id="completeness">Completeness</a></h3>
+<p><strong>Completeness</strong> is the fact that as two values in the space get arbitrarily close to each other, we should still get a value that exists within the space itself.</p>
+<p>A more formal way of stating this is that the <strong>Cauchy Sequence</strong> within the space will produce a value that also exists in the space.</p>
+<h2><a class="header" href="#types-of-hilbert-space-sup5sup" id="types-of-hilbert-space-sup5sup">Types of Hilbert Space <sup>5</sup></a></h2>
+<p>There are two types of Hilbert Spaces:</p>
+<ul>
+<li>Finite Dimensional</li>
+<li>Infinite Dimensional</li>
+</ul>
+<p>Some more detail on the distinction is given below</p>
+<h3><a class="header" href="#finite-dimensional-hilbert-space" id="finite-dimensional-hilbert-space">Finite Dimensional Hilbert Space</a></h3>
+<p>In the Finite variation, the basis vectors that you can make other vectors with or more generally, the elements that permit you to make other elements, are finite.</p>
+<p>All the examples you saw with the dot product and matrices use a pair of finite, vectors.</p>
+<h3><a class="header" href="#infinite-dimensional-hilbert-space" id="infinite-dimensional-hilbert-space">Infinite Dimensional Hilbert Space</a></h3>
+<p>In the infinite variation (and the one we'll be doing the great majority of our work in) we have a infinite number of basis elements to create other elements from.</p>
+<p>The importance of this will be made clear as we dive more into Core Quantum Mechanics but there is another property which should be committed to heart:</p>
+<p>All functions in this space are <strong>square integrable</strong> </p>
+<p>This means the following property must be true:</p>
+<p>\[ \int_{-\infty}^\infty \mid f(x)\mid^2 = finite \]</p>
+<p>We are guaranteed a finite value for such integrals.</p>
+<h2><a class="header" href="#citations-3" id="citations-3">Citations</a></h2>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=Qpm85nC2BBE&amp;ab_channel=AndrewDotson">DO YOU EVEN DOT PRODUCT BRO? - Andrew Dotson</a></li>
+<li><a href="https://www.youtube.com/watch?v=PFDu9oVAE-g&amp;ab_channel=3Blue1Brown">Eigenvectors and Eigenvalues | Essence of Linear Algebra, chapter 14 - 3Blue1Brown</a></li>
+<li><a href="https://www.youtube.com/watch?v=8DYyKKCBDBQ&amp;ab_channel=patrickJMT">Vector Spaces - The Definition - 3 Problems - patrickJMT</a></li>
+<li><a href="https://www.youtube.com/watch?v=7zx3MT9FgT0&amp;list=PLdgVBOaXkb9Bv466YnyxslT4gIlSZdtjw&amp;index=2&amp;ab_channel=FacultyofKhan">An Introduction to Hilbert Spaces - Faculty of Khan</a></li>
+<li><a href="https://www.youtube.com/watch?v=ua-Y4k0gq8w&amp;list=PLdgVBOaXkb9Bv466YnyxslT4gIlSZdtjw&amp;index=3&amp;ab_channel=FacultyofKhan">Introduction to Hilbert Spaces - Important Examples - Faculty of Khan</a></li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
