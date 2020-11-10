@@ -59,7 +59,7 @@ We graph the two functions together and find our \\(n_0\\):
 
 With the function found, as well as a suitable \\(n_0\\) and \\(c\\), we can now say the following
 
-> The function \\(f(n)\\) is has Big-O of \\(n^2\\) time complexity.
+> The function \\(f(n)\\) has Big-O of \\(n^2\\) time complexity.
 
 With that understanding, the image below gives an idea for the different kinds of complexities you'll frequently bump into in the computer science world, as well as how to think of them qualitatively (is \\(O(n)\\) good or bad? What about \\(O(log(n))\\)?)
 
