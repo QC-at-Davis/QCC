@@ -38,11 +38,7 @@ All of this seems more like a nuisance than something to accelerate computation 
 
 ### Inherent Parallelism
 
-In a quantum computer, we know that superposition allows us to represent multiple states at once. That means with each qubit added gives us
-
-\\[ 2^{n} \\]
-
-possible states, where \\(n\\) is the number of qubits you have. <sup> 1 </sup> Furthermore, we can manipulate qubits in this superposition state which is similar to working with ALL the possible states the classical computer could represent SIMULTANEOUSLY.
+In a quantum computer, we know that superposition allows us to represent multiple states at once. This means that performing any operation on the qubits will perform the same operation on each of those encoded states. This is the equivalent of having multiple states in classical computation and being able to perform oeprations on them *all at once* instead of having to perform the operation on each individual piece of data.<sup> 1 </sup>
 
 Superposition and Inherent Parallelism are only part of the Qubit story. Entanglement also plays an incredibly important role.
 

@@ -12,7 +12,7 @@ Continue reading at your own disgression.
 Feedback is welcome!
 ```
 <p align="center">
-  <img  src="QCAD_horizontal_patch.png">
+  <img  src="patch.png">
 </p>
 
 Welcome to the __Quantum Computing Codex (QCC)__ created by __Quantum Computing at Davis (QCaD)__ !

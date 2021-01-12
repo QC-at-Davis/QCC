@@ -165,7 +165,7 @@ Continue reading at your own disgression.
 Feedback is welcome!
 </code></pre>
 <p align="center">
-  <img  src="Introduction/QCAD_horizontal_patch.png">
+  <img  src="Introduction/patch.png">
 </p>
 <p>Welcome to the <strong>Quantum Computing Codex (QCC)</strong> created by <strong>Quantum Computing at Davis (QCaD)</strong> !</p>
 <h2><a class="header" href="#purpose" id="purpose">Purpose</a></h2>
@@ -325,7 +325,7 @@ Feedback is welcome!
 </p>
 <p>With the function found, as well as a suitable \(n_0\) and \(c\), we can now say the following</p>
 <blockquote>
-<p>The function \(f(n)\) is has Big-O of \(n^2\) time complexity.</p>
+<p>The function \(f(n)\) has Big-O of \(n^2\) time complexity.</p>
 </blockquote>
 <p>With that understanding, the image below gives an idea for the different kinds of complexities you'll frequently bump into in the computer science world, as well as how to think of them qualitatively (is \(O(n)\) good or bad? What about \(O(log(n))\)?)</p>
 <p align="center">
@@ -578,9 +578,7 @@ Note: Elements in the above diagram is equivalent to data inputted
 <p>This result should remind you of the probabilistic nature of Quantum Computation already hinted by the <strong>BQP</strong> and <strong>QMA</strong> complexity classes where we a problem needs to be solved correctly AT LEAST some fraction of the time to fall into the quantum complexity classes.</p>
 <p>All of this seems more like a nuisance than something to accelerate computation but superposition allows for a property known as <strong>Inherent Parallelism</strong>.</p>
 <h3><a class="header" href="#inherent-parallelism" id="inherent-parallelism">Inherent Parallelism</a></h3>
-<p>In a quantum computer, we know that superposition allows us to represent multiple states at once. That means with each qubit added gives us</p>
-<p>\[ 2^{n} \]</p>
-<p>possible states, where \(n\) is the number of qubits you have. <sup> 1 </sup> Furthermore, we can manipulate qubits in this superposition state which is similar to working with ALL the possible states the classical computer could represent SIMULTANEOUSLY.</p>
+<p>In a quantum computer, we know that superposition allows us to represent multiple states at once. This means that performing any operation on the qubits will perform the same operation on each of those encoded states. This is the equivalent of having multiple states in classical computation and being able to perform oeprations on them <em>all at once</em> instead of having to perform the operation on each individual piece of data.<sup> 1 </sup></p>
 <p>Superposition and Inherent Parallelism are only part of the Qubit story. Entanglement also plays an incredibly important role.</p>
 <h2><a class="header" href="#entanglement-1" id="entanglement-1">Entanglement</a></h2>
 <p>A solid grasp of the quantum mechanical definition of entanglement prior translates rather nicely to its context in QC. </p>
